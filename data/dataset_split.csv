@@ -1,0 +1,11 @@
+document_id,manufacturer,series,split
+vishay_293d,Vishay,293D,dev
+vishay_593d,Vishay,593D,eval
+vishay_t55,Vishay,T55,dev
+vishay_t59,Vishay,T59,eval
+kyocera_avx_taj,KYOCERA AVX,TAJ,dev
+kyocera_avx_tps,KYOCERA AVX,TPS,dev
+kyocera_avx_tcj,KYOCERA AVX,TCJ,dev
+kyocera_avx_tcn,KYOCERA AVX,TCN,eval
+panasonic_tpb,Panasonic,TPB,dev
+panasonic_tpc,Panasonic,TPC,eval

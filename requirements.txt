@@ -1,0 +1,10 @@
+pandas
+numpy
+matplotlib
+pymupdf
+pdfplumber
+pydantic
+streamlit
+pytest
+jupyter
+ipykernel

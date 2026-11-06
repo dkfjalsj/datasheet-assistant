@@ -1,0 +1,21 @@
+document_id,manufacturer,series,part_number,component_type,split,selection_note
+vishay_293d,Vishay,293D,293D107X9010D2WE3,tantalum,dev,PDF 1쪽 주문 안내에 인쇄된 코드 블록을 원문 화면과 대조해 연결 표기함; 임의 옵션 치환하지 않음; 후속 주문 코드·P/N 식별 대상에 포함함
+vishay_593d,Vishay,593D,593D107X9010D2WE3,tantalum,eval,PDF 1쪽 주문 안내에 인쇄된 코드 블록을 원문 화면과 대조해 연결 표기함; 임의 옵션 치환하지 않음; 후속 주문 코드·P/N 식별 대상에 포함함
+vishay_t55,Vishay,T55,T55A226M2R5C0200,polymer_tantalum,dev,PDF 5쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+vishay_t55,Vishay,T55,T55A336M2R5C0200,polymer_tantalum,dev,PDF 5쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+vishay_t55,Vishay,T55,T55B107M2R5C0070,polymer_tantalum,dev,PDF 5쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+vishay_t59,Vishay,T59,T59EL157M035C0050,polymer_tantalum,eval,PDF 3쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+vishay_t59,Vishay,T59,T59EL336M050C0075,polymer_tantalum,eval,PDF 4쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음; 해당 행에 개발 중 등급 각주가 있어 제품 가용성은 제조사 추가 확인 필요함
+kyocera_avx_taj,KYOCERA AVX,TAJ,TAJC106M035RNJ,tantalum,dev,PDF 1쪽 주문 안내에 인쇄된 코드 블록을 원문 화면과 대조해 연결 표기함; 임의 옵션 치환하지 않음; 후속 주문 코드·P/N 식별 대상에 포함함
+kyocera_avx_tps,KYOCERA AVX,TPS,TPSC107M010R0100,tantalum,dev,PDF 1쪽 주문 안내에 인쇄된 코드 블록을 원문 화면과 대조해 연결 표기함; 임의 옵션 치환하지 않음; 후속 주문 코드·P/N 식별 대상에 포함함
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU337M016R0050E,polymer_tantalum,dev,PDF 6쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU337M016R0070E,polymer_tantalum,dev,PDF 6쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU227M020R0070E,polymer_tantalum,dev,PDF 6쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU107M025R0070E,polymer_tantalum,dev,PDF 7쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+kyocera_avx_tcn,KYOCERA AVX,TCN,TCNT157M006R0200E,polymer_tantalum,eval,PDF 1쪽 주문 안내에 인쇄된 코드 블록을 원문 화면과 대조해 연결 표기함; 임의 옵션 치환하지 않음; 후속 주문 코드·P/N 식별 대상에 포함함
+panasonic_tpb,Panasonic,TPB,4TPB68M,polymer_tantalum,dev,PDF 1쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+panasonic_tpb,Panasonic,TPB,6TPB220ML,polymer_tantalum,dev,PDF 1쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+panasonic_tpb,Panasonic,TPB,10TPB150ML,polymer_tantalum,dev,PDF 1쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+panasonic_tpc,Panasonic,TPC,6TPC47M,polymer_tantalum,eval,PDF 1쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+panasonic_tpc,Panasonic,TPC,8TPC22M,polymer_tantalum,eval,PDF 1쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
+panasonic_tpc,Panasonic,TPC,10TPC100M,polymer_tantalum,eval,PDF 1쪽 규격표의 완전한 P/N을 원문 화면과 대조해 선정함; 자리표시자 치환하지 않음
