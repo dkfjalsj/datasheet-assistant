@@ -1,0 +1,4 @@
+﻿document_id,manufacturer,part_number,execution_status,specification,error_type,cause,review_status,source_comparison
+vishay_t55,Vishay,T55A226M2R5C0200,blocked,,missing_api_key,호출 전 차단,observed,
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0050E,blocked,,missing_api_key,호출 전 차단,observed,
+panasonic_tpb,Panasonic,4TPB68M,blocked,,missing_api_key,호출 전 차단,observed,
