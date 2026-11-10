@@ -1,0 +1,51 @@
+﻿group,item,metric,correct,denominator,accuracy_percent,planned,response_rows,evaluated,ground_truth_uncertain,no_response
+overall,development_sample,value_and_unit_accuracy,9,11,81.82,18,12,11,1,6
+overall,development_sample,condition_accuracy,1,2,50.0,18,12,11,1,6
+overall,development_sample,pn_match_accuracy,8,10,80.0,18,12,11,1,6
+overall,development_sample,evidence_accuracy,7,11,63.64,18,12,11,1,6
+overall,development_sample,full_spec_accuracy,6,11,54.55,18,12,11,1,6
+specification,rated_voltage,value_and_unit_accuracy,2,2,100.0,3,2,2,0,1
+specification,rated_voltage,condition_accuracy,,0,,3,2,2,0,1
+specification,rated_voltage,pn_match_accuracy,1,2,50.0,3,2,2,0,1
+specification,rated_voltage,evidence_accuracy,1,2,50.0,3,2,2,0,1
+specification,rated_voltage,full_spec_accuracy,1,2,50.0,3,2,2,0,1
+specification,surge_voltage,value_and_unit_accuracy,1,1,100.0,3,2,1,1,1
+specification,surge_voltage,condition_accuracy,,0,,3,2,1,1,1
+specification,surge_voltage,pn_match_accuracy,,0,,3,2,1,1,1
+specification,surge_voltage,evidence_accuracy,0,1,0.0,3,2,1,1,1
+specification,surge_voltage,full_spec_accuracy,0,1,0.0,3,2,1,1,1
+specification,capacitance,value_and_unit_accuracy,2,2,100.0,3,2,2,0,1
+specification,capacitance,condition_accuracy,,0,,3,2,2,0,1
+specification,capacitance,pn_match_accuracy,2,2,100.0,3,2,2,0,1
+specification,capacitance,evidence_accuracy,2,2,100.0,3,2,2,0,1
+specification,capacitance,full_spec_accuracy,2,2,100.0,3,2,2,0,1
+specification,tolerance,value_and_unit_accuracy,2,2,100.0,3,2,2,0,1
+specification,tolerance,condition_accuracy,,0,,3,2,2,0,1
+specification,tolerance,pn_match_accuracy,2,2,100.0,3,2,2,0,1
+specification,tolerance,evidence_accuracy,2,2,100.0,3,2,2,0,1
+specification,tolerance,full_spec_accuracy,2,2,100.0,3,2,2,0,1
+specification,esr,value_and_unit_accuracy,2,2,100.0,3,2,2,0,1
+specification,esr,condition_accuracy,1,2,50.0,3,2,2,0,1
+specification,esr,pn_match_accuracy,2,2,100.0,3,2,2,0,1
+specification,esr,evidence_accuracy,2,2,100.0,3,2,2,0,1
+specification,esr,full_spec_accuracy,1,2,50.0,3,2,2,0,1
+specification,operating_temperature,value_and_unit_accuracy,0,2,0.0,3,2,2,0,1
+specification,operating_temperature,condition_accuracy,,0,,3,2,2,0,1
+specification,operating_temperature,pn_match_accuracy,1,2,50.0,3,2,2,0,1
+specification,operating_temperature,evidence_accuracy,0,2,0.0,3,2,2,0,1
+specification,operating_temperature,full_spec_accuracy,0,2,0.0,3,2,2,0,1
+manufacturer,Vishay,value_and_unit_accuracy,4,5,80.0,6,6,5,1,0
+manufacturer,Vishay,condition_accuracy,1,1,100.0,6,6,5,1,0
+manufacturer,Vishay,pn_match_accuracy,3,5,60.0,6,6,5,1,0
+manufacturer,Vishay,evidence_accuracy,3,5,60.0,6,6,5,1,0
+manufacturer,Vishay,full_spec_accuracy,3,5,60.0,6,6,5,1,0
+manufacturer,KYOCERA AVX,value_and_unit_accuracy,5,6,83.33,6,6,6,0,0
+manufacturer,KYOCERA AVX,condition_accuracy,0,1,0.0,6,6,6,0,0
+manufacturer,KYOCERA AVX,pn_match_accuracy,5,5,100.0,6,6,6,0,0
+manufacturer,KYOCERA AVX,evidence_accuracy,4,6,66.67,6,6,6,0,0
+manufacturer,KYOCERA AVX,full_spec_accuracy,3,6,50.0,6,6,6,0,0
+manufacturer,Panasonic,value_and_unit_accuracy,,0,,6,0,0,0,6
+manufacturer,Panasonic,condition_accuracy,,0,,6,0,0,0,6
+manufacturer,Panasonic,pn_match_accuracy,,0,,6,0,0,0,6
+manufacturer,Panasonic,evidence_accuracy,,0,,6,0,0,0,6
+manufacturer,Panasonic,full_spec_accuracy,,0,,6,0,0,0,6

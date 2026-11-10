@@ -1,19 +1,13 @@
-﻿document_id,part_number,execution_status,manufacturer,specification,extraction_status,verification_status,value,unit,value_min,value_max,condition,pdf_page,scope,source_type,evidence_id,evidence,normalized
-vishay_t55,T55A226M2R5C0200,blocked,Vishay,rated_voltage,,,,,,,,,,,,,
-vishay_t55,T55A226M2R5C0200,blocked,Vishay,surge_voltage,,,,,,,,,,,,,
-vishay_t55,T55A226M2R5C0200,blocked,Vishay,capacitance,,,,,,,,,,,,,
-vishay_t55,T55A226M2R5C0200,blocked,Vishay,tolerance,,,,,,,,,,,,,
-vishay_t55,T55A226M2R5C0200,blocked,Vishay,esr,,,,,,,,,,,,,
-vishay_t55,T55A226M2R5C0200,blocked,Vishay,operating_temperature,,,,,,,,,,,,,
-kyocera_avx_tcj,TCJU337M016R0050E,blocked,KYOCERA AVX,rated_voltage,,,,,,,,,,,,,
-kyocera_avx_tcj,TCJU337M016R0050E,blocked,KYOCERA AVX,surge_voltage,,,,,,,,,,,,,
-kyocera_avx_tcj,TCJU337M016R0050E,blocked,KYOCERA AVX,capacitance,,,,,,,,,,,,,
-kyocera_avx_tcj,TCJU337M016R0050E,blocked,KYOCERA AVX,tolerance,,,,,,,,,,,,,
-kyocera_avx_tcj,TCJU337M016R0050E,blocked,KYOCERA AVX,esr,,,,,,,,,,,,,
-kyocera_avx_tcj,TCJU337M016R0050E,blocked,KYOCERA AVX,operating_temperature,,,,,,,,,,,,,
-panasonic_tpb,4TPB68M,blocked,Panasonic,rated_voltage,,,,,,,,,,,,,
-panasonic_tpb,4TPB68M,blocked,Panasonic,surge_voltage,,,,,,,,,,,,,
-panasonic_tpb,4TPB68M,blocked,Panasonic,capacitance,,,,,,,,,,,,,
-panasonic_tpb,4TPB68M,blocked,Panasonic,tolerance,,,,,,,,,,,,,
-panasonic_tpb,4TPB68M,blocked,Panasonic,esr,,,,,,,,,,,,,
-panasonic_tpb,4TPB68M,blocked,Panasonic,operating_temperature,,,,,,,,,,,,,
+﻿manufacturer,document_id,part_number,specification,extraction_status,verification_status,value,unit,condition,page,scope,issue_types
+Vishay,vishay_t55,T55A226M2R5C0200,rated_voltage,found,failed,2.5,VDC,,5.0,series,source_type_mismatch
+Vishay,vishay_t55,T55A226M2R5C0200,surge_voltage,found,failed,3.2,,"105 °C, 1000 successive test cycles in series with a 1 kΩ resistor at the rate of 30 s ON, 30 s OFF; test voltage per table below",15.0,series,specification_schema_error;missing_unit;unit_unverifiable
+Vishay,vishay_t55,T55A226M2R5C0200,capacitance,found,verified,22,μF,,5.0,pn,
+Vishay,vishay_t55,T55A226M2R5C0200,tolerance,found,verified,± 20,%,,1.0,series,
+Vishay,vishay_t55,T55A226M2R5C0200,esr,found,verified,200,mΩ,+ 25 °C 100 kHz,5.0,pn,
+Vishay,vishay_t55,T55A226M2R5C0200,operating_temperature,found,failed,-55 °C to +105 °C / +125 °C,°C,"above 105 °C, additional voltage derating is required",1.0,series,temperature_range_not_in_primary_evidence;invalid_unit_value_or_range;series_temperature_not_target_specific
+KYOCERA AVX,kyocera_avx_tcj,TCJU337M016R0050E,rated_voltage,found,verified,16,V,,6.0,pn,
+KYOCERA AVX,kyocera_avx_tcj,TCJU337M016R0050E,surge_voltage,not_found,unverifiable,,,,,,no_confirmed_value_to_check
+KYOCERA AVX,kyocera_avx_tcj,TCJU337M016R0050E,capacitance,found,verified,330,μF,,6.0,pn,
+KYOCERA AVX,kyocera_avx_tcj,TCJU337M016R0050E,tolerance,found,verified,±20,%,,1.0,series,
+KYOCERA AVX,kyocera_avx_tcj,TCJU337M016R0050E,esr,found,failed,50,mΩ,100kHz,6.0,pn,esr_ambient_temperature_missing
+KYOCERA AVX,kyocera_avx_tcj,TCJU337M016R0050E,operating_temperature,found,failed,125,ºC,,6.0,pn,temperature_range_not_in_primary_evidence;invalid_unit_value_or_range;operating_temperature_range_missing

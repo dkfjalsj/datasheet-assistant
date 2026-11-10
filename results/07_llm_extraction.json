@@ -1,8 +1,8 @@
 {
   "stage": "07_llm_extraction",
-  "execution_mode": "preflight_only",
+  "execution_mode": "live",
   "provider": "gemini",
-  "requested_model": "gemini-3.1-flash-lite",
+  "requested_model": "gemini-3.5-flash-lite",
   "sdk_version": "3.0.0",
   "prompt_version": "07.2-gemini",
   "settings": {
@@ -10,14 +10,16 @@
     "response_mime_type": "application/json",
     "max_attempts": 3,
     "max_retries": 0,
+    "sdk_attempts_per_request": 1,
     "max_output_tokens_per_request": 2500
   },
   "free_tier": {
     "model_public_free_input_output": true,
-    "project_confirmed": false,
-    "key_configured": false,
-    "actual_cost_usd": 0,
-    "billing_data_available": false
+    "project_confirmed": true,
+    "key_configured": true,
+    "actual_cost_usd": null,
+    "billing_data_available": false,
+    "project_confirmation_source": "user_confirmed_free_project"
   },
   "legacy_openai_preflight_archive": {
     "provider": "openai",
@@ -55,9 +57,2422 @@
       }
     ]
   },
+  "legacy_gemini_preflight_record": {
+    "stage": "07_llm_extraction",
+    "execution_mode": "preflight_only",
+    "provider": "gemini",
+    "requested_model": "gemini-3.1-flash-lite",
+    "sdk_version": "3.0.0",
+    "prompt_version": "07.2-gemini",
+    "settings": {
+      "structured_outputs": true,
+      "response_mime_type": "application/json",
+      "max_attempts": 3,
+      "max_retries": 0,
+      "max_output_tokens_per_request": 2500
+    },
+    "free_tier": {
+      "model_public_free_input_output": true,
+      "project_confirmed": false,
+      "key_configured": false,
+      "actual_cost_usd": 0,
+      "billing_data_available": false
+    },
+    "requests_planned": 3,
+    "requests_attempted": 0,
+    "responses_received": 0,
+    "parsed_responses": 0,
+    "request_plans": [
+      {
+        "document_id": "vishay_t55",
+        "part_number": "T55A226M2R5C0200",
+        "pdf_pages": [
+          1,
+          5,
+          15
+        ],
+        "source_excerpts": 9,
+        "stage6_estimated_input_tokens": 19022,
+        "user_input_characters": 15117,
+        "estimated_input_tokens_including_prompt_schema": 4973,
+        "max_output_tokens": 2500
+      },
+      {
+        "document_id": "kyocera_avx_tcj",
+        "part_number": "TCJU337M016R0050E",
+        "pdf_pages": [
+          1,
+          6,
+          10,
+          11,
+          12
+        ],
+        "source_excerpts": 10,
+        "stage6_estimated_input_tokens": 14049,
+        "user_input_characters": 8264,
+        "estimated_input_tokens_including_prompt_schema": 3257,
+        "max_output_tokens": 2500
+      },
+      {
+        "document_id": "panasonic_tpb",
+        "part_number": "4TPB68M",
+        "pdf_pages": [
+          1
+        ],
+        "source_excerpts": 6,
+        "stage6_estimated_input_tokens": 12418,
+        "user_input_characters": 9131,
+        "estimated_input_tokens_including_prompt_schema": 3451,
+        "max_output_tokens": 2500
+      }
+    ],
+    "execution_records": [
+      {
+        "document_id": "vishay_t55",
+        "part_number": "T55A226M2R5C0200",
+        "provider": "gemini",
+        "requested_model": "gemini-3.1-flash-lite",
+        "model": null,
+        "prompt_version": "07.2-gemini",
+        "request_attempted": false,
+        "response_received": false,
+        "processing_seconds": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "thinking_tokens": null,
+        "total_tokens": null,
+        "response_id": null,
+        "finish_reason": null,
+        "execution_status": "blocked",
+        "error_type": "missing_api_key",
+        "http_status": null,
+        "quota_warning": null
+      },
+      {
+        "document_id": "kyocera_avx_tcj",
+        "part_number": "TCJU337M016R0050E",
+        "provider": "gemini",
+        "requested_model": "gemini-3.1-flash-lite",
+        "model": null,
+        "prompt_version": "07.2-gemini",
+        "request_attempted": false,
+        "response_received": false,
+        "processing_seconds": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "thinking_tokens": null,
+        "total_tokens": null,
+        "response_id": null,
+        "finish_reason": null,
+        "execution_status": "blocked",
+        "error_type": "missing_api_key",
+        "http_status": null,
+        "quota_warning": null
+      },
+      {
+        "document_id": "panasonic_tpb",
+        "part_number": "4TPB68M",
+        "provider": "gemini",
+        "requested_model": "gemini-3.1-flash-lite",
+        "model": null,
+        "prompt_version": "07.2-gemini",
+        "request_attempted": false,
+        "response_received": false,
+        "processing_seconds": null,
+        "input_tokens": null,
+        "output_tokens": null,
+        "thinking_tokens": null,
+        "total_tokens": null,
+        "response_id": null,
+        "finish_reason": null,
+        "execution_status": "blocked",
+        "error_type": "missing_api_key",
+        "http_status": null,
+        "quota_warning": null
+      }
+    ],
+    "responses": [],
+    "source_excerpts": [
+      {
+        "document_id": "vishay_t55",
+        "part_number": "T55A226M2R5C0200",
+        "evidence": [
+          {
+            "evidence_id": "p1-e01",
+            "pdf_page": 1,
+            "label": "series_electrical_context",
+            "source_type": "text",
+            "text": "PERFORMANCE / ELECTRICAL CHARACTERISTICS Operating Temperature: -55 °C to +105 °C / +125 °C (above 105 °C, additional voltage derating is required) Capacitance Range: 1.0 μF to 1500 μF Capacitance Tolerance: ± 20 % Voltage Rating: 2.5 VDC to 63 VDC",
+            "word_ids": [
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99
+            ],
+            "bbox_pdf": [
+              53.70000076293945,
+              361.81256103515625,
+              272.1129150390625,
+              446.2446594238281
+            ]
+          },
+          {
+            "evidence_id": "p1-e02",
+            "pdf_page": 1,
+            "label": "ordering_guide",
+            "source_type": "ordering_code",
+            "text": "ORDERING INFORMATION T55 A 156 M 6R3 C 0500 TYPE CASE CAPACITANCE CAPACITANCE DC VOLTAGE TERMINATION / ESR CODE TOLERANCE RATING PACKAGING See Ratings and Case Codes table This is expressed in picofarads. The first two digits are the significant figures. The third is the number of zeros to follow. M = ± 20 % 2R5 = 2.5 V 004 = 4 V 6R3 = 6.3 V 007 = 7 V 010 = 10 V 12R = 12.5 V 016 = 16 V 020 = 20 V 025 = 25 V 035 = 35 V 050 = 50 V 063 = 63 V C = lead (Pb)-free solderable coating, 7\" reel Maximum 100 kHz ESR in mΩ",
+            "word_ids": [
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287,
+              288,
+              289,
+              290,
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298,
+              299,
+              300,
+              301,
+              302,
+              303,
+              304,
+              305,
+              306,
+              307,
+              308,
+              309,
+              310,
+              311,
+              312,
+              313,
+              314,
+              315,
+              316,
+              317,
+              318,
+              319,
+              320,
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327,
+              328,
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337,
+              338,
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357,
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364,
+              365,
+              366,
+              367,
+              368,
+              369,
+              370,
+              371
+            ],
+            "bbox_pdf": [
+              60.959999084472656,
+              469.75201416015625,
+              540.7247924804688,
+              624.9769897460938
+            ]
+          },
+          {
+            "evidence_id": "p1-e03",
+            "pdf_page": 1,
+            "label": "series_technical_note",
+            "source_type": "text",
+            "text": "Note • We reserve the right to supply higher voltage ratings and tighter capacitance tolerance capacitors in the same case size. Voltage substitutions will be marked with a higher voltage rating.",
+            "word_ids": [
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246
+            ],
+            "bbox_pdf": [
+              53.70000076293945,
+              637.5361938476562,
+              558.265869140625,
+              665.6506958007812
+            ]
+          },
+          {
+            "evidence_id": "p5-e04",
+            "pdf_page": 5,
+            "label": "table_header",
+            "source_type": "table",
+            "text": "STANDARD RATINGS CAPACITANCE (μF) CASE CODE PART NUMBER MAX. DCL AT 25 °C (μA) MAX. DF AT 25 °C 120 Hz (%) MAX. ESR AT + 25 °C 100 kHz (mΩ) MAX. RIPPLE AT 45 °C 100 kHz IRMS (A) MAX. OPERATING TEMPERATURE (°C) HIGH TEMPERATURE LOAD, TIME (h)",
+            "word_ids": [
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93
+            ],
+            "bbox_pdf": [
+              56.7599983215332,
+              88.75196838378906,
+              555.2426147460938,
+              138.15621948242188
+            ]
+          },
+          {
+            "evidence_id": "p5-e05",
+            "pdf_page": 5,
+            "label": "voltage_group",
+            "source_type": "table",
+            "text": "2.5 VDC",
+            "word_ids": [
+              94,
+              95
+            ],
+            "bbox_pdf": [
+              292.3798522949219,
+              142.7151641845703,
+              319.6260070800781,
+              151.7103729248047
+            ]
+          },
+          {
+            "evidence_id": "p5-e06",
+            "pdf_page": 5,
+            "label": "table_footnotes",
+            "source_type": "text",
+            "text": "Notes • Termination code “C”: cases C, J, P: 100 % tin, case A, T, B, Z, V, D, X: Ni / Pd / Au (1) Rating in development, contact factory for availability",
+            "word_ids": [
+              600,
+              601,
+              602,
+              603,
+              604,
+              605,
+              606,
+              607,
+              608,
+              609,
+              610,
+              611,
+              612,
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              631,
+              632
+            ],
+            "bbox_pdf": [
+              53.70000076293945,
+              699.9196166992188,
+              363.23272705078125,
+              726.9705200195312
+            ]
+          },
+          {
+            "evidence_id": "p15-e07",
+            "pdf_page": 15,
+            "label": "performance_and_surge",
+            "source_type": "table",
+            "text": "PERFORMANCE CHARACTERISTICS ITEM CONDITION POST TEST PERFORMANCE Temperature characteristics Measure the specified characteristics in each stage Specified initial value -55 °C +105 °C / +125 °C Capacitance change - -30 % to 0 % 0 % to +50 % Dissipation factor shown in Standard Ratings table or less 8 to 10 14 - Leakage current Refer to Standard Ratings table - Not more than 1 CV or 30 μA which is greater Surge voltage 105 °C, 1000 successive test cycles in series with a 1 kΩ resistor at the rate of 30 s ON, 30 s OFF; test voltage per table below: Capacitance change Within ± 20 % of initial value Rated voltage 2.5 4.0 6.3 7.0 10 12.5 16 20 25 35 50 63 Dissipation factor Within initial limit Surge voltage 3.2 5.2 8.2 9.0 13 16.2 20 23 29 40 57 72 Leakage current Shall not exceed 300 % of initial limit Solder heat resistance Reflow board surface peak temperature: less than 260 °C Time: 5 s max. Capacitance change Within ± 20 % of initial value Dissipation factor Initial specified value or less Leakage current Shall not exceed 300 % of initial specified value Moisture resistance no load Leave at 60 °C and 90 % RH for 500 h Capacitance change VR ≤ 4 V Relative to the value before test +50 % to -20 % VR ≥ 6.3 V Relative to the value before test +40 % to -20 % Dissipation factor Initial specified value or less Leakage current Shall not exceed 300 % of initial specified value High temperature load 105 °C. The rated voltage is applied through a protective resistor of 3 Ω for 1000 h or 2000 h (1) 125 °C. 2/3 rated voltage is applied through a protective resistor of 3 Ω for 1000 h or 2000 h (1) Capacitance change Within ± 20 % of initial value Dissipation factor Initial specified value or less Leakage current Shall not exceed 300 % of initial specified value Thermal shock Leave at -55 °C, normal temperature, 105 °C, and normal temperature for 30 min., 15 min. 30 min., and 15 min. Repeat this operation 5 times running. Capacitance change Within ± 20 % of initial value or less Dissipation factor Initial specified value or less Leakage current Shall not exceed 300 % of initial specified value Failure rate 105 °C. The rated voltage is applied through a protective resistor of 1 Ω/V. 1 % / 1000 h",
+            "word_ids": [
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287,
+              288,
+              289,
+              290,
+              291,
+              292,
+              293,
+              294,
+              295,
+              296,
+              297,
+              298,
+              299,
+              300,
+              301,
+              302,
+              303,
+              304,
+              305,
+              306,
+              307,
+              308,
+              309,
+              310,
+              311,
+              312,
+              313,
+              314,
+              315,
+              316,
+              317,
+              318,
+              319,
+              320,
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327,
+              328,
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337,
+              338,
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              355,
+              356,
+              357,
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364,
+              365,
+              366,
+              367,
+              368,
+              369,
+              370,
+              371,
+              372,
+              373,
+              374,
+              375,
+              376,
+              377,
+              378,
+              379,
+              380,
+              381,
+              382,
+              383,
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395,
+              396,
+              397,
+              398,
+              399,
+              400,
+              401,
+              402,
+              403,
+              404,
+              405,
+              406,
+              407,
+              408,
+              409,
+              410,
+              411,
+              412,
+              413,
+              414,
+              415,
+              416,
+              417,
+              418,
+              419,
+              420,
+              421,
+              422,
+              423,
+              424,
+              425,
+              426,
+              427,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436,
+              437,
+              438,
+              439,
+              440,
+              441,
+              442,
+              443,
+              444,
+              445,
+              446,
+              447,
+              448,
+              449,
+              450,
+              451,
+              452,
+              453,
+              454,
+              455,
+              456,
+              457,
+              458,
+              459,
+              460,
+              461,
+              462,
+              463,
+              464,
+              465,
+              466,
+              467,
+              468,
+              469,
+              470,
+              471,
+              472,
+              473,
+              474,
+              475,
+              476
+            ],
+            "bbox_pdf": [
+              60.774749755859375,
+              88.75196838378906,
+              557.3809814453125,
+              533.7698974609375
+            ]
+          },
+          {
+            "evidence_id": "p15-e08",
+            "pdf_page": 15,
+            "label": "test_conditions_footnote",
+            "source_type": "text",
+            "text": "Notes • Test conditions per JIS C5101-1 (1) Test time and test temperature, please refer to table “Standard Ratings”",
+            "word_ids": [
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ],
+            "bbox_pdf": [
+              53.70000076293945,
+              539.6762084960938,
+              321.8986511230469,
+              565.75048828125
+            ]
+          },
+          {
+            "evidence_id": "p5-e09",
+            "pdf_page": 5,
+            "label": "exact_target_pn_row",
+            "source_type": "table",
+            "text": "22 A T55A226M2R5C0200 5.5 10 200 0.75 105 1000",
+            "word_ids": [
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104
+            ],
+            "bbox_pdf": [
+              81.23999786376953,
+              153.91053771972656,
+              533.7091064453125,
+              161.89053344726562
+            ]
+          }
+        ]
+      },
+      {
+        "document_id": "kyocera_avx_tcj",
+        "part_number": "TCJU337M016R0050E",
+        "evidence": [
+          {
+            "evidence_id": "p1-e01",
+            "pdf_page": 1,
+            "label": "ordering_guide",
+            "source_type": "ordering_code",
+            "text": "HOW TO ORDER TCJ Type A Case Size See table above E Additional Character E = Black resin (It is possible to order PN without \"E\" as identical product) M Tolerance M = ±20% R Packaging R = Leadfree 7\" Reel S = Leadfree 13\" Reel 226 Capacitance Code pF code: 1st two digits represent significant figures, 3rd digit represents multiplier (number of zeros to follow) 0300 ESR in mΩ 004 Rated DC Voltage 002 = 2.5Vdc 004 = 4Vdc 006 = 6.3Vdc 010 = 10Vdc 016 = 16Vdc 020 = 20Vdc 025 = 25Vdc 035 = 35Vdc 050 = 50Vdc 063 = 63Vdc 075 = 75Vdc 100 = 100Vdc 125 = 125Vdc",
+            "word_ids": [
+              94,
+              95,
+              96,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436,
+              437,
+              438,
+              439,
+              440,
+              441,
+              442,
+              443,
+              444,
+              445,
+              446,
+              447,
+              448,
+              449,
+              450,
+              451,
+              452,
+              453,
+              454,
+              455,
+              456,
+              457,
+              458,
+              459,
+              460,
+              461,
+              462,
+              463,
+              464,
+              465,
+              466,
+              467,
+              468,
+              469,
+              470,
+              471,
+              472,
+              473,
+              474,
+              475,
+              476,
+              477,
+              478,
+              479,
+              480,
+              481,
+              482,
+              483,
+              484,
+              485,
+              486,
+              487,
+              488,
+              489,
+              490,
+              491,
+              492,
+              493,
+              494,
+              530,
+              531,
+              532,
+              533,
+              534,
+              535,
+              536,
+              537,
+              538,
+              539,
+              540,
+              541,
+              542,
+              543,
+              544,
+              545,
+              546,
+              547,
+              548,
+              549,
+              550,
+              551,
+              552,
+              553,
+              554,
+              555,
+              556,
+              557,
+              558,
+              559,
+              560,
+              561,
+              562,
+              563,
+              564,
+              565,
+              566,
+              567,
+              568,
+              569,
+              570,
+              571,
+              572
+            ],
+            "bbox_pdf": [
+              27.719999313354492,
+              477.08941650390625,
+              577.6343383789062,
+              601.8152465820312
+            ]
+          },
+          {
+            "evidence_id": "p1-e02",
+            "pdf_page": 1,
+            "label": "series_technical_context",
+            "source_type": "text",
+            "text": "TECHNICAL SPECIFICATIONS (COMMON FOR ALL TCJ SERIES) Technical Data: All technical data relate to an ambient temperature of +25°C Capacitance Tolerance: ±20% Leakage Current DCL: 0.1CV Resistance to soldering heat: 3x reflow cycles according to J-STD-020 NOTE: Conductive Polymer Capacitors are designed to operate within the limits of the environmental conditions specified for each series. If operated continuously at their maximum temperature and / or humidity limit, or beyond these limits, capacitors may exhibit a parametric shift in capacitance and increases in ESR. These changes may occur earlier if the specified environmental conditions are exceeded. Similarly, their normal operational time period will be significantly extended if their general duty cycle includes operation below maximum temperature within humidity controlled environments. Careful attention should be paid to maximum temperature with associated high humidity environments as well as voltage derating, ripple current and current surges. Please reference the KYOCERA AVX Conductive Polymer Capacitor Guidelines for more information or contact factory for application assistance.",
+            "word_ids": [
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              495,
+              496,
+              497,
+              498,
+              499,
+              500,
+              501,
+              502,
+              503,
+              504,
+              505,
+              506,
+              507,
+              508,
+              509,
+              510,
+              511,
+              512,
+              513,
+              514,
+              515,
+              516,
+              517,
+              518,
+              519,
+              520,
+              521,
+              522,
+              523,
+              573,
+              574,
+              575,
+              576,
+              577,
+              578,
+              579,
+              580,
+              581,
+              582,
+              583,
+              584,
+              585,
+              586,
+              587,
+              588,
+              589,
+              590,
+              591,
+              592,
+              593,
+              594,
+              595,
+              596,
+              597,
+              598,
+              599,
+              600,
+              601,
+              602,
+              603,
+              604,
+              605,
+              606,
+              607,
+              608,
+              609,
+              610,
+              611,
+              612,
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              631,
+              632,
+              633,
+              634,
+              635,
+              636,
+              637,
+              638,
+              639,
+              640,
+              641,
+              642,
+              643,
+              644,
+              645,
+              646,
+              647,
+              648,
+              649,
+              650,
+              651,
+              652,
+              653,
+              654,
+              655,
+              656,
+              657,
+              658,
+              659,
+              660,
+              661,
+              662,
+              663,
+              664,
+              665,
+              666,
+              667,
+              668,
+              669,
+              670,
+              671,
+              672,
+              673,
+              674,
+              675,
+              676,
+              677,
+              678,
+              679,
+              680,
+              681,
+              682,
+              683,
+              684,
+              685,
+              686,
+              687,
+              688,
+              689,
+              690,
+              691,
+              692,
+              693,
+              694,
+              695,
+              696
+            ],
+            "bbox_pdf": [
+              27.719999313354492,
+              621.3594360351562,
+              563.503662109375,
+              733.6053466796875
+            ]
+          },
+          {
+            "evidence_id": "p6-e03",
+            "pdf_page": 6,
+            "label": "table_header",
+            "source_type": "table",
+            "text": "RATINGS & PART NUMBER REFERENCE Part Number Case Size Capacitance (μF) Rated Voltage (V) Maximum Operating Temperature (ºC) DCL Max. (μA) DF Max. (%) ESR Max. @ 100kHz (mΩ) 100kHz RMS Current (mA) Product Category MSL 45ºC 85ºC 105ºC 125ºC",
+            "word_ids": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48
+            ],
+            "bbox_pdf": [
+              28.11400032043457,
+              89.4315185546875,
+              575.4847412109375,
+              139.73385620117188
+            ]
+          },
+          {
+            "evidence_id": "p10-e04",
+            "pdf_page": 10,
+            "label": "category_heading",
+            "source_type": "text",
+            "text": "PRODUCT CATEGORY 0, 1 (TEMPERATURE RANGE -55°C TO +125°C)",
+            "word_ids": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17
+            ],
+            "bbox_pdf": [
+              27.89579963684082,
+              89.42938232421875,
+              350.4947814941406,
+              102.69937896728516
+            ]
+          },
+          {
+            "evidence_id": "p10-e05",
+            "pdf_page": 10,
+            "label": "surge_test_conditions",
+            "source_type": "table",
+            "text": "Surge Voltage Apply 1.3x 2/3x rated voltage (Ur) at 125ºC for 1000 cycles of duration 6 min (30 sec charge, 5 min 30 sec discharge) through a charge / discharge resistance of 1000Ω",
+            "word_ids": [
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260
+            ],
+            "bbox_pdf": [
+              74.4825210571289,
+              382.5735168457031,
+              280.3373107910156,
+              419.5260314941406
+            ]
+          },
+          {
+            "evidence_id": "p11-e06",
+            "pdf_page": 11,
+            "label": "category_heading",
+            "source_type": "text",
+            "text": "PRODUCT CATEGORY 2, 3, 4 (TEMPERATURE RANGE -55°C TO +105°C)",
+            "word_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10
+            ],
+            "bbox_pdf": [
+              27.89579963684082,
+              89.42938232421875,
+              361.16180419921875,
+              102.69937896728516
+            ]
+          },
+          {
+            "evidence_id": "p11-e07",
+            "pdf_page": 11,
+            "label": "surge_test_conditions",
+            "source_type": "table",
+            "text": "Surge Voltage Apply 1.3x rated voltage (Ur) at 105ºC for CATEGORY 2, or apply 1.3x 0.8x rated voltage (Ur) at 105ºC for CATEGORY 3, 4 for 1000 cycles of duration 6 min (30 sec charge, 5 min 30 sec discharge) through a charge / discharge resistance of 1000Ω",
+            "word_ids": [
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              269,
+              270,
+              271,
+              272,
+              273,
+              274,
+              275,
+              276,
+              277,
+              278,
+              279,
+              280,
+              281
+            ],
+            "bbox_pdf": [
+              67.2201156616211,
+              390.5036315917969,
+              283.2546081542969,
+              436.4561462402344
+            ]
+          },
+          {
+            "evidence_id": "p12-e08",
+            "pdf_page": 12,
+            "label": "category_heading",
+            "source_type": "text",
+            "text": "PRODUCT CATEGORY 5 (TEMPERATURE RANGE -55°C TO +85°C)",
+            "word_ids": [
+              281,
+              282,
+              283,
+              284,
+              285,
+              286,
+              287,
+              288
+            ],
+            "bbox_pdf": [
+              27.89579963684082,
+              89.42938232421875,
+              334.0877990722656,
+              102.69937896728516
+            ]
+          },
+          {
+            "evidence_id": "p12-e09",
+            "pdf_page": 12,
+            "label": "surge_test_conditions",
+            "source_type": "table",
+            "text": "Surge Voltage Apply 1.3x rated voltage (Ur) at 85ºC for 1000 cycles of duration 6 min (30 sec charge, 5 min 30 sec discharge) through a charge / discharge resistance of 1000Ω",
+            "word_ids": [
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204
+            ],
+            "bbox_pdf": [
+              75.2485580444336,
+              361.6935729980469,
+              310.9209899902344,
+              389.6460876464844
+            ]
+          },
+          {
+            "evidence_id": "p6-e10",
+            "pdf_page": 6,
+            "label": "exact_target_pn_row",
+            "source_type": "table",
+            "text": "TCJU337M016R0050E U 330 16 125 528 12 50 2800 2000 1300 700 1 3",
+            "word_ids": [
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337,
+              338,
+              339,
+              340,
+              341,
+              342
+            ],
+            "bbox_pdf": [
+              37.59130859375,
+              284.5863037109375,
+              570.0792846679688,
+              292.5483093261719
+            ]
+          }
+        ]
+      },
+      {
+        "document_id": "panasonic_tpb",
+        "part_number": "4TPB68M",
+        "evidence": [
+          {
+            "evidence_id": "p1-e01",
+            "pdf_page": 1,
+            "label": "series_specification_table",
+            "source_type": "table",
+            "text": "Size code B2 D3L D4 Category temperature range –55 °C to +105 °C Rated voltage range 4 V.DC to 10 V.DC 6.3 V.DC to 10 V.DC Category voltage range 4 V.DC to 10 V.DC 6.3 V.DC to 10 V.DC Rated capacitance range 33 μF to 68 μF 150 μF to 330 μF 220 μF to 470 μF Capacitance tolerance ±20 % (120 Hz / + 20 °C) Leakage current Please see the attached characteristics list Dissipation factor (tan d) Please see the attached characteristics list Surge voltage (V.DC) Rated voltage × 1.15 Endurance +105 °C 2000h, (B2 size : 1000h) rated voltage appled ✽ Rated temp. +85 °C 1000h rated voltage applied Capacitance change Within ±20 % of the initial value tan d < 1.5 times of the initial limit DC leakage current Within the initial limit Damp heat (Steady State) +60 °C, 90 % to 95 %, 500 h, No-applied voltage Capacitance change Within +40 %, −20 % of the initial value tan d < 1.5 times of the initial limit DC leakage current < 3 times of the initial limit Specifi cations",
+            "word_ids": [
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143,
+              144,
+              145,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              152,
+              153,
+              154,
+              155,
+              156,
+              157,
+              158,
+              159,
+              160,
+              161,
+              162,
+              163,
+              164,
+              165,
+              166,
+              167,
+              168,
+              169,
+              170,
+              171,
+              172,
+              173,
+              174,
+              175,
+              176,
+              177,
+              178,
+              179,
+              180,
+              181,
+              182,
+              183,
+              184,
+              185,
+              186,
+              187,
+              188,
+              189,
+              190,
+              191,
+              192,
+              193,
+              194,
+              195,
+              196,
+              197,
+              198,
+              199,
+              200,
+              201,
+              202,
+              203,
+              204,
+              205,
+              206,
+              207,
+              208,
+              209,
+              210,
+              211,
+              212,
+              213,
+              214,
+              215,
+              216,
+              217,
+              218,
+              219,
+              220,
+              221,
+              222,
+              223,
+              224,
+              225,
+              226,
+              227,
+              228,
+              229,
+              230,
+              231,
+              232,
+              233,
+              234,
+              235,
+              236,
+              237,
+              238,
+              239,
+              240,
+              241,
+              242,
+              243,
+              244,
+              245,
+              246,
+              247,
+              248,
+              249,
+              250,
+              251,
+              252,
+              253,
+              254,
+              255,
+              256,
+              257,
+              258,
+              259,
+              260,
+              261,
+              262,
+              263,
+              264,
+              265,
+              266,
+              267,
+              268,
+              634,
+              635
+            ],
+            "bbox_pdf": [
+              53.73210144042969,
+              176.43116760253906,
+              518.7728881835938,
+              394.20672607421875
+            ]
+          },
+          {
+            "evidence_id": "p1-e02",
+            "pdf_page": 1,
+            "label": "ordering_marking_rules",
+            "source_type": "ordering_code",
+            "text": "R.Cap. code R. Voltage code Lot. No. Polarity marking(+) R. Voltage code Lot. No. R.Cap. code Polarity marking(+) R. Voltage code Lot. No. R.Cap. code Polarity marking(+) B2 Size D4 Size D3L Size R. Voltage (V.DC) 4.0 6.3 10.0 Code g j A R. Cap. (μF) 33 47 68 Code N7 S7 W7 B2 Size Marking",
+            "word_ids": [
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              605,
+              606,
+              607,
+              608,
+              609,
+              610,
+              611,
+              612,
+              613,
+              614,
+              615,
+              616,
+              617,
+              618,
+              619,
+              620,
+              621,
+              622,
+              623,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              631,
+              632,
+              636
+            ],
+            "bbox_pdf": [
+              58.68109893798828,
+              404.62005615234375,
+              284.9554748535156,
+              555.6014404296875
+            ]
+          },
+          {
+            "evidence_id": "p1-e03",
+            "pdf_page": 1,
+            "label": "characteristics_header",
+            "source_type": "table",
+            "text": "Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs) Characteristics list",
+            "word_ids": [
+              309,
+              310,
+              311,
+              312,
+              313,
+              314,
+              315,
+              316,
+              317,
+              318,
+              319,
+              320,
+              321,
+              322,
+              323,
+              324,
+              325,
+              326,
+              327,
+              328,
+              329,
+              330,
+              331,
+              332,
+              333,
+              334,
+              335,
+              336,
+              337,
+              338,
+              339,
+              340,
+              341,
+              342,
+              343,
+              344,
+              345,
+              346,
+              347,
+              348,
+              349,
+              350,
+              351,
+              352,
+              353,
+              354,
+              641,
+              642
+            ],
+            "bbox_pdf": [
+              55.22560119628906,
+              569.838134765625,
+              541.1295776367188,
+              627.9021606445312
+            ]
+          },
+          {
+            "evidence_id": "p1-e04",
+            "pdf_page": 1,
+            "label": "characteristics_merged_rows",
+            "source_type": "table",
+            "text": "TPB 4.0 105 4.0 105 68 3.5 2.8 1.9 B2 1100 70 0.08 27.2 4TPB68M 2000 105 4.0 105 330 7.3 4.3 2.8 D3L 2000 40 0.10 132.0 4TPB330ML 2500 6.3 105 6.3 105 68 3.5 2.8 1.9 B2 1100 70 0.08 42.8 6TPB68M 2000 105 6.3 105 220 7.3 4.3 2.8 D3L 2000 40 0.10 138.6 6TPB220ML 2500 85 5.0 105 330 7.3 4.3 2.8 2000 40 0.10 207.9 6TPB330MAL 2500 105 6.3 105 7.3 4.3 2.8 2000 40 0.10 207.9 6TPB330ML 2500 105 6.3 105 7.3 4.3 3.8 D4 3000 40 0.10 207.9 6TPB330M 2000 105 6.3 105 470 7.3 4.3 3.8 3000 35 0.15 296.1 6TPB470M 2000 10 105 10.0 105 33 3.5 2.8 1.9 B2 1100 70 0.08 33.0 10TPB33M 2000 105 10.0 105 47 3.5 2.8 1.9 1100 70 0.08 47.0 10TPB47M 2000 105 10.0 105 150 7.3 4.3 2.8 D3L 2000 40 0.10 150.0 10TPB150ML 2500 105 10.0 105 220 7.3 4.3 2.8 2000 40 0.10 220.0 10TPB220ML 2500 105 10.0 105 7.3 4.3 3.8 D4 3000 40 0.10 220.0 10TPB220M 2000 105 10.0 105 330 7.3 4.3 3.8 3000 35 0.10 330.0 10TPB330M 2000",
+            "word_ids": [
+              355,
+              356,
+              357,
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364,
+              365,
+              366,
+              367,
+              368,
+              369,
+              370,
+              371,
+              372,
+              373,
+              374,
+              375,
+              376,
+              377,
+              378,
+              379,
+              380,
+              381,
+              382,
+              383,
+              384,
+              385,
+              386,
+              387,
+              388,
+              389,
+              390,
+              391,
+              392,
+              393,
+              394,
+              395,
+              396,
+              397,
+              398,
+              399,
+              400,
+              401,
+              402,
+              403,
+              404,
+              405,
+              406,
+              407,
+              408,
+              409,
+              410,
+              411,
+              412,
+              413,
+              414,
+              415,
+              416,
+              417,
+              418,
+              419,
+              420,
+              421,
+              422,
+              423,
+              424,
+              425,
+              426,
+              427,
+              428,
+              429,
+              430,
+              431,
+              432,
+              433,
+              434,
+              435,
+              436,
+              437,
+              438,
+              439,
+              440,
+              441,
+              442,
+              443,
+              444,
+              445,
+              446,
+              447,
+              448,
+              449,
+              450,
+              451,
+              452,
+              453,
+              454,
+              455,
+              456,
+              457,
+              458,
+              459,
+              460,
+              461,
+              462,
+              463,
+              464,
+              465,
+              466,
+              467,
+              468,
+              469,
+              470,
+              471,
+              472,
+              473,
+              474,
+              475,
+              476,
+              477,
+              478,
+              479,
+              480,
+              481,
+              482,
+              483,
+              484,
+              485,
+              486,
+              487,
+              488,
+              489,
+              490,
+              491,
+              492,
+              493,
+              494,
+              495,
+              496,
+              497,
+              498,
+              499,
+              500,
+              501,
+              502,
+              503,
+              504,
+              505,
+              506,
+              507,
+              508,
+              509,
+              510,
+              511,
+              512,
+              513,
+              514,
+              515,
+              516,
+              517,
+              518,
+              519,
+              520,
+              521,
+              522,
+              523,
+              524,
+              525,
+              526,
+              527,
+              528,
+              529,
+              530,
+              531,
+              532,
+              533,
+              534,
+              535,
+              536,
+              537,
+              538,
+              539,
+              540,
+              541,
+              542,
+              543,
+              544,
+              545
+            ],
+            "bbox_pdf": [
+              59.05759811401367,
+              629.4716186523438,
+              536.990478515625,
+              756.5846557617188
+            ]
+          },
+          {
+            "evidence_id": "p1-e05",
+            "pdf_page": 1,
+            "label": "specification_footnotes",
+            "source_type": "text",
+            "text": "✽1 Ripple current (100 kHz/ +45 °C ), ✽2 ESR (100 kHz/+20 °C) ✽3 tan d (120 Hz/+20 °C) ✽4 After 5 minutes ◆ Please refer to each page in this catarog for “Reflow conditions” and “Taping specifications”.",
+            "word_ids": [
+              546,
+              547,
+              548,
+              549,
+              550,
+              551,
+              552,
+              553,
+              554,
+              555,
+              556,
+              557,
+              558,
+              559,
+              560,
+              561,
+              562,
+              563,
+              564,
+              565,
+              566,
+              567,
+              568,
+              569,
+              570,
+              571,
+              572,
+              573,
+              574,
+              575,
+              576,
+              577,
+              578,
+              579,
+              580,
+              581,
+              582,
+              583
+            ],
+            "bbox_pdf": [
+              52.30316162109375,
+              760.0482177734375,
+              396.3161315917969,
+              776.35302734375
+            ]
+          },
+          {
+            "evidence_id": "p1-e06",
+            "pdf_page": 1,
+            "label": "exact_target_pn_row",
+            "source_type": "table",
+            "text": "105 4.0 105 68 3.5 2.8 1.9 B2 1100 70 0.08 27.2 4TPB68M 2000",
+            "word_ids": [
+              357,
+              358,
+              359,
+              360,
+              361,
+              362,
+              363,
+              364,
+              365,
+              366,
+              367,
+              368,
+              369,
+              370
+            ],
+            "bbox_pdf": [
+              115.49735260009766,
+              629.4716186523438,
+              536.989013671875,
+              636.9716186523438
+            ]
+          }
+        ]
+      }
+    ],
+    "accuracy_evaluated": false,
+    "accuracy": null
+  },
+  "prior_live_runs": [
+    {
+      "result_sha256": "e53a005c87ade7db0686a58d830453e8cf992fc2cb9d353fe9324399eb1cf1d7",
+      "requested_model": "gemini-3.1-flash-lite",
+      "prompt_version": "07.2-gemini",
+      "requests_attempted": 1,
+      "responses_received": 0,
+      "parsed_responses": 0,
+      "execution_records": [
+        {
+          "document_id": "vishay_t55",
+          "part_number": "T55A226M2R5C0200",
+          "provider": "gemini",
+          "requested_model": "gemini-3.1-flash-lite",
+          "model": null,
+          "prompt_version": "07.2-gemini",
+          "request_attempted": true,
+          "response_received": false,
+          "processing_seconds": 17.602867299996433,
+          "input_tokens": null,
+          "output_tokens": null,
+          "thinking_tokens": null,
+          "total_tokens": null,
+          "response_id": null,
+          "finish_reason": null,
+          "execution_status": "error",
+          "error_type": "ServerError",
+          "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+          "http_status": 503,
+          "quota_warning": null
+        },
+        {
+          "document_id": "kyocera_avx_tcj",
+          "part_number": "TCJU337M016R0050E",
+          "provider": "gemini",
+          "requested_model": "gemini-3.1-flash-lite",
+          "model": null,
+          "prompt_version": "07.2-gemini",
+          "request_attempted": false,
+          "response_received": false,
+          "processing_seconds": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "thinking_tokens": null,
+          "total_tokens": null,
+          "response_id": null,
+          "finish_reason": null,
+          "execution_status": "blocked",
+          "error_type": "previous_sample_not_validated",
+          "error_message": "앞 표본의 응답 또는 원문 검사가 통과하지 못함",
+          "http_status": null,
+          "quota_warning": null
+        },
+        {
+          "document_id": "panasonic_tpb",
+          "part_number": "4TPB68M",
+          "provider": "gemini",
+          "requested_model": "gemini-3.1-flash-lite",
+          "model": null,
+          "prompt_version": "07.2-gemini",
+          "request_attempted": false,
+          "response_received": false,
+          "processing_seconds": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "thinking_tokens": null,
+          "total_tokens": null,
+          "response_id": null,
+          "finish_reason": null,
+          "execution_status": "blocked",
+          "error_type": "previous_sample_not_validated",
+          "error_message": "앞 표본의 응답 또는 원문 검사가 통과하지 못함",
+          "http_status": null,
+          "quota_warning": null
+        }
+      ],
+      "responses": []
+    },
+    {
+      "result_sha256": "16292ead0e97195124e2185e6597bbe30801f088583f3eb145c5fd2d4402d711",
+      "requested_model": "gemini-3.1-flash-lite",
+      "prompt_version": "07.2-gemini",
+      "requests_attempted": 1,
+      "responses_received": 0,
+      "parsed_responses": 0,
+      "execution_records": [
+        {
+          "document_id": "vishay_t55",
+          "part_number": "T55A226M2R5C0200",
+          "provider": "gemini",
+          "requested_model": "gemini-3.1-flash-lite",
+          "model": null,
+          "prompt_version": "07.2-gemini",
+          "request_attempted": true,
+          "response_received": false,
+          "processing_seconds": 2.9434662999992725,
+          "input_tokens": null,
+          "output_tokens": null,
+          "thinking_tokens": null,
+          "total_tokens": null,
+          "response_id": null,
+          "finish_reason": null,
+          "execution_status": "error",
+          "error_type": "ServerError",
+          "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+          "http_status": 503,
+          "quota_warning": null
+        },
+        {
+          "document_id": "kyocera_avx_tcj",
+          "part_number": "TCJU337M016R0050E",
+          "provider": "gemini",
+          "requested_model": "gemini-3.1-flash-lite",
+          "model": null,
+          "prompt_version": "07.2-gemini",
+          "request_attempted": false,
+          "response_received": false,
+          "processing_seconds": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "thinking_tokens": null,
+          "total_tokens": null,
+          "response_id": null,
+          "finish_reason": null,
+          "execution_status": "blocked",
+          "error_type": "previous_sample_not_validated",
+          "error_message": "앞 표본의 응답 또는 원문 검사가 통과하지 못함",
+          "http_status": null,
+          "quota_warning": null
+        },
+        {
+          "document_id": "panasonic_tpb",
+          "part_number": "4TPB68M",
+          "provider": "gemini",
+          "requested_model": "gemini-3.1-flash-lite",
+          "model": null,
+          "prompt_version": "07.2-gemini",
+          "request_attempted": false,
+          "response_received": false,
+          "processing_seconds": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "thinking_tokens": null,
+          "total_tokens": null,
+          "response_id": null,
+          "finish_reason": null,
+          "execution_status": "blocked",
+          "error_type": "previous_sample_not_validated",
+          "error_message": "앞 표본의 응답 또는 원문 검사가 통과하지 못함",
+          "http_status": null,
+          "quota_warning": null
+        }
+      ],
+      "responses": []
+    }
+  ],
+  "connection_checks": [
+    {
+      "model": "gemini-3.5-flash-lite",
+      "kind": "plain_text",
+      "http_status": 200,
+      "requests_attempted": 1,
+      "processing_seconds": 3.872,
+      "input_tokens": 10,
+      "output_tokens": 8,
+      "counts_toward_extraction_limit": false
+    }
+  ],
   "requests_planned": 3,
-  "requests_attempted": 0,
-  "responses_received": 0,
+  "requests_attempted": 1,
+  "responses_received": 1,
   "parsed_responses": 0,
   "request_plans": [
     {
@@ -108,28 +2523,37 @@
       "document_id": "vishay_t55",
       "part_number": "T55A226M2R5C0200",
       "provider": "gemini",
-      "requested_model": "gemini-3.1-flash-lite",
-      "model": null,
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
       "prompt_version": "07.2-gemini",
-      "request_attempted": false,
-      "response_received": false,
-      "processing_seconds": null,
-      "input_tokens": null,
-      "output_tokens": null,
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.539474999997765,
+      "input_tokens": 10178,
+      "output_tokens": 1468,
       "thinking_tokens": null,
-      "total_tokens": null,
-      "response_id": null,
-      "finish_reason": null,
-      "execution_status": "blocked",
-      "error_type": "missing_api_key",
-      "http_status": null,
-      "quota_warning": null
+      "total_tokens": 11646,
+      "response_id": "Rb_yap-gBvfLrfcP5fTP2A0",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": 200,
+      "quota_warning": null,
+      "schema_validation_issues": [
+        {
+          "specification": "surge_voltage",
+          "field": "unit",
+          "type": "required_for_found",
+          "message": "서지전압을 found로 반환했으나 필수 단위가 비어 있어 Pydantic 검증에 실패함"
+        }
+      ]
     },
     {
       "document_id": "kyocera_avx_tcj",
       "part_number": "TCJU337M016R0050E",
       "provider": "gemini",
-      "requested_model": "gemini-3.1-flash-lite",
+      "requested_model": "gemini-3.5-flash-lite",
       "model": null,
       "prompt_version": "07.2-gemini",
       "request_attempted": false,
@@ -142,7 +2566,8 @@
       "response_id": null,
       "finish_reason": null,
       "execution_status": "blocked",
-      "error_type": "missing_api_key",
+      "error_type": "previous_sample_not_validated",
+      "error_message": "앞 표본의 응답 또는 원문 검사가 통과하지 못함",
       "http_status": null,
       "quota_warning": null
     },
@@ -150,7 +2575,7 @@
       "document_id": "panasonic_tpb",
       "part_number": "4TPB68M",
       "provider": "gemini",
-      "requested_model": "gemini-3.1-flash-lite",
+      "requested_model": "gemini-3.5-flash-lite",
       "model": null,
       "prompt_version": "07.2-gemini",
       "request_attempted": false,
@@ -163,12 +2588,47 @@
       "response_id": null,
       "finish_reason": null,
       "execution_status": "blocked",
-      "error_type": "missing_api_key",
+      "error_type": "previous_sample_not_validated",
+      "error_message": "앞 표본의 응답 또는 원문 검사가 통과하지 못함",
       "http_status": null,
       "quota_warning": null
     }
   ],
-  "responses": [],
+  "responses": [
+    {
+      "document_id": "vishay_t55",
+      "part_number": "T55A226M2R5C0200",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.539474999997765,
+      "input_tokens": 10178,
+      "output_tokens": 1468,
+      "thinking_tokens": null,
+      "total_tokens": 11646,
+      "response_id": "Rb_yap-gBvfLrfcP5fTP2A0",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": 200,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"T55A226M2R5C0200\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"2.5\",\n      \"unit\": \"VDC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 5,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p5-e05\",\n      \"evidence\": \"2.5 VDC\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p5-e05\",\n          \"page\": 5,\n          \"quote\": \"2.5 VDC\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"3.2\",\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"105 °C, 1000 successive test cycles in series with a 1 kΩ resistor at the rate of 30 s ON, 30 s OFF; test voltage per table below\",\n      \"page\": 15,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p15-e07\",\n      \"evidence\": \"3.2\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e07\",\n          \"page\": 15,\n          \"quote\": \"Surge voltage 3.2 5.2 8.2 9.0 13 16.2 20 23 29 40 57 72\"\n        },\n        {\n          \"evidence_id\": \"p15-e07\",\n          \"page\": 15,\n          \"quote\": \"Rated voltage 2.5 4.0 6.3 7.0 10 12.5 16 20 25 35 50 63\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"22\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 5,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p5-e09\",\n      \"evidence\": \"22 A T55A226M2R5C0200\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p5-e09\",\n          \"page\": 5,\n          \"quote\": \"22 A T55A226M2R5C0200\"\n        },\n        {\n          \"evidence_id\": \"p5-e04\",\n          \"page\": 5,\n          \"quote\": \"CAPACITANCE (μF)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"± 20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance Tolerance: ± 20 %\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance Tolerance: ± 20 %\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"200\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"+ 25 °C 100 kHz\",\n      \"page\": 5,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p5-e09\",\n      \"evidence\": \"200\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p5-e09\",\n          \"page\": 5,\n          \"quote\": \"200\"\n        },\n        {\n          \"evidence_id\": \"p5-e04\",\n          \"page\": 5,\n          \"quote\": \"MAX. ESR AT + 25 °C 100 kHz (mΩ)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"-55 °C to +105 °C / +125 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105 / +125\",\n      \"condition\": \"above 105 °C, additional voltage derating is required\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"-55 °C to +105 °C / +125 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Operating Temperature: -55 °C to +105 °C / +125 °C (above 105 °C, additional voltage derating is required)\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "schema_validation_issues": [
+        {
+          "specification": "surge_voltage",
+          "field": "unit",
+          "type": "required_for_found",
+          "message": "서지전압을 found로 반환했으나 필수 단위가 비어 있어 Pydantic 검증에 실패함"
+        }
+      ]
+    }
+  ],
   "source_excerpts": [
     {
       "document_id": "vishay_t55",
@@ -2277,5 +4737,4573 @@
     }
   ],
   "accuracy_evaluated": false,
-  "accuracy": null
+  "accuracy": null,
+  "independent_validation": {
+    "revalidated_at": "2026-11-10T07:04:39+00:00",
+    "mode": "offline_saved_response",
+    "document_id": "vishay_t55",
+    "part_number": "T55A226M2R5C0200",
+    "model": "gemini-3.5-flash-lite",
+    "historical_http_status": 200,
+    "raw_response_sha256": "8002f305e87fc82f4a6974537938e724ff89e2ad4a2b85f5973a01116a180f17",
+    "source_pdf_sha256": "b6b2af34f4c63971bd089c49e4477fcee69957dbe2d66aee397b23df160595d4",
+    "additional_api_requests": 0,
+    "parts_reviewed": 1,
+    "original_extraction_counts": {
+      "found": 6
+    },
+    "verification_counts": {
+      "verified": 3,
+      "failed": 3,
+      "unverifiable": 0
+    },
+    "accuracy_evaluated": false,
+    "structure": {
+      "status": "passed",
+      "json_parsed": true,
+      "part_number": "T55A226M2R5C0200",
+      "part_number_matches": true,
+      "field_shapes": {
+        "rated_voltage": "object",
+        "surge_voltage": "object",
+        "capacitance": "object",
+        "tolerance": "object",
+        "esr": "object",
+        "operating_temperature": "object"
+      },
+      "issues": []
+    },
+    "specifications": {
+      "rated_voltage": {
+        "raw": {
+          "status": "found",
+          "value": "2.5",
+          "unit": "VDC",
+          "value_min": null,
+          "value_max": null,
+          "condition": null,
+          "page": 5,
+          "scope": "series",
+          "source_type": "text",
+          "evidence_id": "p5-e05",
+          "evidence": "2.5 VDC",
+          "supporting_evidence": [
+            {
+              "evidence_id": "p5-e05",
+              "page": 5,
+              "quote": "2.5 VDC"
+            }
+          ],
+          "reason": null
+        },
+        "schema_status": "passed",
+        "schema_errors": [],
+        "verification_status": "failed",
+        "issues": [
+          "source_type_mismatch"
+        ],
+        "source_text_matched": true,
+        "normalized": {
+          "value": "2.5",
+          "unit": "V",
+          "rule": "VDC -> V: multiply by 1"
+        },
+        "automated_verification_status": "failed",
+        "automated_issues": [
+          "source_type_mismatch"
+        ],
+        "pdf_review": {
+          "pages": [
+            5
+          ],
+          "finding": "5쪽에서 대상 P/N이 2.5 VDC 그룹에 속함. 응답은 표의 그룹 헤더를 일반 본문으로 분류하고 시리즈 범위로 제시함."
+        },
+        "issue_details": [
+          {
+            "code": "source_type_mismatch",
+            "message": "표의 그룹 헤더를 일반 본문으로 분류함"
+          }
+        ]
+      },
+      "surge_voltage": {
+        "raw": {
+          "status": "found",
+          "value": "3.2",
+          "unit": null,
+          "value_min": null,
+          "value_max": null,
+          "condition": "105 °C, 1000 successive test cycles in series with a 1 kΩ resistor at the rate of 30 s ON, 30 s OFF; test voltage per table below",
+          "page": 15,
+          "scope": "series",
+          "source_type": "table",
+          "evidence_id": "p15-e07",
+          "evidence": "3.2",
+          "supporting_evidence": [
+            {
+              "evidence_id": "p15-e07",
+              "page": 15,
+              "quote": "Surge voltage 3.2 5.2 8.2 9.0 13 16.2 20 23 29 40 57 72"
+            },
+            {
+              "evidence_id": "p15-e07",
+              "page": 15,
+              "quote": "Rated voltage 2.5 4.0 6.3 7.0 10 12.5 16 20 25 35 50 63"
+            }
+          ],
+          "reason": null
+        },
+        "schema_status": "failed",
+        "schema_errors": [
+          {
+            "type": "value_error",
+            "loc": [],
+            "msg": "Value error, found에는 값·단위·범위·유형·근거 필요함"
+          }
+        ],
+        "verification_status": "failed",
+        "issues": [
+          "specification_schema_error",
+          "missing_unit",
+          "unit_unverifiable"
+        ],
+        "source_text_matched": true,
+        "normalized": null,
+        "automated_verification_status": "failed",
+        "automated_issues": [
+          "specification_schema_error",
+          "missing_unit"
+        ],
+        "pdf_review": {
+          "pages": [
+            5,
+            15
+          ],
+          "finding": "15쪽의 정격 2.5와 서지 3.2가 같은 열에 있고 시험 조건 문구 일치함. 서지 표에 명시 단위 없음.",
+          "unit_status": "unit_unverifiable"
+        },
+        "issue_details": [
+          {
+            "code": "specification_schema_error",
+            "message": "Pydantic 규격 스키마 검사 실패"
+          },
+          {
+            "code": "missing_unit",
+            "message": "found 응답에 필수 단위가 비어 있음"
+          },
+          {
+            "code": "unit_unverifiable",
+            "message": "서지 표에서 3.2에 적용되는 단위 표기를 확인할 수 없음"
+          }
+        ]
+      },
+      "capacitance": {
+        "raw": {
+          "status": "found",
+          "value": "22",
+          "unit": "μF",
+          "value_min": null,
+          "value_max": null,
+          "condition": null,
+          "page": 5,
+          "scope": "pn",
+          "source_type": "table",
+          "evidence_id": "p5-e09",
+          "evidence": "22 A T55A226M2R5C0200",
+          "supporting_evidence": [
+            {
+              "evidence_id": "p5-e09",
+              "page": 5,
+              "quote": "22 A T55A226M2R5C0200"
+            },
+            {
+              "evidence_id": "p5-e04",
+              "page": 5,
+              "quote": "CAPACITANCE (μF)"
+            }
+          ],
+          "reason": null
+        },
+        "schema_status": "passed",
+        "schema_errors": [],
+        "verification_status": "verified",
+        "issues": [],
+        "source_text_matched": true,
+        "normalized": {
+          "value": "22",
+          "unit": "µF",
+          "rule": "µF -> µF: multiply by 1"
+        },
+        "automated_verification_status": "verified",
+        "automated_issues": [],
+        "pdf_review": {
+          "pages": [
+            5
+          ],
+          "finding": "5쪽 대상 P/N 행의 22와 정전용량 (μF) 열 제목 일치함."
+        },
+        "issue_details": []
+      },
+      "tolerance": {
+        "raw": {
+          "status": "found",
+          "value": "± 20",
+          "unit": "%",
+          "value_min": null,
+          "value_max": null,
+          "condition": null,
+          "page": 1,
+          "scope": "series",
+          "source_type": "text",
+          "evidence_id": "p1-e01",
+          "evidence": "Capacitance Tolerance: ± 20 %",
+          "supporting_evidence": [
+            {
+              "evidence_id": "p1-e01",
+              "page": 1,
+              "quote": "Capacitance Tolerance: ± 20 %"
+            }
+          ],
+          "reason": null
+        },
+        "schema_status": "passed",
+        "schema_errors": [],
+        "verification_status": "verified",
+        "issues": [],
+        "source_text_matched": true,
+        "normalized": {
+          "value": "±20",
+          "unit": "%",
+          "rule": "% -> %: multiply by 1"
+        },
+        "automated_verification_status": "unverifiable",
+        "automated_issues": [
+          "pn_field_or_series_scope_not_proved_by_automatic_check"
+        ],
+        "pdf_review": {
+          "pages": [
+            1,
+            5
+          ],
+          "finding": "1쪽 시리즈 전기 특성에 ± 20 % 표기됨. 1쪽 주문 코드 M과 5쪽 대상 P/N의 M이 일치함."
+        },
+        "issue_details": []
+      },
+      "esr": {
+        "raw": {
+          "status": "found",
+          "value": "200",
+          "unit": "mΩ",
+          "value_min": null,
+          "value_max": null,
+          "condition": "+ 25 °C 100 kHz",
+          "page": 5,
+          "scope": "pn",
+          "source_type": "table",
+          "evidence_id": "p5-e09",
+          "evidence": "200",
+          "supporting_evidence": [
+            {
+              "evidence_id": "p5-e09",
+              "page": 5,
+              "quote": "200"
+            },
+            {
+              "evidence_id": "p5-e04",
+              "page": 5,
+              "quote": "MAX. ESR AT + 25 °C 100 kHz (mΩ)"
+            }
+          ],
+          "reason": null
+        },
+        "schema_status": "passed",
+        "schema_errors": [],
+        "verification_status": "verified",
+        "issues": [],
+        "source_text_matched": true,
+        "normalized": {
+          "value": "200",
+          "unit": "mΩ",
+          "rule": "mΩ -> mΩ: multiply by 1"
+        },
+        "automated_verification_status": "unverifiable",
+        "automated_issues": [
+          "pn_field_or_series_scope_not_proved_by_automatic_check"
+        ],
+        "pdf_review": {
+          "pages": [
+            5
+          ],
+          "finding": "5쪽 대상 P/N 행의 200이 MAX. ESR 열에 위치함. 단위 mΩ와 조건 +25 °C, 100 kHz 일치함."
+        },
+        "issue_details": []
+      },
+      "operating_temperature": {
+        "raw": {
+          "status": "found",
+          "value": "-55 °C to +105 °C / +125 °C",
+          "unit": "°C",
+          "value_min": "-55",
+          "value_max": "+105 / +125",
+          "condition": "above 105 °C, additional voltage derating is required",
+          "page": 1,
+          "scope": "series",
+          "source_type": "text",
+          "evidence_id": "p1-e01",
+          "evidence": "-55 °C to +105 °C / +125 °C",
+          "supporting_evidence": [
+            {
+              "evidence_id": "p1-e01",
+              "page": 1,
+              "quote": "Operating Temperature: -55 °C to +105 °C / +125 °C (above 105 °C, additional voltage derating is required)"
+            }
+          ],
+          "reason": null
+        },
+        "schema_status": "passed",
+        "schema_errors": [],
+        "verification_status": "failed",
+        "issues": [
+          "temperature_range_not_in_primary_evidence",
+          "invalid_unit_value_or_range",
+          "series_temperature_not_target_specific"
+        ],
+        "source_text_matched": true,
+        "normalized": null,
+        "automated_verification_status": "failed",
+        "automated_issues": [
+          "temperature_range_not_in_primary_evidence",
+          "invalid_unit_value_or_range"
+        ],
+        "pdf_review": {
+          "pages": [
+            1,
+            5
+          ],
+          "finding": "1쪽 시리즈 범위에는 +105 °C / +125 °C가 병기됨. 5쪽 대상 P/N 행의 최대 동작 온도는 105 °C임."
+        },
+        "issue_details": [
+          {
+            "code": "temperature_range_not_in_primary_evidence",
+            "message": "응답의 복합 상한이 하나의 온도 값으로 원문에 나오지 않음"
+          },
+          {
+            "code": "invalid_unit_value_or_range",
+            "message": "복합 상한을 단일 십진수 범위 상한으로 검사할 수 없음"
+          },
+          {
+            "code": "series_temperature_not_target_specific",
+            "message": "시리즈의 125 °C 상한은 대상 P/N 표의 105 °C와 적용 범위가 다름"
+          }
+        ]
+      }
+    }
+  },
+  "remaining_pn_run": {
+    "execution_mode": "authorized_live_once_then_offline_replay",
+    "requested_model": "gemini-3.5-flash-lite",
+    "free_tier": {
+      "project_confirmed_by_user": true,
+      "public_standard_input_output_free": true,
+      "actual_cost_usd": null,
+      "billing_data_available": false,
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing?frmapp=yes"
+    },
+    "sdk_retry_attempts": 1,
+    "requests_dispatched": 2,
+    "notebook_additional_requests": 0,
+    "stop_reason": "http_503",
+    "request_plans": [
+      {
+        "document_id": "kyocera_avx_tcj",
+        "part_number": "TCJU337M016R0050E",
+        "manufacturer": "KYOCERA AVX",
+        "pdf_sha256": "ab956be23ec05beb29dc7c9561d28de7263c810d429f86d646a7c470a5edd264",
+        "pdf_pages": [
+          1,
+          6,
+          10,
+          11,
+          12
+        ],
+        "evidence": [
+          {
+            "evidence_id": "p1-e01",
+            "pdf_page": 1,
+            "label": "ordering_guide",
+            "source_type": "ordering_code",
+            "text": "HOW TO ORDER TCJ Type A Case Size See table above E Additional Character E = Black resin (It is possible to order PN without \"E\" as identical product) M Tolerance M = ±20% R Packaging R = Leadfree 7\" Reel S = Leadfree 13\" Reel 226 Capacitance Code pF code: 1st two digits represent significant figures, 3rd digit represents multiplier (number of zeros to follow) 0300 ESR in mΩ 004 Rated DC Voltage 002 = 2.5Vdc 004 = 4Vdc 006 = 6.3Vdc 010 = 10Vdc 016 = 16Vdc 020 = 20Vdc 025 = 25Vdc 035 = 35Vdc 050 = 50Vdc 063 = 63Vdc 075 = 75Vdc 100 = 100Vdc 125 = 125Vdc",
+            "bbox_pdf": [
+              27.719999313354492,
+              477.08941650390625,
+              577.6343383789062,
+              601.8152465820312
+            ],
+            "word_center_points_in_text_order": [
+              [
+                39.6,
+                483.7
+              ],
+              [
+                60.5,
+                483.7
+              ],
+              [
+                86.6,
+                483.7
+              ],
+              [
+                37.0,
+                498.6
+              ],
+              [
+                37.0,
+                527.0
+              ],
+              [
+                75.7,
+                498.6
+              ],
+              [
+                75.7,
+                527.0
+              ],
+              [
+                75.7,
+                536.6
+              ],
+              [
+                66.8,
+                545.4
+              ],
+              [
+                82.5,
+                545.4
+              ],
+              [
+                75.7,
+                553.8
+              ],
+              [
+                543.8,
+                498.6
+              ],
+              [
+                543.8,
+                527.0
+              ],
+              [
+                543.8,
+                536.6
+              ],
+              [
+                522.6,
+                545.4
+              ],
+              [
+                528.3,
+                545.4
+              ],
+              [
+                540.7,
+                545.4
+              ],
+              [
+                559.2,
+                545.4
+              ],
+              [
+                513.3,
+                553.8
+              ],
+              [
+                521.0,
+                553.8
+              ],
+              [
+                538.5,
+                553.8
+              ],
+              [
+                556.4,
+                553.8
+              ],
+              [
+                569.4,
+                553.8
+              ],
+              [
+                521.7,
+                562.2
+              ],
+              [
+                539.7,
+                562.2
+              ],
+              [
+                557.3,
+                562.2
+              ],
+              [
+                567.0,
+                562.2
+              ],
+              [
+                529.8,
+                570.6
+              ],
+              [
+                557.9,
+                570.6
+              ],
+              [
+                234.1,
+                498.6
+              ],
+              [
+                234.1,
+                527.0
+              ],
+              [
+                221.8,
+                535.8
+              ],
+              [
+                228.6,
+                535.8
+              ],
+              [
+                240.8,
+                535.8
+              ],
+              [
+                409.2,
+                498.6
+              ],
+              [
+                409.2,
+                527.0
+              ],
+              [
+                375.6,
+                535.8
+              ],
+              [
+                381.5,
+                535.8
+              ],
+              [
+                399.3,
+                535.8
+              ],
+              [
+                418.4,
+                535.8
+              ],
+              [
+                430.4,
+                535.8
+              ],
+              [
+                375.6,
+                544.2
+              ],
+              [
+                381.3,
+                544.2
+              ],
+              [
+                399.1,
+                544.2
+              ],
+              [
+                420.1,
+                544.2
+              ],
+              [
+                433.8,
+                544.2
+              ],
+              [
+                152.3,
+                498.6
+              ],
+              [
+                141.8,
+                527.0
+              ],
+              [
+                176.3,
+                527.0
+              ],
+              [
+                120.3,
+                535.8
+              ],
+              [
+                134.8,
+                535.8
+              ],
+              [
+                150.3,
+                535.8
+              ],
+              [
+                162.8,
+                535.8
+              ],
+              [
+                179.4,
+                535.8
+              ],
+              [
+                121.9,
+                544.2
+              ],
+              [
+                155.9,
+                544.2
+              ],
+              [
+                186.3,
+                544.2
+              ],
+              [
+                110.4,
+                552.6
+              ],
+              [
+                124.4,
+                552.6
+              ],
+              [
+                150.4,
+                552.6
+              ],
+              [
+                184.4,
+                552.6
+              ],
+              [
+                122.7,
+                561.0
+              ],
+              [
+                141.2,
+                561.0
+              ],
+              [
+                154.9,
+                561.0
+              ],
+              [
+                168.7,
+                561.0
+              ],
+              [
+                184.5,
+                561.0
+              ],
+              [
+                475.0,
+                498.6
+              ],
+              [
+                463.5,
+                527.0
+              ],
+              [
+                476.3,
+                527.0
+              ],
+              [
+                487.9,
+                527.0
+              ],
+              [
+                315.5,
+                498.6
+              ],
+              [
+                315.5,
+                526.6
+              ],
+              [
+                300.4,
+                535.6
+              ],
+              [
+                321.7,
+                535.6
+              ],
+              [
+                274.7,
+                546.8
+              ],
+              [
+                284.5,
+                546.8
+              ],
+              [
+                299.3,
+                546.8
+              ],
+              [
+                274.7,
+                555.2
+              ],
+              [
+                284.6,
+                555.2
+              ],
+              [
+                296.3,
+                555.2
+              ],
+              [
+                274.7,
+                563.6
+              ],
+              [
+                284.5,
+                563.6
+              ],
+              [
+                299.2,
+                563.6
+              ],
+              [
+                274.4,
+                572.0
+              ],
+              [
+                283.9,
+                572.0
+              ],
+              [
+                297.5,
+                572.0
+              ],
+              [
+                274.4,
+                580.4
+              ],
+              [
+                283.9,
+                580.4
+              ],
+              [
+                297.4,
+                580.4
+              ],
+              [
+                274.6,
+                588.8
+              ],
+              [
+                284.4,
+                588.8
+              ],
+              [
+                298.1,
+                588.8
+              ],
+              [
+                274.6,
+                597.2
+              ],
+              [
+                284.3,
+                597.2
+              ],
+              [
+                298.2,
+                597.2
+              ],
+              [
+                324.9,
+                546.8
+              ],
+              [
+                334.6,
+                546.8
+              ],
+              [
+                348.4,
+                546.8
+              ],
+              [
+                324.9,
+                555.2
+              ],
+              [
+                334.6,
+                555.2
+              ],
+              [
+                348.5,
+                555.2
+              ],
+              [
+                325.0,
+                563.6
+              ],
+              [
+                334.7,
+                563.6
+              ],
+              [
+                348.6,
+                563.6
+              ],
+              [
+                324.8,
+                572.0
+              ],
+              [
+                334.4,
+                572.0
+              ],
+              [
+                348.2,
+                572.0
+              ],
+              [
+                324.8,
+                580.4
+              ],
+              [
+                334.4,
+                580.4
+              ],
+              [
+                350.1,
+                580.4
+              ],
+              [
+                324.7,
+                588.8
+              ],
+              [
+                334.1,
+                588.8
+              ],
+              [
+                349.8,
+                588.8
+              ]
+            ]
+          },
+          {
+            "evidence_id": "p1-e02",
+            "pdf_page": 1,
+            "label": "series_technical_context",
+            "source_type": "text",
+            "text": "TECHNICAL SPECIFICATIONS (COMMON FOR ALL TCJ SERIES) Technical Data: All technical data relate to an ambient temperature of +25°C Capacitance Tolerance: ±20% Leakage Current DCL: 0.1CV Resistance to soldering heat: 3x reflow cycles according to J-STD-020 NOTE: Conductive Polymer Capacitors are designed to operate within the limits of the environmental conditions specified for each series. If operated continuously at their maximum temperature and / or humidity limit, or beyond these limits, capacitors may exhibit a parametric shift in capacitance and increases in ESR. These changes may occur earlier if the specified environmental conditions are exceeded. Similarly, their normal operational time period will be significantly extended if their general duty cycle includes operation below maximum temperature within humidity controlled environments. Careful attention should be paid to maximum temperature with associated high humidity environments as well as voltage derating, ripple current and current surges. Please reference the KYOCERA AVX Conductive Polymer Capacitor Guidelines for more information or contact factory for application assistance.",
+            "bbox_pdf": [
+              27.719999313354492,
+              621.3594360351562,
+              563.503662109375,
+              733.6053466796875
+            ]
+          },
+          {
+            "evidence_id": "p6-e03",
+            "pdf_page": 6,
+            "label": "table_header",
+            "source_type": "table",
+            "text": "RATINGS & PART NUMBER REFERENCE Part Number Case Size Capacitance (μF) Rated Voltage (V) Maximum Operating Temperature (ºC) DCL Max. (μA) DF Max. (%) ESR Max. @ 100kHz (mΩ) 100kHz RMS Current (mA) Product Category MSL 45ºC 85ºC 105ºC 125ºC",
+            "bbox_pdf": [
+              28.11400032043457,
+              89.4315185546875,
+              575.4847412109375,
+              139.73385620117188
+            ],
+            "word_center_points_in_text_order": [
+              [
+                50.0,
+                96.1
+              ],
+              [
+                77.8,
+                96.1
+              ],
+              [
+                96.6,
+                96.1
+              ],
+              [
+                133.3,
+                96.1
+              ],
+              [
+                186.0,
+                96.1
+              ],
+              [
+                56.3,
+                122.5
+              ],
+              [
+                76.3,
+                122.5
+              ],
+              [
+                122.1,
+                118.3
+              ],
+              [
+                122.1,
+                126.7
+              ],
+              [
+                157.2,
+                118.3
+              ],
+              [
+                157.2,
+                126.7
+              ],
+              [
+                196.5,
+                114.1
+              ],
+              [
+                196.5,
+                122.5
+              ],
+              [
+                196.5,
+                130.9
+              ],
+              [
+                238.6,
+                109.9
+              ],
+              [
+                238.6,
+                118.3
+              ],
+              [
+                238.6,
+                126.7
+              ],
+              [
+                238.6,
+                135.1
+              ],
+              [
+                275.3,
+                118.3
+              ],
+              [
+                290.4,
+                118.3
+              ],
+              [
+                283.5,
+                126.7
+              ],
+              [
+                310.5,
+                118.3
+              ],
+              [
+                323.5,
+                118.3
+              ],
+              [
+                318.7,
+                126.7
+              ],
+              [
+                352.3,
+                114.1
+              ],
+              [
+                366.9,
+                114.1
+              ],
+              [
+                348.3,
+                122.5
+              ],
+              [
+                363.8,
+                122.5
+              ],
+              [
+                360.2,
+                130.9
+              ],
+              [
+                422.6,
+                112.5
+              ],
+              [
+                442.9,
+                112.5
+              ],
+              [
+                463.0,
+                112.5
+              ],
+              [
+                483.2,
+                112.5
+              ],
+              [
+                534.4,
+                118.3
+              ],
+              [
+                534.4,
+                126.7
+              ],
+              [
+                568.4,
+                122.5
+              ],
+              [
+                401.6,
+                129.6
+              ],
+              [
+                434.4,
+                129.6
+              ],
+              [
+                467.1,
+                129.6
+              ],
+              [
+                499.9,
+                129.6
+              ]
+            ]
+          },
+          {
+            "evidence_id": "p10-e04",
+            "pdf_page": 10,
+            "label": "category_heading",
+            "source_type": "text",
+            "text": "PRODUCT CATEGORY 0, 1 (TEMPERATURE RANGE -55°C TO +125°C)",
+            "bbox_pdf": [
+              27.89579963684082,
+              89.42938232421875,
+              350.4947814941406,
+              102.69937896728516
+            ]
+          },
+          {
+            "evidence_id": "p10-e05",
+            "pdf_page": 10,
+            "label": "surge_test_conditions",
+            "source_type": "table",
+            "text": "Surge Voltage Apply 1.3x 2/3x rated voltage (Ur) at 125ºC for 1000 cycles of duration 6 min (30 sec charge, 5 min 30 sec discharge) through a charge / discharge resistance of 1000Ω",
+            "bbox_pdf": [
+              74.4825210571289,
+              382.5735168457031,
+              280.3373107910156,
+              419.5260314941406
+            ]
+          },
+          {
+            "evidence_id": "p11-e06",
+            "pdf_page": 11,
+            "label": "category_heading",
+            "source_type": "text",
+            "text": "PRODUCT CATEGORY 2, 3, 4 (TEMPERATURE RANGE -55°C TO +105°C)",
+            "bbox_pdf": [
+              27.89579963684082,
+              89.42938232421875,
+              361.16180419921875,
+              102.69937896728516
+            ]
+          },
+          {
+            "evidence_id": "p11-e07",
+            "pdf_page": 11,
+            "label": "surge_test_conditions",
+            "source_type": "table",
+            "text": "Surge Voltage Apply 1.3x rated voltage (Ur) at 105ºC for CATEGORY 2, or apply 1.3x 0.8x rated voltage (Ur) at 105ºC for CATEGORY 3, 4 for 1000 cycles of duration 6 min (30 sec charge, 5 min 30 sec discharge) through a charge / discharge resistance of 1000Ω",
+            "bbox_pdf": [
+              67.2201156616211,
+              390.5036315917969,
+              283.2546081542969,
+              436.4561462402344
+            ]
+          },
+          {
+            "evidence_id": "p12-e08",
+            "pdf_page": 12,
+            "label": "category_heading",
+            "source_type": "text",
+            "text": "PRODUCT CATEGORY 5 (TEMPERATURE RANGE -55°C TO +85°C)",
+            "bbox_pdf": [
+              27.89579963684082,
+              89.42938232421875,
+              334.0877990722656,
+              102.69937896728516
+            ]
+          },
+          {
+            "evidence_id": "p12-e09",
+            "pdf_page": 12,
+            "label": "surge_test_conditions",
+            "source_type": "table",
+            "text": "Surge Voltage Apply 1.3x rated voltage (Ur) at 85ºC for 1000 cycles of duration 6 min (30 sec charge, 5 min 30 sec discharge) through a charge / discharge resistance of 1000Ω",
+            "bbox_pdf": [
+              75.2485580444336,
+              361.6935729980469,
+              310.9209899902344,
+              389.6460876464844
+            ]
+          },
+          {
+            "evidence_id": "p6-e10",
+            "pdf_page": 6,
+            "label": "exact_target_pn_row",
+            "source_type": "table",
+            "text": "TCJU337M016R0050E U 330 16 125 528 12 50 2800 2000 1300 700 1 3",
+            "bbox_pdf": [
+              37.59130859375,
+              284.5863037109375,
+              570.0792846679688,
+              292.5483093261719
+            ],
+            "word_center_points_in_text_order": [
+              [
+                69.3,
+                288.6
+              ],
+              [
+                122.1,
+                288.6
+              ],
+              [
+                157.1,
+                288.6
+              ],
+              [
+                196.5,
+                288.6
+              ],
+              [
+                238.5,
+                288.6
+              ],
+              [
+                283.4,
+                288.6
+              ],
+              [
+                318.7,
+                288.6
+              ],
+              [
+                360.2,
+                288.6
+              ],
+              [
+                401.6,
+                288.6
+              ],
+              [
+                434.3,
+                288.6
+              ],
+              [
+                467.1,
+                288.6
+              ],
+              [
+                499.8,
+                288.6
+              ],
+              [
+                534.4,
+                288.6
+              ],
+              [
+                568.4,
+                288.6
+              ]
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "pdf_page": 6,
+            "bbox_pdf": [
+              37.59130859375,
+              284.5863037109375,
+              100.93509674072266,
+              292.5483093261719
+            ],
+            "geometry_status": "missing_axis_candidate",
+            "row_evidence_id": "p6-e10",
+            "row_column_matches": [
+              {
+                "region_id": "d1",
+                "row_ids": [],
+                "column_ids": [
+                  33
+                ],
+                "other_pn_word_ids_in_candidate_rows": []
+              }
+            ],
+            "fallback_table_ids": [],
+            "structure_header_incomplete": true,
+            "detection_status": "detected",
+            "structure_candidate_boxes": [
+              {
+                "region_id": "d1",
+                "objects": [
+                  {
+                    "id": 33,
+                    "class": "table column",
+                    "bbox_pdf": [
+                      37.55795928955078,
+                      107.02842956542969,
+                      105.8706298828125,
+                      748.40900390625
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "user_input_characters": 8264,
+        "estimated_input_tokens_including_prompt_schema": 3257,
+        "max_output_tokens": 2500
+      },
+      {
+        "document_id": "panasonic_tpb",
+        "part_number": "4TPB68M",
+        "manufacturer": "Panasonic",
+        "pdf_sha256": "81271b5e89f3502338efd78cc5e6b163bc23f21fad040b203284464c8f40f1d5",
+        "pdf_pages": [
+          1
+        ],
+        "evidence": [
+          {
+            "evidence_id": "p1-e01",
+            "pdf_page": 1,
+            "label": "series_specification_table",
+            "source_type": "table",
+            "text": "Size code B2 D3L D4 Category temperature range –55 °C to +105 °C Rated voltage range 4 V.DC to 10 V.DC 6.3 V.DC to 10 V.DC Category voltage range 4 V.DC to 10 V.DC 6.3 V.DC to 10 V.DC Rated capacitance range 33 μF to 68 μF 150 μF to 330 μF 220 μF to 470 μF Capacitance tolerance ±20 % (120 Hz / + 20 °C) Leakage current Please see the attached characteristics list Dissipation factor (tan d) Please see the attached characteristics list Surge voltage (V.DC) Rated voltage × 1.15 Endurance +105 °C 2000h, (B2 size : 1000h) rated voltage appled ✽ Rated temp. +85 °C 1000h rated voltage applied Capacitance change Within ±20 % of the initial value tan d < 1.5 times of the initial limit DC leakage current Within the initial limit Damp heat (Steady State) +60 °C, 90 % to 95 %, 500 h, No-applied voltage Capacitance change Within +40 %, −20 % of the initial value tan d < 1.5 times of the initial limit DC leakage current < 3 times of the initial limit Specifi cations",
+            "bbox_pdf": [
+              53.73210144042969,
+              176.43116760253906,
+              518.7728881835938,
+              394.20672607421875
+            ]
+          },
+          {
+            "evidence_id": "p1-e02",
+            "pdf_page": 1,
+            "label": "ordering_marking_rules",
+            "source_type": "ordering_code",
+            "text": "R.Cap. code R. Voltage code Lot. No. Polarity marking(+) R. Voltage code Lot. No. R.Cap. code Polarity marking(+) R. Voltage code Lot. No. R.Cap. code Polarity marking(+) B2 Size D4 Size D3L Size R. Voltage (V.DC) 4.0 6.3 10.0 Code g j A R. Cap. (μF) 33 47 68 Code N7 S7 W7 B2 Size Marking",
+            "bbox_pdf": [
+              58.68109893798828,
+              404.62005615234375,
+              284.9554748535156,
+              555.6014404296875
+            ],
+            "word_center_points_in_text_order": [
+              [
+                125.4,
+                440.2
+              ],
+              [
+                143.2,
+                440.2
+              ],
+              [
+                68.7,
+                479.7
+              ],
+              [
+                83.2,
+                479.7
+              ],
+              [
+                101.7,
+                479.7
+              ],
+              [
+                131.8,
+                479.7
+              ],
+              [
+                143.2,
+                479.7
+              ],
+              [
+                74.7,
+                440.0
+              ],
+              [
+                98.4,
+                440.0
+              ],
+              [
+                195.0,
+                479.4
+              ],
+              [
+                209.6,
+                479.4
+              ],
+              [
+                228.1,
+                479.4
+              ],
+              [
+                258.6,
+                479.0
+              ],
+              [
+                269.9,
+                479.0
+              ],
+              [
+                249.2,
+                439.8
+              ],
+              [
+                267.1,
+                439.8
+              ],
+              [
+                198.6,
+                439.7
+              ],
+              [
+                222.2,
+                439.7
+              ],
+              [
+                70.1,
+                551.6
+              ],
+              [
+                84.6,
+                551.6
+              ],
+              [
+                103.1,
+                551.6
+              ],
+              [
+                135.5,
+                551.2
+              ],
+              [
+                146.8,
+                551.2
+              ],
+              [
+                124.3,
+                510.0
+              ],
+              [
+                142.1,
+                510.0
+              ],
+              [
+                73.6,
+                509.8
+              ],
+              [
+                97.3,
+                509.8
+              ],
+              [
+                63.6,
+                427.3
+              ],
+              [
+                79.4,
+                427.3
+              ],
+              [
+                187.1,
+                427.3
+              ],
+              [
+                203.1,
+                427.3
+              ],
+              [
+                66.0,
+                499.1
+              ],
+              [
+                84.2,
+                499.1
+              ],
+              [
+                187.1,
+                502.2
+              ],
+              [
+                200.2,
+                502.2
+              ],
+              [
+                218.4,
+                502.2
+              ],
+              [
+                238.0,
+                501.6
+              ],
+              [
+                257.8,
+                501.6
+              ],
+              [
+                277.7,
+                501.6
+              ],
+              [
+                205.4,
+                513.0
+              ],
+              [
+                238.0,
+                512.9
+              ],
+              [
+                257.8,
+                512.9
+              ],
+              [
+                277.7,
+                512.9
+              ],
+              [
+                189.2,
+                540.0
+              ],
+              [
+                202.4,
+                540.0
+              ],
+              [
+                218.6,
+                540.0
+              ],
+              [
+                238.0,
+                539.6
+              ],
+              [
+                257.8,
+                539.6
+              ],
+              [
+                277.7,
+                539.6
+              ],
+              [
+                205.4,
+                551.1
+              ],
+              [
+                238.0,
+                551.0
+              ],
+              [
+                257.8,
+                551.0
+              ],
+              [
+                277.7,
+                551.0
+              ],
+              [
+                188.2,
+                527.6
+              ],
+              [
+                203.9,
+                527.6
+              ],
+              [
+                81.9,
+                410.1
+              ]
+            ]
+          },
+          {
+            "evidence_id": "p1-e03",
+            "pdf_page": 1,
+            "label": "characteristics_header",
+            "source_type": "table",
+            "text": "Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs) Characteristics list",
+            "bbox_pdf": [
+              55.22560119628906,
+              569.838134765625,
+              541.1295776367188,
+              627.9021606445312
+            ],
+            "word_center_points_in_text_order": [
+              [
+                66.5,
+                607.1
+              ],
+              [
+                94.8,
+                597.3
+              ],
+              [
+                94.8,
+                607.3
+              ],
+              [
+                94.8,
+                617.1
+              ],
+              [
+                121.8,
+                597.3
+              ],
+              [
+                121.8,
+                607.3
+              ],
+              [
+                121.8,
+                617.0
+              ],
+              [
+                147.3,
+                597.7
+              ],
+              [
+                147.3,
+                607.7
+              ],
+              [
+                147.3,
+                617.3
+              ],
+              [
+                172.8,
+                597.7
+              ],
+              [
+                172.8,
+                607.7
+              ],
+              [
+                172.8,
+                617.0
+              ],
+              [
+                199.7,
+                597.8
+              ],
+              [
+                199.7,
+                607.8
+              ],
+              [
+                199.7,
+                617.0
+              ],
+              [
+                229.0,
+                591.8
+              ],
+              [
+                247.9,
+                591.8
+              ],
+              [
+                266.8,
+                591.8
+              ],
+              [
+                294.7,
+                601.6
+              ],
+              [
+                294.7,
+                612.6
+              ],
+              [
+                375.5,
+                591.7
+              ],
+              [
+                493.1,
+                591.7
+              ],
+              [
+                225.2,
+                613.4
+              ],
+              [
+                247.9,
+                613.4
+              ],
+              [
+                270.6,
+                613.4
+              ],
+              [
+                320.7,
+                603.6
+              ],
+              [
+                335.9,
+                600.5
+              ],
+              [
+                321.6,
+                613.6
+              ],
+              [
+                324.4,
+                623.8
+              ],
+              [
+                354.4,
+                608.4
+              ],
+              [
+                367.7,
+                605.5
+              ],
+              [
+                349.8,
+                618.0
+              ],
+              [
+                365.4,
+                618.8
+              ],
+              [
+                384.5,
+                613.4
+              ],
+              [
+                395.9,
+                612.9
+              ],
+              [
+                403.3,
+                610.5
+              ],
+              [
+                422.4,
+                608.4
+              ],
+              [
+                433.0,
+                605.5
+              ],
+              [
+                426.5,
+                618.4
+              ],
+              [
+                462.2,
+                613.4
+              ],
+              [
+                488.3,
+                613.4
+              ],
+              [
+                528.5,
+                604.2
+              ],
+              [
+                524.7,
+                614.2
+              ],
+              [
+                537.8,
+                614.2
+              ],
+              [
+                528.5,
+                623.4
+              ],
+              [
+                100.7,
+                575.3
+              ],
+              [
+                151.6,
+                575.3
+              ]
+            ]
+          },
+          {
+            "evidence_id": "p1-e04",
+            "pdf_page": 1,
+            "label": "characteristics_merged_rows",
+            "source_type": "table",
+            "text": "TPB 4.0 105 4.0 105 68 3.5 2.8 1.9 B2 1100 70 0.08 27.2 4TPB68M 2000 105 4.0 105 330 7.3 4.3 2.8 D3L 2000 40 0.10 132.0 4TPB330ML 2500 6.3 105 6.3 105 68 3.5 2.8 1.9 B2 1100 70 0.08 42.8 6TPB68M 2000 105 6.3 105 220 7.3 4.3 2.8 D3L 2000 40 0.10 138.6 6TPB220ML 2500 85 5.0 105 330 7.3 4.3 2.8 2000 40 0.10 207.9 6TPB330MAL 2500 105 6.3 105 7.3 4.3 2.8 2000 40 0.10 207.9 6TPB330ML 2500 105 6.3 105 7.3 4.3 3.8 D4 3000 40 0.10 207.9 6TPB330M 2000 105 6.3 105 470 7.3 4.3 3.8 3000 35 0.15 296.1 6TPB470M 2000 10 105 10.0 105 33 3.5 2.8 1.9 B2 1100 70 0.08 33.0 10TPB33M 2000 105 10.0 105 47 3.5 2.8 1.9 1100 70 0.08 47.0 10TPB47M 2000 105 10.0 105 150 7.3 4.3 2.8 D3L 2000 40 0.10 150.0 10TPB150ML 2500 105 10.0 105 220 7.3 4.3 2.8 2000 40 0.10 220.0 10TPB220ML 2500 105 10.0 105 7.3 4.3 3.8 D4 3000 40 0.10 220.0 10TPB220M 2000 105 10.0 105 330 7.3 4.3 3.8 3000 35 0.10 330.0 10TPB330M 2000",
+            "bbox_pdf": [
+              59.05759811401367,
+              629.4716186523438,
+              536.990478515625,
+              756.5846557617188
+            ],
+            "word_center_points_in_text_order": [
+              [
+                66.4,
+                693.0
+              ],
+              [
+                94.8,
+                637.8
+              ],
+              [
+                121.8,
+                633.2
+              ],
+              [
+                149.1,
+                633.2
+              ],
+              [
+                172.8,
+                633.2
+              ],
+              [
+                201.6,
+                633.2
+              ],
+              [
+                225.2,
+                633.2
+              ],
+              [
+                247.9,
+                633.2
+              ],
+              [
+                270.6,
+                633.2
+              ],
+              [
+                294.7,
+                633.2
+              ],
+              [
+                324.4,
+                633.2
+              ],
+              [
+                358.4,
+                633.2
+              ],
+              [
+                392.5,
+                633.2
+              ],
+              [
+                428.4,
+                633.2
+              ],
+              [
+                471.7,
+                633.2
+              ],
+              [
+                528.6,
+                633.2
+              ],
+              [
+                121.8,
+                642.4
+              ],
+              [
+                149.1,
+                642.4
+              ],
+              [
+                172.8,
+                642.4
+              ],
+              [
+                199.7,
+                642.4
+              ],
+              [
+                225.2,
+                642.4
+              ],
+              [
+                247.9,
+                642.4
+              ],
+              [
+                270.6,
+                642.4
+              ],
+              [
+                294.7,
+                642.4
+              ],
+              [
+                324.4,
+                642.4
+              ],
+              [
+                358.4,
+                642.4
+              ],
+              [
+                392.5,
+                642.4
+              ],
+              [
+                426.5,
+                642.4
+              ],
+              [
+                475.9,
+                642.4
+              ],
+              [
+                528.6,
+                642.4
+              ],
+              [
+                94.8,
+                674.6
+              ],
+              [
+                121.8,
+                651.6
+              ],
+              [
+                149.1,
+                651.6
+              ],
+              [
+                172.8,
+                651.6
+              ],
+              [
+                201.6,
+                651.6
+              ],
+              [
+                225.2,
+                651.6
+              ],
+              [
+                247.9,
+                651.6
+              ],
+              [
+                270.6,
+                651.6
+              ],
+              [
+                294.7,
+                651.6
+              ],
+              [
+                324.4,
+                651.6
+              ],
+              [
+                358.4,
+                651.6
+              ],
+              [
+                392.5,
+                651.6
+              ],
+              [
+                428.4,
+                651.6
+              ],
+              [
+                471.7,
+                651.6
+              ],
+              [
+                528.6,
+                651.6
+              ],
+              [
+                121.8,
+                660.8
+              ],
+              [
+                149.1,
+                660.8
+              ],
+              [
+                172.8,
+                660.8
+              ],
+              [
+                199.7,
+                660.8
+              ],
+              [
+                225.2,
+                660.8
+              ],
+              [
+                247.9,
+                660.8
+              ],
+              [
+                270.6,
+                660.8
+              ],
+              [
+                294.7,
+                670.0
+              ],
+              [
+                324.4,
+                660.8
+              ],
+              [
+                358.4,
+                660.8
+              ],
+              [
+                392.5,
+                660.8
+              ],
+              [
+                426.5,
+                660.8
+              ],
+              [
+                475.9,
+                660.8
+              ],
+              [
+                528.6,
+                660.8
+              ],
+              [
+                123.6,
+                670.0
+              ],
+              [
+                149.1,
+                670.0
+              ],
+              [
+                172.8,
+                670.0
+              ],
+              [
+                199.7,
+                679.2
+              ],
+              [
+                225.2,
+                670.0
+              ],
+              [
+                247.9,
+                670.0
+              ],
+              [
+                270.6,
+                670.0
+              ],
+              [
+                324.4,
+                670.0
+              ],
+              [
+                358.4,
+                670.0
+              ],
+              [
+                392.5,
+                670.0
+              ],
+              [
+                426.5,
+                670.0
+              ],
+              [
+                478.4,
+                670.0
+              ],
+              [
+                528.6,
+                670.0
+              ],
+              [
+                121.8,
+                679.2
+              ],
+              [
+                149.1,
+                679.2
+              ],
+              [
+                172.8,
+                679.2
+              ],
+              [
+                225.2,
+                679.2
+              ],
+              [
+                247.9,
+                679.2
+              ],
+              [
+                270.6,
+                679.2
+              ],
+              [
+                324.4,
+                679.2
+              ],
+              [
+                358.4,
+                679.2
+              ],
+              [
+                392.5,
+                679.2
+              ],
+              [
+                426.5,
+                679.2
+              ],
+              [
+                475.9,
+                679.2
+              ],
+              [
+                528.6,
+                679.2
+              ],
+              [
+                121.8,
+                688.4
+              ],
+              [
+                149.1,
+                688.4
+              ],
+              [
+                172.8,
+                688.4
+              ],
+              [
+                225.2,
+                688.4
+              ],
+              [
+                247.9,
+                688.4
+              ],
+              [
+                270.6,
+                688.4
+              ],
+              [
+                294.7,
+                693.0
+              ],
+              [
+                324.4,
+                688.4
+              ],
+              [
+                358.4,
+                688.4
+              ],
+              [
+                392.5,
+                688.4
+              ],
+              [
+                426.5,
+                688.4
+              ],
+              [
+                473.8,
+                688.4
+              ],
+              [
+                528.6,
+                688.4
+              ],
+              [
+                121.8,
+                697.6
+              ],
+              [
+                149.1,
+                697.6
+              ],
+              [
+                172.8,
+                697.6
+              ],
+              [
+                199.7,
+                697.6
+              ],
+              [
+                225.2,
+                697.6
+              ],
+              [
+                247.9,
+                697.6
+              ],
+              [
+                270.6,
+                697.6
+              ],
+              [
+                324.4,
+                697.6
+              ],
+              [
+                358.4,
+                697.6
+              ],
+              [
+                392.5,
+                697.6
+              ],
+              [
+                426.5,
+                697.6
+              ],
+              [
+                473.8,
+                697.6
+              ],
+              [
+                528.6,
+                697.6
+              ],
+              [
+                94.8,
+                729.8
+              ],
+              [
+                121.8,
+                706.8
+              ],
+              [
+                147.3,
+                706.8
+              ],
+              [
+                172.8,
+                706.8
+              ],
+              [
+                199.7,
+                706.8
+              ],
+              [
+                225.2,
+                706.8
+              ],
+              [
+                247.9,
+                706.8
+              ],
+              [
+                270.6,
+                706.8
+              ],
+              [
+                294.7,
+                711.4
+              ],
+              [
+                324.4,
+                706.8
+              ],
+              [
+                358.4,
+                706.8
+              ],
+              [
+                392.5,
+                706.8
+              ],
+              [
+                428.4,
+                706.8
+              ],
+              [
+                473.6,
+                706.8
+              ],
+              [
+                528.7,
+                706.8
+              ],
+              [
+                121.8,
+                716.0
+              ],
+              [
+                147.3,
+                716.0
+              ],
+              [
+                172.8,
+                716.0
+              ],
+              [
+                199.7,
+                716.0
+              ],
+              [
+                225.2,
+                716.0
+              ],
+              [
+                247.9,
+                716.0
+              ],
+              [
+                270.6,
+                716.0
+              ],
+              [
+                324.4,
+                716.0
+              ],
+              [
+                358.4,
+                716.0
+              ],
+              [
+                392.5,
+                716.0
+              ],
+              [
+                429.4,
+                716.0
+              ],
+              [
+                473.6,
+                716.0
+              ],
+              [
+                528.7,
+                716.0
+              ],
+              [
+                121.8,
+                725.2
+              ],
+              [
+                147.3,
+                725.2
+              ],
+              [
+                172.8,
+                725.2
+              ],
+              [
+                199.7,
+                725.2
+              ],
+              [
+                225.2,
+                725.2
+              ],
+              [
+                247.9,
+                725.2
+              ],
+              [
+                270.6,
+                725.2
+              ],
+              [
+                294.7,
+                729.8
+              ],
+              [
+                324.4,
+                725.2
+              ],
+              [
+                358.4,
+                725.2
+              ],
+              [
+                392.5,
+                725.2
+              ],
+              [
+                426.5,
+                725.2
+              ],
+              [
+                477.6,
+                725.2
+              ],
+              [
+                528.7,
+                725.2
+              ],
+              [
+                121.8,
+                734.4
+              ],
+              [
+                147.3,
+                734.4
+              ],
+              [
+                172.8,
+                734.4
+              ],
+              [
+                199.7,
+                739.0
+              ],
+              [
+                225.2,
+                734.4
+              ],
+              [
+                247.9,
+                734.4
+              ],
+              [
+                270.6,
+                734.4
+              ],
+              [
+                324.4,
+                734.4
+              ],
+              [
+                358.4,
+                734.4
+              ],
+              [
+                392.5,
+                734.4
+              ],
+              [
+                426.5,
+                734.4
+              ],
+              [
+                477.8,
+                734.4
+              ],
+              [
+                528.7,
+                734.4
+              ],
+              [
+                121.8,
+                743.6
+              ],
+              [
+                147.3,
+                743.6
+              ],
+              [
+                172.8,
+                743.6
+              ],
+              [
+                225.2,
+                743.6
+              ],
+              [
+                247.9,
+                743.6
+              ],
+              [
+                270.6,
+                743.6
+              ],
+              [
+                294.7,
+                748.2
+              ],
+              [
+                324.4,
+                743.6
+              ],
+              [
+                358.4,
+                743.6
+              ],
+              [
+                392.5,
+                743.6
+              ],
+              [
+                426.5,
+                743.6
+              ],
+              [
+                475.7,
+                743.6
+              ],
+              [
+                528.7,
+                743.6
+              ],
+              [
+                121.8,
+                752.8
+              ],
+              [
+                147.3,
+                752.8
+              ],
+              [
+                172.8,
+                752.8
+              ],
+              [
+                199.7,
+                752.8
+              ],
+              [
+                225.2,
+                752.8
+              ],
+              [
+                247.9,
+                752.8
+              ],
+              [
+                270.6,
+                752.8
+              ],
+              [
+                324.4,
+                752.8
+              ],
+              [
+                358.4,
+                752.8
+              ],
+              [
+                392.5,
+                752.8
+              ],
+              [
+                426.5,
+                752.8
+              ],
+              [
+                475.7,
+                752.8
+              ],
+              [
+                528.7,
+                752.8
+              ]
+            ]
+          },
+          {
+            "evidence_id": "p1-e05",
+            "pdf_page": 1,
+            "label": "specification_footnotes",
+            "source_type": "text",
+            "text": "✽1 Ripple current (100 kHz/ +45 °C ), ✽2 ESR (100 kHz/+20 °C) ✽3 tan d (120 Hz/+20 °C) ✽4 After 5 minutes ◆ Please refer to each page in this catarog for “Reflow conditions” and “Taping specifications”.",
+            "bbox_pdf": [
+              52.30316162109375,
+              760.0482177734375,
+              396.3161315917969,
+              776.35302734375
+            ]
+          },
+          {
+            "evidence_id": "p1-e06",
+            "pdf_page": 1,
+            "label": "exact_target_pn_row",
+            "source_type": "table",
+            "text": "105 4.0 105 68 3.5 2.8 1.9 B2 1100 70 0.08 27.2 4TPB68M 2000",
+            "bbox_pdf": [
+              115.49735260009766,
+              629.4716186523438,
+              536.989013671875,
+              636.9716186523438
+            ],
+            "word_center_points_in_text_order": [
+              [
+                121.8,
+                633.2
+              ],
+              [
+                149.1,
+                633.2
+              ],
+              [
+                172.8,
+                633.2
+              ],
+              [
+                201.6,
+                633.2
+              ],
+              [
+                225.2,
+                633.2
+              ],
+              [
+                247.9,
+                633.2
+              ],
+              [
+                270.6,
+                633.2
+              ],
+              [
+                294.7,
+                633.2
+              ],
+              [
+                324.4,
+                633.2
+              ],
+              [
+                358.4,
+                633.2
+              ],
+              [
+                392.5,
+                633.2
+              ],
+              [
+                428.4,
+                633.2
+              ],
+              [
+                471.7,
+                633.2
+              ],
+              [
+                528.6,
+                633.2
+              ]
+            ]
+          }
+        ],
+        "occurrences": [
+          {
+            "pdf_page": 1,
+            "bbox_pdf": [
+              455.0733337402344,
+              629.4716186523438,
+              488.4183654785156,
+              636.9716186523438
+            ],
+            "geometry_status": "fallback_source_only",
+            "row_evidence_id": "p1-e06",
+            "row_column_matches": [],
+            "fallback_table_ids": [
+              "characteristics_list"
+            ],
+            "structure_header_incomplete": true,
+            "detection_status": "detected",
+            "structure_candidate_boxes": []
+          }
+        ],
+        "user_input_characters": 9131,
+        "estimated_input_tokens_including_prompt_schema": 3451,
+        "max_output_tokens": 2500
+      }
+    ],
+    "execution_records": [
+      {
+        "document_id": "kyocera_avx_tcj",
+        "part_number": "TCJU337M016R0050E",
+        "provider": "gemini",
+        "requested_model": "gemini-3.5-flash-lite",
+        "model": "gemini-3.5-flash-lite",
+        "prompt_version": "07.2-gemini",
+        "request_attempted": true,
+        "response_received": true,
+        "processing_seconds": 5.803543299989542,
+        "input_tokens": 4787,
+        "output_tokens": 1036,
+        "thinking_tokens": null,
+        "total_tokens": 5823,
+        "response_id": "pMPyarCZGJvb9tMP7_KbsAs",
+        "finish_reason": "STOP",
+        "execution_status": "completed",
+        "error_type": null,
+        "error_message": null,
+        "http_status": 200,
+        "quota_warning": null,
+        "raw_response_text": "{\n  \"part_number\": \"TCJU337M016R0050E\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"16\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"16\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"Rated Voltage (V)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"not_found\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"Surge voltage specific numerical value for this part number is not explicitly listed in the ratings table.\"\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"330\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"330\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"Capacitance (μF)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"ordering_code\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"M = ±20%\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e02\",\n          \"page\": 1,\n          \"quote\": \"Capacitance Tolerance: ±20%\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"50\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100kHz\",\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"50\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"ESR Max. @ 100kHz (mΩ)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"125\",\n      \"unit\": \"ºC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"125\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"Maximum Operating Temperature (ºC)\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+        "extraction": null,
+        "verification": null,
+        "independent_validation": {
+          "structure": {
+            "status": "passed",
+            "json_parsed": true,
+            "part_number": "TCJU337M016R0050E",
+            "part_number_matches": true,
+            "field_shapes": {
+              "rated_voltage": "object",
+              "surge_voltage": "object",
+              "capacitance": "object",
+              "tolerance": "object",
+              "esr": "object",
+              "operating_temperature": "object"
+            },
+            "issues": []
+          },
+          "specifications": {
+            "rated_voltage": {
+              "raw": {
+                "status": "found",
+                "value": "16",
+                "unit": "V",
+                "value_min": null,
+                "value_max": null,
+                "condition": null,
+                "page": 6,
+                "scope": "pn",
+                "source_type": "table",
+                "evidence_id": "p6-e10",
+                "evidence": "16",
+                "supporting_evidence": [
+                  {
+                    "evidence_id": "p6-e03",
+                    "page": 6,
+                    "quote": "Rated Voltage (V)"
+                  }
+                ],
+                "reason": null
+              },
+              "schema_status": "passed",
+              "schema_errors": [],
+              "verification_status": "unverifiable",
+              "issues": [
+                "pn_field_or_series_scope_not_proved_by_automatic_check"
+              ],
+              "source_text_matched": true,
+              "normalized": {
+                "value": "16",
+                "unit": "V",
+                "rule": "V -> V: multiply by 1"
+              }
+            },
+            "surge_voltage": {
+              "raw": {
+                "status": "not_found",
+                "value": null,
+                "unit": null,
+                "value_min": null,
+                "value_max": null,
+                "condition": null,
+                "page": null,
+                "scope": null,
+                "source_type": null,
+                "evidence_id": null,
+                "evidence": null,
+                "supporting_evidence": [],
+                "reason": "Surge voltage specific numerical value for this part number is not explicitly listed in the ratings table."
+              },
+              "schema_status": "passed",
+              "schema_errors": [],
+              "verification_status": "unverifiable",
+              "issues": [
+                "no_confirmed_value_to_check"
+              ],
+              "source_text_matched": false,
+              "normalized": null
+            },
+            "capacitance": {
+              "raw": {
+                "status": "found",
+                "value": "330",
+                "unit": "μF",
+                "value_min": null,
+                "value_max": null,
+                "condition": null,
+                "page": 6,
+                "scope": "pn",
+                "source_type": "table",
+                "evidence_id": "p6-e10",
+                "evidence": "330",
+                "supporting_evidence": [
+                  {
+                    "evidence_id": "p6-e03",
+                    "page": 6,
+                    "quote": "Capacitance (μF)"
+                  }
+                ],
+                "reason": null
+              },
+              "schema_status": "passed",
+              "schema_errors": [],
+              "verification_status": "unverifiable",
+              "issues": [
+                "pn_field_or_series_scope_not_proved_by_automatic_check"
+              ],
+              "source_text_matched": true,
+              "normalized": {
+                "value": "330",
+                "unit": "µF",
+                "rule": "µF -> µF: multiply by 1"
+              }
+            },
+            "tolerance": {
+              "raw": {
+                "status": "found",
+                "value": "±20",
+                "unit": "%",
+                "value_min": null,
+                "value_max": null,
+                "condition": null,
+                "page": 1,
+                "scope": "series",
+                "source_type": "ordering_code",
+                "evidence_id": "p1-e01",
+                "evidence": "M = ±20%",
+                "supporting_evidence": [
+                  {
+                    "evidence_id": "p1-e02",
+                    "page": 1,
+                    "quote": "Capacitance Tolerance: ±20%"
+                  }
+                ],
+                "reason": null
+              },
+              "schema_status": "passed",
+              "schema_errors": [],
+              "verification_status": "unverifiable",
+              "issues": [
+                "pn_field_or_series_scope_not_proved_by_automatic_check"
+              ],
+              "source_text_matched": true,
+              "normalized": {
+                "value": "±20",
+                "unit": "%",
+                "rule": "% -> %: multiply by 1"
+              }
+            },
+            "esr": {
+              "raw": {
+                "status": "found",
+                "value": "50",
+                "unit": "mΩ",
+                "value_min": null,
+                "value_max": null,
+                "condition": "100kHz",
+                "page": 6,
+                "scope": "pn",
+                "source_type": "table",
+                "evidence_id": "p6-e10",
+                "evidence": "50",
+                "supporting_evidence": [
+                  {
+                    "evidence_id": "p6-e03",
+                    "page": 6,
+                    "quote": "ESR Max. @ 100kHz (mΩ)"
+                  }
+                ],
+                "reason": null
+              },
+              "schema_status": "passed",
+              "schema_errors": [],
+              "verification_status": "unverifiable",
+              "issues": [
+                "pn_field_or_series_scope_not_proved_by_automatic_check"
+              ],
+              "source_text_matched": true,
+              "normalized": {
+                "value": "50",
+                "unit": "mΩ",
+                "rule": "mΩ -> mΩ: multiply by 1"
+              }
+            },
+            "operating_temperature": {
+              "raw": {
+                "status": "found",
+                "value": "125",
+                "unit": "ºC",
+                "value_min": null,
+                "value_max": null,
+                "condition": null,
+                "page": 6,
+                "scope": "pn",
+                "source_type": "table",
+                "evidence_id": "p6-e10",
+                "evidence": "125",
+                "supporting_evidence": [
+                  {
+                    "evidence_id": "p6-e03",
+                    "page": 6,
+                    "quote": "Maximum Operating Temperature (ºC)"
+                  }
+                ],
+                "reason": null
+              },
+              "schema_status": "passed",
+              "schema_errors": [],
+              "verification_status": "failed",
+              "issues": [
+                "temperature_range_not_in_primary_evidence",
+                "invalid_unit_value_or_range"
+              ],
+              "source_text_matched": true,
+              "normalized": null
+            }
+          }
+        },
+        "requested_at": "2026-11-10T07:11:31+00:00",
+        "requests_dispatched": 1
+      },
+      {
+        "document_id": "panasonic_tpb",
+        "part_number": "4TPB68M",
+        "provider": "gemini",
+        "requested_model": "gemini-3.5-flash-lite",
+        "model": null,
+        "prompt_version": "07.2-gemini",
+        "request_attempted": true,
+        "response_received": false,
+        "processing_seconds": 1.2667055999918375,
+        "input_tokens": null,
+        "output_tokens": null,
+        "thinking_tokens": null,
+        "total_tokens": null,
+        "response_id": null,
+        "finish_reason": null,
+        "execution_status": "error",
+        "error_type": "ServerError",
+        "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+        "http_status": 503,
+        "quota_warning": null,
+        "raw_response_text": null,
+        "extraction": null,
+        "verification": null,
+        "requested_at": "2026-11-10T07:11:37+00:00",
+        "requests_dispatched": 1
+      }
+    ],
+    "pdf_validation": {
+      "TCJU337M016R0050E": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "TCJU337M016R0050E",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "16",
+              "unit": "V",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 6,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p6-e10",
+              "evidence": "16",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p6-e03",
+                  "page": 6,
+                  "quote": "Rated Voltage (V)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "verified",
+            "issues": [],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "16",
+              "unit": "V",
+              "rule": "V -> V: multiply by 1"
+            },
+            "automated_verification_status": "unverifiable",
+            "automated_issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "pdf_review": {
+              "pages": [
+                6
+              ],
+              "finding": "6쪽 대상 P/N 행의 정격전압 열에 16 V가 기재됨."
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "not_found",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "Surge voltage specific numerical value for this part number is not explicitly listed in the ratings table."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null,
+            "automated_verification_status": "unverifiable",
+            "automated_issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "pdf_review": {
+              "pages": [
+                6,
+                10
+              ],
+              "finding": "6쪽 대상 행은 카테고리 1임. 10쪽에 125 °C에서의 시험 배율과 조건이 있으나 P/N별 서지전압 수치는 없음."
+            }
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "330",
+              "unit": "μF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 6,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p6-e10",
+              "evidence": "330",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p6-e03",
+                  "page": 6,
+                  "quote": "Capacitance (μF)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "verified",
+            "issues": [],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "330",
+              "unit": "µF",
+              "rule": "µF -> µF: multiply by 1"
+            },
+            "automated_verification_status": "unverifiable",
+            "automated_issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "pdf_review": {
+              "pages": [
+                6
+              ],
+              "finding": "6쪽 대상 P/N 행과 정전용량 열의 330 μF가 일치함."
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "±20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "ordering_code",
+              "evidence_id": "p1-e01",
+              "evidence": "M = ±20%",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e02",
+                  "page": 1,
+                  "quote": "Capacitance Tolerance: ±20%"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "verified",
+            "issues": [],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "±20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            },
+            "automated_verification_status": "unverifiable",
+            "automated_issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "pdf_review": {
+              "pages": [
+                1,
+                6
+              ],
+              "finding": "1쪽 주문 코드 M은 ±20%임. 6쪽 대상 P/N의 허용오차 코드 M 및 시리즈 공통 규격과 일치함."
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "50",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": null,
+              "condition": "100kHz",
+              "page": 6,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p6-e10",
+              "evidence": "50",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p6-e03",
+                  "page": 6,
+                  "quote": "ESR Max. @ 100kHz (mΩ)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "esr_ambient_temperature_missing"
+            ],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "50",
+              "unit": "mΩ",
+              "rule": "mΩ -> mΩ: multiply by 1"
+            },
+            "automated_verification_status": "unverifiable",
+            "automated_issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "pdf_review": {
+              "pages": [
+                1,
+                6
+              ],
+              "finding": "6쪽 대상 P/N 행의 최대 ESR은 50 mΩ이고 헤더에 100 kHz가 표시됨. 1쪽 공통 기술 데이터 기준 +25 °C는 모델 응답 조건에 누락됨."
+            }
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": "125",
+              "unit": "ºC",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 6,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p6-e10",
+              "evidence": "125",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p6-e03",
+                  "page": 6,
+                  "quote": "Maximum Operating Temperature (ºC)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "temperature_range_not_in_primary_evidence",
+              "invalid_unit_value_or_range",
+              "operating_temperature_range_missing"
+            ],
+            "source_text_matched": true,
+            "normalized": null,
+            "automated_verification_status": "failed",
+            "automated_issues": [
+              "temperature_range_not_in_primary_evidence",
+              "invalid_unit_value_or_range"
+            ],
+            "pdf_review": {
+              "pages": [
+                6,
+                10
+              ],
+              "finding": "6쪽 대상 P/N 최대 동작 온도는 +125 °C임. 카테고리 1 범위는 10쪽의 −55 °C~+125 °C이며 모델 응답은 상한만 제공함."
+            }
+          }
+        }
+      }
+    },
+    "totals": {
+      "parts_attempted_including_vishay": 3,
+      "parts_with_response": 2,
+      "specifications_reviewed": 12,
+      "verification_counts": {
+        "verified": 6,
+        "failed": 5,
+        "unverifiable": 1
+      }
+    }
+  },
+  "panasonic_retry_run": {
+    "execution_mode": "authorized_live_once_then_offline_replay",
+    "requested_model": "gemini-3.5-flash-lite",
+    "free_tier": {
+      "project_confirmed_by_user": true,
+      "public_standard_input_output_free": true,
+      "actual_cost_usd": null,
+      "billing_data_available": false,
+      "pricing_source": "https://ai.google.dev/gemini-api/docs/pricing?frmapp=yes"
+    },
+    "sdk_retry_attempts": 1,
+    "requests_dispatched": 1,
+    "notebook_additional_requests": 0,
+    "stop_reason": "http_503",
+    "request_plan": {
+      "document_id": "panasonic_tpb",
+      "part_number": "4TPB68M",
+      "manufacturer": "Panasonic",
+      "pdf_sha256": "81271b5e89f3502338efd78cc5e6b163bc23f21fad040b203284464c8f40f1d5",
+      "pdf_pages": [
+        1
+      ],
+      "evidence": [
+        {
+          "evidence_id": "p1-e01",
+          "pdf_page": 1,
+          "label": "series_specification_table",
+          "source_type": "table",
+          "text": "Size code B2 D3L D4 Category temperature range –55 °C to +105 °C Rated voltage range 4 V.DC to 10 V.DC 6.3 V.DC to 10 V.DC Category voltage range 4 V.DC to 10 V.DC 6.3 V.DC to 10 V.DC Rated capacitance range 33 μF to 68 μF 150 μF to 330 μF 220 μF to 470 μF Capacitance tolerance ±20 % (120 Hz / + 20 °C) Leakage current Please see the attached characteristics list Dissipation factor (tan d) Please see the attached characteristics list Surge voltage (V.DC) Rated voltage × 1.15 Endurance +105 °C 2000h, (B2 size : 1000h) rated voltage appled ✽ Rated temp. +85 °C 1000h rated voltage applied Capacitance change Within ±20 % of the initial value tan d < 1.5 times of the initial limit DC leakage current Within the initial limit Damp heat (Steady State) +60 °C, 90 % to 95 %, 500 h, No-applied voltage Capacitance change Within +40 %, −20 % of the initial value tan d < 1.5 times of the initial limit DC leakage current < 3 times of the initial limit Specifi cations",
+          "bbox_pdf": [
+            53.73210144042969,
+            176.43116760253906,
+            518.7728881835938,
+            394.20672607421875
+          ]
+        },
+        {
+          "evidence_id": "p1-e02",
+          "pdf_page": 1,
+          "label": "ordering_marking_rules",
+          "source_type": "ordering_code",
+          "text": "R.Cap. code R. Voltage code Lot. No. Polarity marking(+) R. Voltage code Lot. No. R.Cap. code Polarity marking(+) R. Voltage code Lot. No. R.Cap. code Polarity marking(+) B2 Size D4 Size D3L Size R. Voltage (V.DC) 4.0 6.3 10.0 Code g j A R. Cap. (μF) 33 47 68 Code N7 S7 W7 B2 Size Marking",
+          "bbox_pdf": [
+            58.68109893798828,
+            404.62005615234375,
+            284.9554748535156,
+            555.6014404296875
+          ],
+          "word_center_points_in_text_order": [
+            [
+              125.4,
+              440.2
+            ],
+            [
+              143.2,
+              440.2
+            ],
+            [
+              68.7,
+              479.7
+            ],
+            [
+              83.2,
+              479.7
+            ],
+            [
+              101.7,
+              479.7
+            ],
+            [
+              131.8,
+              479.7
+            ],
+            [
+              143.2,
+              479.7
+            ],
+            [
+              74.7,
+              440.0
+            ],
+            [
+              98.4,
+              440.0
+            ],
+            [
+              195.0,
+              479.4
+            ],
+            [
+              209.6,
+              479.4
+            ],
+            [
+              228.1,
+              479.4
+            ],
+            [
+              258.6,
+              479.0
+            ],
+            [
+              269.9,
+              479.0
+            ],
+            [
+              249.2,
+              439.8
+            ],
+            [
+              267.1,
+              439.8
+            ],
+            [
+              198.6,
+              439.7
+            ],
+            [
+              222.2,
+              439.7
+            ],
+            [
+              70.1,
+              551.6
+            ],
+            [
+              84.6,
+              551.6
+            ],
+            [
+              103.1,
+              551.6
+            ],
+            [
+              135.5,
+              551.2
+            ],
+            [
+              146.8,
+              551.2
+            ],
+            [
+              124.3,
+              510.0
+            ],
+            [
+              142.1,
+              510.0
+            ],
+            [
+              73.6,
+              509.8
+            ],
+            [
+              97.3,
+              509.8
+            ],
+            [
+              63.6,
+              427.3
+            ],
+            [
+              79.4,
+              427.3
+            ],
+            [
+              187.1,
+              427.3
+            ],
+            [
+              203.1,
+              427.3
+            ],
+            [
+              66.0,
+              499.1
+            ],
+            [
+              84.2,
+              499.1
+            ],
+            [
+              187.1,
+              502.2
+            ],
+            [
+              200.2,
+              502.2
+            ],
+            [
+              218.4,
+              502.2
+            ],
+            [
+              238.0,
+              501.6
+            ],
+            [
+              257.8,
+              501.6
+            ],
+            [
+              277.7,
+              501.6
+            ],
+            [
+              205.4,
+              513.0
+            ],
+            [
+              238.0,
+              512.9
+            ],
+            [
+              257.8,
+              512.9
+            ],
+            [
+              277.7,
+              512.9
+            ],
+            [
+              189.2,
+              540.0
+            ],
+            [
+              202.4,
+              540.0
+            ],
+            [
+              218.6,
+              540.0
+            ],
+            [
+              238.0,
+              539.6
+            ],
+            [
+              257.8,
+              539.6
+            ],
+            [
+              277.7,
+              539.6
+            ],
+            [
+              205.4,
+              551.1
+            ],
+            [
+              238.0,
+              551.0
+            ],
+            [
+              257.8,
+              551.0
+            ],
+            [
+              277.7,
+              551.0
+            ],
+            [
+              188.2,
+              527.6
+            ],
+            [
+              203.9,
+              527.6
+            ],
+            [
+              81.9,
+              410.1
+            ]
+          ]
+        },
+        {
+          "evidence_id": "p1-e03",
+          "pdf_page": 1,
+          "label": "characteristics_header",
+          "source_type": "table",
+          "text": "Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs) Characteristics list",
+          "bbox_pdf": [
+            55.22560119628906,
+            569.838134765625,
+            541.1295776367188,
+            627.9021606445312
+          ],
+          "word_center_points_in_text_order": [
+            [
+              66.5,
+              607.1
+            ],
+            [
+              94.8,
+              597.3
+            ],
+            [
+              94.8,
+              607.3
+            ],
+            [
+              94.8,
+              617.1
+            ],
+            [
+              121.8,
+              597.3
+            ],
+            [
+              121.8,
+              607.3
+            ],
+            [
+              121.8,
+              617.0
+            ],
+            [
+              147.3,
+              597.7
+            ],
+            [
+              147.3,
+              607.7
+            ],
+            [
+              147.3,
+              617.3
+            ],
+            [
+              172.8,
+              597.7
+            ],
+            [
+              172.8,
+              607.7
+            ],
+            [
+              172.8,
+              617.0
+            ],
+            [
+              199.7,
+              597.8
+            ],
+            [
+              199.7,
+              607.8
+            ],
+            [
+              199.7,
+              617.0
+            ],
+            [
+              229.0,
+              591.8
+            ],
+            [
+              247.9,
+              591.8
+            ],
+            [
+              266.8,
+              591.8
+            ],
+            [
+              294.7,
+              601.6
+            ],
+            [
+              294.7,
+              612.6
+            ],
+            [
+              375.5,
+              591.7
+            ],
+            [
+              493.1,
+              591.7
+            ],
+            [
+              225.2,
+              613.4
+            ],
+            [
+              247.9,
+              613.4
+            ],
+            [
+              270.6,
+              613.4
+            ],
+            [
+              320.7,
+              603.6
+            ],
+            [
+              335.9,
+              600.5
+            ],
+            [
+              321.6,
+              613.6
+            ],
+            [
+              324.4,
+              623.8
+            ],
+            [
+              354.4,
+              608.4
+            ],
+            [
+              367.7,
+              605.5
+            ],
+            [
+              349.8,
+              618.0
+            ],
+            [
+              365.4,
+              618.8
+            ],
+            [
+              384.5,
+              613.4
+            ],
+            [
+              395.9,
+              612.9
+            ],
+            [
+              403.3,
+              610.5
+            ],
+            [
+              422.4,
+              608.4
+            ],
+            [
+              433.0,
+              605.5
+            ],
+            [
+              426.5,
+              618.4
+            ],
+            [
+              462.2,
+              613.4
+            ],
+            [
+              488.3,
+              613.4
+            ],
+            [
+              528.5,
+              604.2
+            ],
+            [
+              524.7,
+              614.2
+            ],
+            [
+              537.8,
+              614.2
+            ],
+            [
+              528.5,
+              623.4
+            ],
+            [
+              100.7,
+              575.3
+            ],
+            [
+              151.6,
+              575.3
+            ]
+          ]
+        },
+        {
+          "evidence_id": "p1-e04",
+          "pdf_page": 1,
+          "label": "characteristics_merged_rows",
+          "source_type": "table",
+          "text": "TPB 4.0 105 4.0 105 68 3.5 2.8 1.9 B2 1100 70 0.08 27.2 4TPB68M 2000 105 4.0 105 330 7.3 4.3 2.8 D3L 2000 40 0.10 132.0 4TPB330ML 2500 6.3 105 6.3 105 68 3.5 2.8 1.9 B2 1100 70 0.08 42.8 6TPB68M 2000 105 6.3 105 220 7.3 4.3 2.8 D3L 2000 40 0.10 138.6 6TPB220ML 2500 85 5.0 105 330 7.3 4.3 2.8 2000 40 0.10 207.9 6TPB330MAL 2500 105 6.3 105 7.3 4.3 2.8 2000 40 0.10 207.9 6TPB330ML 2500 105 6.3 105 7.3 4.3 3.8 D4 3000 40 0.10 207.9 6TPB330M 2000 105 6.3 105 470 7.3 4.3 3.8 3000 35 0.15 296.1 6TPB470M 2000 10 105 10.0 105 33 3.5 2.8 1.9 B2 1100 70 0.08 33.0 10TPB33M 2000 105 10.0 105 47 3.5 2.8 1.9 1100 70 0.08 47.0 10TPB47M 2000 105 10.0 105 150 7.3 4.3 2.8 D3L 2000 40 0.10 150.0 10TPB150ML 2500 105 10.0 105 220 7.3 4.3 2.8 2000 40 0.10 220.0 10TPB220ML 2500 105 10.0 105 7.3 4.3 3.8 D4 3000 40 0.10 220.0 10TPB220M 2000 105 10.0 105 330 7.3 4.3 3.8 3000 35 0.10 330.0 10TPB330M 2000",
+          "bbox_pdf": [
+            59.05759811401367,
+            629.4716186523438,
+            536.990478515625,
+            756.5846557617188
+          ],
+          "word_center_points_in_text_order": [
+            [
+              66.4,
+              693.0
+            ],
+            [
+              94.8,
+              637.8
+            ],
+            [
+              121.8,
+              633.2
+            ],
+            [
+              149.1,
+              633.2
+            ],
+            [
+              172.8,
+              633.2
+            ],
+            [
+              201.6,
+              633.2
+            ],
+            [
+              225.2,
+              633.2
+            ],
+            [
+              247.9,
+              633.2
+            ],
+            [
+              270.6,
+              633.2
+            ],
+            [
+              294.7,
+              633.2
+            ],
+            [
+              324.4,
+              633.2
+            ],
+            [
+              358.4,
+              633.2
+            ],
+            [
+              392.5,
+              633.2
+            ],
+            [
+              428.4,
+              633.2
+            ],
+            [
+              471.7,
+              633.2
+            ],
+            [
+              528.6,
+              633.2
+            ],
+            [
+              121.8,
+              642.4
+            ],
+            [
+              149.1,
+              642.4
+            ],
+            [
+              172.8,
+              642.4
+            ],
+            [
+              199.7,
+              642.4
+            ],
+            [
+              225.2,
+              642.4
+            ],
+            [
+              247.9,
+              642.4
+            ],
+            [
+              270.6,
+              642.4
+            ],
+            [
+              294.7,
+              642.4
+            ],
+            [
+              324.4,
+              642.4
+            ],
+            [
+              358.4,
+              642.4
+            ],
+            [
+              392.5,
+              642.4
+            ],
+            [
+              426.5,
+              642.4
+            ],
+            [
+              475.9,
+              642.4
+            ],
+            [
+              528.6,
+              642.4
+            ],
+            [
+              94.8,
+              674.6
+            ],
+            [
+              121.8,
+              651.6
+            ],
+            [
+              149.1,
+              651.6
+            ],
+            [
+              172.8,
+              651.6
+            ],
+            [
+              201.6,
+              651.6
+            ],
+            [
+              225.2,
+              651.6
+            ],
+            [
+              247.9,
+              651.6
+            ],
+            [
+              270.6,
+              651.6
+            ],
+            [
+              294.7,
+              651.6
+            ],
+            [
+              324.4,
+              651.6
+            ],
+            [
+              358.4,
+              651.6
+            ],
+            [
+              392.5,
+              651.6
+            ],
+            [
+              428.4,
+              651.6
+            ],
+            [
+              471.7,
+              651.6
+            ],
+            [
+              528.6,
+              651.6
+            ],
+            [
+              121.8,
+              660.8
+            ],
+            [
+              149.1,
+              660.8
+            ],
+            [
+              172.8,
+              660.8
+            ],
+            [
+              199.7,
+              660.8
+            ],
+            [
+              225.2,
+              660.8
+            ],
+            [
+              247.9,
+              660.8
+            ],
+            [
+              270.6,
+              660.8
+            ],
+            [
+              294.7,
+              670.0
+            ],
+            [
+              324.4,
+              660.8
+            ],
+            [
+              358.4,
+              660.8
+            ],
+            [
+              392.5,
+              660.8
+            ],
+            [
+              426.5,
+              660.8
+            ],
+            [
+              475.9,
+              660.8
+            ],
+            [
+              528.6,
+              660.8
+            ],
+            [
+              123.6,
+              670.0
+            ],
+            [
+              149.1,
+              670.0
+            ],
+            [
+              172.8,
+              670.0
+            ],
+            [
+              199.7,
+              679.2
+            ],
+            [
+              225.2,
+              670.0
+            ],
+            [
+              247.9,
+              670.0
+            ],
+            [
+              270.6,
+              670.0
+            ],
+            [
+              324.4,
+              670.0
+            ],
+            [
+              358.4,
+              670.0
+            ],
+            [
+              392.5,
+              670.0
+            ],
+            [
+              426.5,
+              670.0
+            ],
+            [
+              478.4,
+              670.0
+            ],
+            [
+              528.6,
+              670.0
+            ],
+            [
+              121.8,
+              679.2
+            ],
+            [
+              149.1,
+              679.2
+            ],
+            [
+              172.8,
+              679.2
+            ],
+            [
+              225.2,
+              679.2
+            ],
+            [
+              247.9,
+              679.2
+            ],
+            [
+              270.6,
+              679.2
+            ],
+            [
+              324.4,
+              679.2
+            ],
+            [
+              358.4,
+              679.2
+            ],
+            [
+              392.5,
+              679.2
+            ],
+            [
+              426.5,
+              679.2
+            ],
+            [
+              475.9,
+              679.2
+            ],
+            [
+              528.6,
+              679.2
+            ],
+            [
+              121.8,
+              688.4
+            ],
+            [
+              149.1,
+              688.4
+            ],
+            [
+              172.8,
+              688.4
+            ],
+            [
+              225.2,
+              688.4
+            ],
+            [
+              247.9,
+              688.4
+            ],
+            [
+              270.6,
+              688.4
+            ],
+            [
+              294.7,
+              693.0
+            ],
+            [
+              324.4,
+              688.4
+            ],
+            [
+              358.4,
+              688.4
+            ],
+            [
+              392.5,
+              688.4
+            ],
+            [
+              426.5,
+              688.4
+            ],
+            [
+              473.8,
+              688.4
+            ],
+            [
+              528.6,
+              688.4
+            ],
+            [
+              121.8,
+              697.6
+            ],
+            [
+              149.1,
+              697.6
+            ],
+            [
+              172.8,
+              697.6
+            ],
+            [
+              199.7,
+              697.6
+            ],
+            [
+              225.2,
+              697.6
+            ],
+            [
+              247.9,
+              697.6
+            ],
+            [
+              270.6,
+              697.6
+            ],
+            [
+              324.4,
+              697.6
+            ],
+            [
+              358.4,
+              697.6
+            ],
+            [
+              392.5,
+              697.6
+            ],
+            [
+              426.5,
+              697.6
+            ],
+            [
+              473.8,
+              697.6
+            ],
+            [
+              528.6,
+              697.6
+            ],
+            [
+              94.8,
+              729.8
+            ],
+            [
+              121.8,
+              706.8
+            ],
+            [
+              147.3,
+              706.8
+            ],
+            [
+              172.8,
+              706.8
+            ],
+            [
+              199.7,
+              706.8
+            ],
+            [
+              225.2,
+              706.8
+            ],
+            [
+              247.9,
+              706.8
+            ],
+            [
+              270.6,
+              706.8
+            ],
+            [
+              294.7,
+              711.4
+            ],
+            [
+              324.4,
+              706.8
+            ],
+            [
+              358.4,
+              706.8
+            ],
+            [
+              392.5,
+              706.8
+            ],
+            [
+              428.4,
+              706.8
+            ],
+            [
+              473.6,
+              706.8
+            ],
+            [
+              528.7,
+              706.8
+            ],
+            [
+              121.8,
+              716.0
+            ],
+            [
+              147.3,
+              716.0
+            ],
+            [
+              172.8,
+              716.0
+            ],
+            [
+              199.7,
+              716.0
+            ],
+            [
+              225.2,
+              716.0
+            ],
+            [
+              247.9,
+              716.0
+            ],
+            [
+              270.6,
+              716.0
+            ],
+            [
+              324.4,
+              716.0
+            ],
+            [
+              358.4,
+              716.0
+            ],
+            [
+              392.5,
+              716.0
+            ],
+            [
+              429.4,
+              716.0
+            ],
+            [
+              473.6,
+              716.0
+            ],
+            [
+              528.7,
+              716.0
+            ],
+            [
+              121.8,
+              725.2
+            ],
+            [
+              147.3,
+              725.2
+            ],
+            [
+              172.8,
+              725.2
+            ],
+            [
+              199.7,
+              725.2
+            ],
+            [
+              225.2,
+              725.2
+            ],
+            [
+              247.9,
+              725.2
+            ],
+            [
+              270.6,
+              725.2
+            ],
+            [
+              294.7,
+              729.8
+            ],
+            [
+              324.4,
+              725.2
+            ],
+            [
+              358.4,
+              725.2
+            ],
+            [
+              392.5,
+              725.2
+            ],
+            [
+              426.5,
+              725.2
+            ],
+            [
+              477.6,
+              725.2
+            ],
+            [
+              528.7,
+              725.2
+            ],
+            [
+              121.8,
+              734.4
+            ],
+            [
+              147.3,
+              734.4
+            ],
+            [
+              172.8,
+              734.4
+            ],
+            [
+              199.7,
+              739.0
+            ],
+            [
+              225.2,
+              734.4
+            ],
+            [
+              247.9,
+              734.4
+            ],
+            [
+              270.6,
+              734.4
+            ],
+            [
+              324.4,
+              734.4
+            ],
+            [
+              358.4,
+              734.4
+            ],
+            [
+              392.5,
+              734.4
+            ],
+            [
+              426.5,
+              734.4
+            ],
+            [
+              477.8,
+              734.4
+            ],
+            [
+              528.7,
+              734.4
+            ],
+            [
+              121.8,
+              743.6
+            ],
+            [
+              147.3,
+              743.6
+            ],
+            [
+              172.8,
+              743.6
+            ],
+            [
+              225.2,
+              743.6
+            ],
+            [
+              247.9,
+              743.6
+            ],
+            [
+              270.6,
+              743.6
+            ],
+            [
+              294.7,
+              748.2
+            ],
+            [
+              324.4,
+              743.6
+            ],
+            [
+              358.4,
+              743.6
+            ],
+            [
+              392.5,
+              743.6
+            ],
+            [
+              426.5,
+              743.6
+            ],
+            [
+              475.7,
+              743.6
+            ],
+            [
+              528.7,
+              743.6
+            ],
+            [
+              121.8,
+              752.8
+            ],
+            [
+              147.3,
+              752.8
+            ],
+            [
+              172.8,
+              752.8
+            ],
+            [
+              199.7,
+              752.8
+            ],
+            [
+              225.2,
+              752.8
+            ],
+            [
+              247.9,
+              752.8
+            ],
+            [
+              270.6,
+              752.8
+            ],
+            [
+              324.4,
+              752.8
+            ],
+            [
+              358.4,
+              752.8
+            ],
+            [
+              392.5,
+              752.8
+            ],
+            [
+              426.5,
+              752.8
+            ],
+            [
+              475.7,
+              752.8
+            ],
+            [
+              528.7,
+              752.8
+            ]
+          ]
+        },
+        {
+          "evidence_id": "p1-e05",
+          "pdf_page": 1,
+          "label": "specification_footnotes",
+          "source_type": "text",
+          "text": "✽1 Ripple current (100 kHz/ +45 °C ), ✽2 ESR (100 kHz/+20 °C) ✽3 tan d (120 Hz/+20 °C) ✽4 After 5 minutes ◆ Please refer to each page in this catarog for “Reflow conditions” and “Taping specifications”.",
+          "bbox_pdf": [
+            52.30316162109375,
+            760.0482177734375,
+            396.3161315917969,
+            776.35302734375
+          ]
+        },
+        {
+          "evidence_id": "p1-e06",
+          "pdf_page": 1,
+          "label": "exact_target_pn_row",
+          "source_type": "table",
+          "text": "105 4.0 105 68 3.5 2.8 1.9 B2 1100 70 0.08 27.2 4TPB68M 2000",
+          "bbox_pdf": [
+            115.49735260009766,
+            629.4716186523438,
+            536.989013671875,
+            636.9716186523438
+          ],
+          "word_center_points_in_text_order": [
+            [
+              121.8,
+              633.2
+            ],
+            [
+              149.1,
+              633.2
+            ],
+            [
+              172.8,
+              633.2
+            ],
+            [
+              201.6,
+              633.2
+            ],
+            [
+              225.2,
+              633.2
+            ],
+            [
+              247.9,
+              633.2
+            ],
+            [
+              270.6,
+              633.2
+            ],
+            [
+              294.7,
+              633.2
+            ],
+            [
+              324.4,
+              633.2
+            ],
+            [
+              358.4,
+              633.2
+            ],
+            [
+              392.5,
+              633.2
+            ],
+            [
+              428.4,
+              633.2
+            ],
+            [
+              471.7,
+              633.2
+            ],
+            [
+              528.6,
+              633.2
+            ]
+          ]
+        }
+      ],
+      "occurrences": [
+        {
+          "pdf_page": 1,
+          "bbox_pdf": [
+            455.0733337402344,
+            629.4716186523438,
+            488.4183654785156,
+            636.9716186523438
+          ],
+          "geometry_status": "fallback_source_only",
+          "row_evidence_id": "p1-e06",
+          "row_column_matches": [],
+          "fallback_table_ids": [
+            "characteristics_list"
+          ],
+          "structure_header_incomplete": true,
+          "detection_status": "detected",
+          "structure_candidate_boxes": []
+        }
+      ],
+      "user_input_characters": 9131,
+      "estimated_input_tokens_including_prompt_schema": 3451,
+      "max_output_tokens": 2500
+    },
+    "execution_record": {
+      "document_id": "panasonic_tpb",
+      "part_number": "4TPB68M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": null,
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": false,
+      "processing_seconds": 3.2469713000027696,
+      "input_tokens": null,
+      "output_tokens": null,
+      "thinking_tokens": null,
+      "total_tokens": null,
+      "response_id": null,
+      "finish_reason": null,
+      "execution_status": "error",
+      "error_type": "ServerError",
+      "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "http_status": 503,
+      "quota_warning": null,
+      "raw_response_text": null,
+      "extraction": null,
+      "verification": null,
+      "requested_at": "2026-11-10T07:43:15+00:00",
+      "requests_dispatched": 1
+    },
+    "specification_evaluation": "not_evaluated",
+    "specifications_pending": 6,
+    "integrated_totals": {
+      "parts_attempted_including_vishay": 3,
+      "parts_with_response": 2,
+      "specifications_reviewed": 12,
+      "verification_counts": {
+        "verified": 6,
+        "failed": 5,
+        "unverifiable": 1
+      }
+    }
+  }
 }

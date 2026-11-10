@@ -226,7 +226,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, ValidationError, model_validator
 
-GEMINI_EXTRACTION_MODEL = 'gemini-3.1-flash-lite'
+GEMINI_EXTRACTION_MODEL = 'gemini-3.5-flash-lite'
 EXTRACTION_PROMPT_VERSION = '07.2-gemini'
 MAX_EXTRACTION_OUTPUT_TOKENS = 2500
 SPEC_FIELDS = ('rated_voltage','surge_voltage','capacitance','tolerance','esr','operating_temperature')
@@ -497,80 +497,173 @@ def _unit_in_quotes(unit, quotes):
                          normalize_whitespace(quote)) for quote in quotes)
 
 
-def validate_extraction(parsed, prepared):
-    """스키마 이후 실제 근거·P/N·단위·좌표 증거의 수준을 구분함."""
+def _match_extraction_citations(citations, prepared, entries, issues):
+    """근거 인용의 페이지·문구와 다른 P/N 포함 여부를 검사함."""
     request=prepared['request']
-    entries={e['evidence_id']:e for e in prepared['evidence']}
-    output={}
-    for field in SPEC_FIELDS:
-        item=getattr(parsed.specifications,field)
-        checks={'verification_status':'unverifiable','issues':[],'source_text_matched':False,
-                'normalized':None}
-        issues=checks['issues']
-        if parsed.part_number!=request['part_number']:
-            issues.append('output_pn_mismatch')
-        if item.status!='found':
-            if issues:
-                checks['verification_status']='failed'
-            else:
-                issues.append('no_confirmed_value_to_check')
-            output[field]=checks
+    quote_entries=[]
+    for eid,n,quote in citations:
+        if not isinstance(eid,str) or type(n) is not int or not isinstance(quote,str):
+            issues.append('invalid_evidence_reference')
             continue
-        citations=[(item.evidence_id,item.page,item.evidence)]+[
-            (q.evidence_id,q.page,q.quote) for q in item.supporting_evidence]
-        quote_entries=[]
-        for eid,n,quote in citations:
-            entry=entries.get(eid)
-            if n not in prepared['pages'] or not entry or entry['pdf_page']!=n:
-                issues.append('evidence_page_or_id_mismatch')
-                continue
-            folded=normalize_whitespace(quote)
-            if not folded or not re.search(r'(?<!\w)'+re.escape(folded)+r'(?!\w)',entry['text']):
-                issues.append('evidence_text_mismatch')
-                continue
-            other_ids=[i for i in prepared['pages'][n]['pn_like_word_ids']
-                       if i in entry['word_ids'] and prepared['pages'][n]['words'][i][0]!=request['part_number']]
-            if any(re.search(r'(?<![\w#])'+re.escape(prepared['pages'][n]['words'][i][0])+r'(?![\w#])',folded)
-                   for i in other_ids):
-                issues.append('other_pn_in_evidence')
-            quote_entries.append((entry,quote))
-        checks['source_text_matched']=len(quote_entries)==len(citations)
-        if quote_entries and quote_entries[0][0]['evidence_id']==item.evidence_id:
-            if quote_entries[0][0]['source_type']!=item.source_type:
-                issues.append('source_type_mismatch')
-        if field=='operating_temperature':
-            if (normalize_whitespace(item.value) not in normalize_whitespace(item.evidence)
-                    or not all(v and _numeric_literal_in_quote(v,item.evidence) for v in
-                               (item.value_min,item.value_max))):
-                issues.append('temperature_range_not_in_primary_evidence')
-        elif not _numeric_literal_in_quote(item.value,item.evidence):
-            issues.append('value_not_in_primary_evidence')
-        if not _unit_in_quotes(item.unit,[q for _,q in quote_entries]):
-            issues.append('unit_not_in_evidence')
-        if field=='tolerance' and '±' in item.evidence and not item.value.startswith('±'):
-            issues.append('tolerance_sign_missing')
-        if field=='esr' and (not item.condition or not re.search(r'\d\s*(?:kHz|MHz|Hz)\b',item.condition,re.I)):
-            issues.append('esr_measurement_frequency_missing')
-        if item.condition and not any(normalize_whitespace(item.condition) in normalize_whitespace(q)
-                                      for _,q in quote_entries):
-            issues.append('condition_not_in_evidence')
-        try:
-            checks['normalized']=normalize_spec_value(field,item.value,item.unit,item.value_min,item.value_max)
-        except ValueError:
-            issues.append('invalid_unit_value_or_range')
+        entry=entries.get(eid)
+        if n not in prepared['pages'] or not entry or entry['pdf_page']!=n:
+            issues.append('evidence_page_or_id_mismatch')
+            continue
+        folded=normalize_whitespace(quote)
+        if not folded or not re.search(r'(?<!\w)'+re.escape(folded)+r'(?!\w)',entry['text']):
+            issues.append('evidence_text_mismatch')
+            continue
+        other_ids=[i for i in prepared['pages'][n]['pn_like_word_ids']
+                   if i in entry['word_ids'] and prepared['pages'][n]['words'][i][0]!=request['part_number']]
+        if any(re.search(r'(?<![\w#])'+re.escape(prepared['pages'][n]['words'][i][0])+r'(?![\w#])',folded)
+               for i in other_ids):
+            issues.append('other_pn_in_evidence')
+        quote_entries.append((entry,quote))
+    return quote_entries
+
+
+def _validate_specification(field, item, part_number, prepared, entries):
+    """한 규격의 값·조건·단위와 P/N 적용 근거를 검사함."""
+    request=prepared['request']
+    checks={'verification_status':'unverifiable','issues':[],'source_text_matched':False,
+            'normalized':None}
+    issues=checks['issues']
+    if part_number!=request['part_number']:
+        issues.append('output_pn_mismatch')
+    if item.status!='found':
         if issues:
             checks['verification_status']='failed'
         else:
-            slot=prepared['direct_slots'].get(field)
-            if (slot and field!='esr' and item.scope=='pn' and item.source_type=='table' and item.evidence_id==slot['row_evidence_id']
-                and slot['text']==item.value and request['part_number'] in item.evidence
-                and any(e['label']=='table_header' and re.search(r'\b'+re.escape(slot['header_anchor'])+r'\b',q)
-                        for e,q in quote_entries)):
-                checks['verification_status']='verified'
-            else:
-                issues.append('pn_field_or_series_scope_not_proved_by_automatic_check')
-        output[field]=checks
-    return output
+            issues.append('no_confirmed_value_to_check')
+        return checks
+    citations=[(item.evidence_id,item.page,item.evidence)]+[
+        (q.evidence_id,q.page,q.quote) for q in item.supporting_evidence]
+    quote_entries=_match_extraction_citations(citations,prepared,entries,issues)
+    checks['source_text_matched']=len(quote_entries)==len(citations)
+    if quote_entries and quote_entries[0][0]['evidence_id']==item.evidence_id:
+        if quote_entries[0][0]['source_type']!=item.source_type:
+            issues.append('source_type_mismatch')
+    if field=='operating_temperature':
+        if (normalize_whitespace(item.value) not in normalize_whitespace(item.evidence)
+                or not all(v and _numeric_literal_in_quote(v,item.evidence) for v in
+                           (item.value_min,item.value_max))):
+            issues.append('temperature_range_not_in_primary_evidence')
+    elif not _numeric_literal_in_quote(item.value,item.evidence):
+        issues.append('value_not_in_primary_evidence')
+    if not _unit_in_quotes(item.unit,[q for _,q in quote_entries]):
+        issues.append('unit_not_in_evidence')
+    if field=='tolerance' and '±' in item.evidence and not item.value.startswith('±'):
+        issues.append('tolerance_sign_missing')
+    if field=='esr' and (not item.condition or not re.search(r'\d\s*(?:kHz|MHz|Hz)\b',item.condition,re.I)):
+        issues.append('esr_measurement_frequency_missing')
+    if item.condition and not any(normalize_whitespace(item.condition) in normalize_whitespace(q)
+                                  for _,q in quote_entries):
+        issues.append('condition_not_in_evidence')
+    try:
+        checks['normalized']=normalize_spec_value(field,item.value,item.unit,item.value_min,item.value_max)
+    except ValueError:
+        issues.append('invalid_unit_value_or_range')
+    if issues:
+        checks['verification_status']='failed'
+    else:
+        slot=prepared['direct_slots'].get(field)
+        if (slot and field!='esr' and item.scope=='pn' and item.source_type=='table' and item.evidence_id==slot['row_evidence_id']
+            and slot['text']==item.value and request['part_number'] in item.evidence
+            and any(e['label']=='table_header' and re.search(r'\b'+re.escape(slot['header_anchor'])+r'\b',q)
+                    for e,q in quote_entries)):
+            checks['verification_status']='verified'
+        else:
+            issues.append('pn_field_or_series_scope_not_proved_by_automatic_check')
+    return checks
+
+
+def validate_extraction(parsed, prepared):
+    """기존 전체 스키마 호출자의 규격별 원문 검사를 유지함."""
+    entries={e['evidence_id']:e for e in prepared['evidence']}
+    return {field:_validate_specification(field,getattr(parsed.specifications,field),
+                                          parsed.part_number,prepared,entries)
+            for field in SPEC_FIELDS}
+
+
+def validate_saved_extraction(raw_text, prepared):
+    """저장된 JSON의 외형과 규격별 스키마·원문 검사를 분리함."""
+    expected_pn=prepared['request']['part_number']
+    structure={'status':'failed','json_parsed':False,'part_number':None,
+               'part_number_matches':False,'field_shapes':{},'issues':[]}
+    issues=structure['issues']
+    try:
+        payload=json.loads(raw_text)
+    except (json.JSONDecodeError, TypeError):
+        issues.append('invalid_json')
+        return {'structure':structure,'specifications':{}}
+    structure['json_parsed']=True
+    if not isinstance(payload,dict):
+        issues.append('invalid_root_object')
+        return {'structure':structure,'specifications':{}}
+
+    part_number=payload.get('part_number')
+    structure['part_number']=part_number
+    structure['part_number_matches']=isinstance(part_number,str) and part_number==expected_pn
+    if not isinstance(part_number,str) or not part_number.strip():
+        issues.append('missing_or_invalid_part_number')
+    elif not structure['part_number_matches']:
+        issues.append('output_pn_mismatch')
+    if payload.keys()-{'part_number','specifications'}:
+        issues.append('unexpected_root_fields')
+
+    raw_specs=payload.get('specifications')
+    if not isinstance(raw_specs,dict):
+        issues.append('missing_or_invalid_specifications')
+        return {'structure':structure,'specifications':{}}
+    if raw_specs.keys()-set(SPEC_FIELDS):
+        issues.append('unexpected_specification_keys')
+
+    entries={e['evidence_id']:e for e in prepared['evidence']}
+    results={}
+    for field in SPEC_FIELDS:
+        raw=raw_specs.get(field)
+        row={'raw':raw,'schema_status':'failed','schema_errors':[],'verification_status':'failed',
+             'issues':[],'source_text_matched':False,'normalized':None}
+        results[field]=row
+        if field not in raw_specs:
+            shape='missing_specification'
+        elif not isinstance(raw,dict):
+            shape='invalid_specification_object'
+        else:
+            shape='object'
+        structure['field_shapes'][field]=shape
+        if shape!='object':
+            issues.append(f'{shape}:{field}')
+            row['issues'].append(shape)
+            continue
+
+        try:
+            item=SpecificationExtraction.model_validate(raw)
+        except ValidationError as error:
+            row['schema_errors']=error.errors(include_url=False,include_context=False,include_input=False)
+            row['issues'].append('specification_schema_error')
+            if raw.get('status')=='found':
+                required_text=('value','unit','scope','source_type','evidence_id','evidence')
+                row['issues'].extend(f'missing_{key}' for key in required_text
+                                     if raw.get(key) is None or raw.get(key)=='')
+                if raw.get('page') is None:
+                    row['issues'].append('missing_page')
+                supporting=raw.get('supporting_evidence')
+                citations=[(raw.get('evidence_id'),raw.get('page'),raw.get('evidence'))]
+                if isinstance(supporting,list):
+                    citations.extend((ref.get('evidence_id'),ref.get('page'),ref.get('quote'))
+                                     if isinstance(ref,dict) else (None,None,None) for ref in supporting)
+                matches=_match_extraction_citations(citations,prepared,entries,row['issues'])
+                row['source_text_matched']=len(matches)==len(citations)
+            if not structure['part_number_matches']:
+                row['issues'].append('output_pn_mismatch')
+        else:
+            row['schema_status']='passed'
+            row.update(_validate_specification(field,item,part_number,prepared,entries))
+
+    if not issues:
+        structure['status']='passed'
+    return {'structure':structure,'specifications':results}
 
 
 def build_extraction_messages(prepared):
@@ -611,19 +704,25 @@ def gemini_free_tier_is_confirmed():
     return _gemini_key_matches_confirmation(read_gemini_api_key())
 
 
-def request_gemini_extraction(prepared, *, stop_after_failure=False):
+def request_gemini_extraction(prepared, *, stop_after_failure=False, independent=False):
     """확인된 무료 프로젝트에서만 생성 요청 한 건을 보내고 결과를 검증함."""
     record={'document_id':prepared['request']['document_id'],'part_number':prepared['request']['part_number'],
         'provider':'gemini','requested_model':GEMINI_EXTRACTION_MODEL,'model':None,
         'prompt_version':EXTRACTION_PROMPT_VERSION,'request_attempted':False,'response_received':False,
         'processing_seconds':None,'input_tokens':None,'output_tokens':None,'thinking_tokens':None,
         'total_tokens':None,'response_id':None,'finish_reason':None,'execution_status':'not_run',
-        'error_type':None,'http_status':None,'quota_warning':None,'extraction':None,'verification':None}
+        'error_type':None,'error_message':None,'http_status':None,'quota_warning':None,
+        'raw_response_text':None,'extraction':None,'verification':None}
     api_key=read_gemini_api_key()
     if stop_after_failure or not api_key or not _gemini_key_matches_confirmation(api_key):
         record['execution_status']='blocked'
         record['error_type']=('previous_sample_not_validated' if stop_after_failure else
                               'missing_api_key' if not api_key else 'free_project_tier_unconfirmed')
+        record['error_message']={
+            'missing_api_key':'프로젝트 .env에 GEMINI_API_KEY가 없음',
+            'free_project_tier_unconfirmed':'현재 키의 프로젝트 무료 티어를 확인하지 못함',
+            'previous_sample_not_validated':'앞 표본의 응답 또는 원문 검사가 통과하지 못함',
+        }[record['error_type']]
         return record
     from google import genai
     from google.genai import errors, types
@@ -650,20 +749,39 @@ def request_gemini_extraction(prepared, *, stop_after_failure=False):
         if response.candidates and response.candidates[0].finish_reason is not None:
             reason=response.candidates[0].finish_reason
             record['finish_reason']=getattr(reason,'value',str(reason))
-        if record['finish_reason']!='STOP' or not response.text:
-            record.update(execution_status='error',error_type='incomplete_or_blocked_generation')
+        raw=response.text
+        record['raw_response_text']=raw.replace(api_key,'[REDACTED]') if raw else None
+        if raw and api_key in raw:
+            record.update(execution_status='error',error_type='credential_in_response',
+                          error_message='응답의 인증정보를 제거하고 파싱을 중단함')
+        elif record['finish_reason']!='STOP' or not raw:
+            record.update(execution_status='error',error_type='incomplete_or_blocked_generation',
+                          error_message=f"Gemini 종료 사유: {record['finish_reason']}")
+        elif independent:
+            checked=validate_saved_extraction(raw,prepared)
+            record['independent_validation']=checked
+            if checked['structure']['status']=='passed':
+                record['execution_status']='completed'
+            else:
+                record.update(execution_status='error',error_type='response_structure_error',
+                              error_message='전체 응답 구조 또는 P/N 일치 검사 실패함')
         else:
-            parsed=PartExtraction.model_validate_json(response.text)
+            parsed=PartExtraction.model_validate_json(raw)
             record.update(execution_status='completed',extraction=parsed.model_dump(),
                           verification=validate_extraction(parsed,prepared))
     except ValidationError:
-        record.update(execution_status='error',error_type='structured_response_validation_error')
+        record.update(execution_status='error',error_type='structured_response_validation_error',
+                      error_message='Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함')
     except errors.APIError as error:
         code=error.code
+        detail=str(getattr(error,'message','') or '').replace(api_key,'[REDACTED]')
+        detail=re.sub(r'AIza[0-9A-Za-z_-]{20,}', '[REDACTED]', detail)
         record.update(execution_status='error',error_type='quota_or_rate_limit' if code==429 else type(error).__name__,
+                      error_message=detail[:1500] or f'HTTP {code}',
                       http_status=code,quota_warning='http_429_no_retry' if code==429 else None)
-    except TransportError:
-        record.update(execution_status='error',error_type='transport_error')
+    except TransportError as error:
+        record.update(execution_status='error',error_type='transport_error',
+                      error_message=f'Gemini 전송 실패: {type(error).__name__}')
     finally:
         record['processing_seconds']=perf_counter()-started
     return record
