@@ -1,0 +1,13 @@
+﻿document_id,manufacturer,series,part_number,spec_name,primary_cause,api_execution_status,http_status,detail,score_included
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,rated_voltage,api_failure,error,429,API 429 quota_or_rate_limit,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,surge_voltage,api_failure,error,429,API 429 quota_or_rate_limit,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,capacitance,api_failure,error,429,API 429 quota_or_rate_limit,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,tolerance,api_failure,error,429,API 429 quota_or_rate_limit,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,esr,api_failure,error,429,API 429 quota_or_rate_limit,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,operating_temperature,api_failure,error,429,API 429 quota_or_rate_limit,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,rated_voltage,not_attempted_after_http_429,not_attempted_after_http_429,,Earlier HTTP 429 stopped remaining request; this P/N was not sent.,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,surge_voltage,not_attempted_after_http_429,not_attempted_after_http_429,,Earlier HTTP 429 stopped remaining request; this P/N was not sent.,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,capacitance,not_attempted_after_http_429,not_attempted_after_http_429,,Earlier HTTP 429 stopped remaining request; this P/N was not sent.,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,tolerance,not_attempted_after_http_429,not_attempted_after_http_429,,Earlier HTTP 429 stopped remaining request; this P/N was not sent.,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,esr,not_attempted_after_http_429,not_attempted_after_http_429,,Earlier HTTP 429 stopped remaining request; this P/N was not sent.,False
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,operating_temperature,not_attempted_after_http_429,not_attempted_after_http_429,,Earlier HTTP 429 stopped remaining request; this P/N was not sent.,False

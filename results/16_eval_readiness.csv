@@ -1,0 +1,8 @@
+﻿document_id,part_number,pn_connection,pdf_source,pdf_integrity,ground_truth_rows,ground_truth_confirmed_rows,input_quality,relationship_context,token_budget,ground_truth_leakage,gemini_api_calls,readiness,reason
+vishay_593d,293D107X9010D2WE3,ordering_code_match,manufacturer_document,pass,6,6,pass,pass,pass,none,0,ready,Unique reviewed ordering-code mapping.
+vishay_t59,T59EL157M035C0050,exact_match,manufacturer_document,pass,6,6,pass,pass,pass,none,0,ready,Exact P/N and conditions are present.
+vishay_t59,T59EL336M050C0075,exact_match,manufacturer_document,pass,6,6,pass,pass,pass,none,0,ready,Exact P/N and conditions are present.
+kyocera_avx_tcn,TCNT157M006R0200E,ordering_code_match,manufacturer_document,pass,6,6,pass,pass,pass,none,0,ready,Unique reviewed ordering-code mapping.
+panasonic_tpc_2015,6TPC47M,exact_match,user_provided_manufacturer_format,pass,6,6,pass,pass,pass,none,0,ready,Exact P/N and conditions are present; DL target-table miss is retained with original-PDF fallback.
+panasonic_tpc_2015,8TPC22M,exact_match,user_provided_manufacturer_format,pass,6,6,pass,pass,pass,none,0,ready,Exact P/N and conditions are present; DL target-table miss is retained with original-PDF fallback.
+panasonic_tpc,10TPC100M,exact_match,manufacturer_document,pass,6,6,pass,pass,pass,none,0,ready,Exact P/N and conditions are present.

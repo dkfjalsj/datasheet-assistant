@@ -1,0 +1,53 @@
+{
+  "stage": "19",
+  "method": "post-hoc reprocessing of unchanged Stage 17 raw Gemini responses; not an independent evaluation",
+  "api_calls": 0,
+  "prompt_changed": false,
+  "ground_truth_changed": false,
+  "raw_response_changed": false,
+  "evaluation": {
+    "successful_part_numbers": 6,
+    "rows": 36,
+    "old_correct": 18,
+    "old_accuracy_percent": 50.0,
+    "reprocessed_correct": 27,
+    "reprocessed_accuracy_percent": 75.0,
+    "recovered_correct_rows": 9,
+    "overall_7_pn_accuracy": "N/A - 8TPC22M HTTP 503 was not re-called"
+  },
+  "primary_cause_counts": {
+    "correct": 18,
+    "llm_missing_value": 5,
+    "llm_wrong_value": 4,
+    "normalization_error": 2,
+    "schema_error": 7
+  },
+  "reported_stage17_schema_validation_error_tags": 28,
+  "current_schema_field_results": {
+    "passed": 36,
+    "failed": 0,
+    "note": "relaxed field schema preserves complete temperature bounds and redundant scalar ESR limits; PDF evidence matching remains disabled"
+  },
+  "recovery_rules": [
+    "uF/µF equivalent units",
+    "trailing-zero numeric normalization",
+    "temperature range from both supplied bounds",
+    "identical scalar value_max preservation"
+  ],
+  "not_auto_corrected": [
+    "ambiguous or missing LLM values",
+    "tolerance without an explicit sign",
+    "incomplete two-condition surge voltage",
+    "surge voltage formula is preserved but never calculated"
+  ],
+  "development_reuse": {
+    "planned_part_numbers": 4,
+    "successful_stored_responses": 1,
+    "part_number": "TCJU227M020R0070E",
+    "rows": 6,
+    "before_correct": 5,
+    "after_correct": 5,
+    "before_accuracy_percent": 83.33,
+    "after_accuracy_percent": 83.33
+  }
+}

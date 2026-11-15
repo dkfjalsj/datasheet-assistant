@@ -1,0 +1,1712 @@
+{
+  "records": [
+    {
+      "document_id": "d5013909658dfbfd543afa4dbbd9c35c517955acbab571348b2f3750f67258f2",
+      "part_number": "10TPB150MGL",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 5.3077718000276946,
+      "input_tokens": 43593,
+      "output_tokens": 1228,
+      "thinking_tokens": null,
+      "total_tokens": 44821,
+      "response_id": "PZj5avWqKcvQosUPtr6EiQ4",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"10TPB150MGL\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"10\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 2,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p2-e02\",\n      \"evidence\": \"10    105    10    105           7.3  4.3  2.8 D3L  1700    55    0.10   150.0  10TPB150MGL     2500\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p2-e02\",\n          \"page\": 2,\n          \"quote\": \"Rated voltage (V)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"Rated voltage × 1.15\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V)                                          Rated voltage × 1.15\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 2,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p2-e02\",\n      \"evidence\": \"10    105    10    105           7.3  4.3  2.8 D3L  1700    55    0.10   150.0  10TPB150MGL     2500\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p2-e02\",\n          \"page\": 2,\n          \"quote\": \"Rated capacitance (μF)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance                                     ±20 % (120 Hz / +20 °C)\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"100\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"100\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 2,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p2-e02\",\n      \"evidence\": \"10    105    10    105           7.3  4.3  2.8 D3L  1700    55    0.10   150.0  10TPB150MGL     2500\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p2-e02\",\n          \"page\": 2,\n          \"quote\": \"ESR*2 (mΩ max.)\"\n        },\n        {\n          \"evidence_id\": \"p2-e02\",\n          \"page\": 2,\n          \"quote\": \"*2: ESR (100 kHz / +20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Category temp. range                                        –55 °C to +105 °C\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "b5af85d75fb0695c266835302bdcd431791d3b7a40c428c104ba03e758e687b1",
+      "requested_at": "2026-11-15T11:32:50.387053+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "6TPC330MA",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 5.717689899960533,
+      "input_tokens": 11243,
+      "output_tokens": 1324,
+      "thinking_tokens": null,
+      "total_tokens": 12567,
+      "response_id": "bJj5apj8C8Sq1e8P5bD2YA",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPC330MA\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   5.0  105   330   7.3  4.3  1.9  D2   1900    40     0.10   207.9   6TPC330MA\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"330\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"330\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"330   7.3  4.3  1.9  D2   1900    40     0.10   207.9   6TPC330MA\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"40\",\n      \"unit\": \"mΩ max.\",\n      \"value_min\": null,\n      \"value_max\": \"40\",\n      \"condition\": \"100 kHz/+20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"40\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"40     0.10   207.9   6TPC330MA\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"-55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "6TPC330MA",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "6.3",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "6.3",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "6.3   105   5.0  105   330   7.3  4.3  1.9  D2   1900    40     0.10   207.9   6TPC330MA"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Rated voltage × 1.15",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Surge voltage (V.DC)                                 Rated voltage × 1.15"
+              }
+            ],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "330",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "330",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "330   7.3  4.3  1.9  D2   1900    40     0.10   207.9   6TPC330MA"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "40",
+            "unit": "mΩ max.",
+            "value_min": null,
+            "value_max": "40",
+            "condition": "100 kHz/+20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "40",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "40     0.10   207.9   6TPC330MA"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "ESR (100 kHz/+20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": "-55 °C to +105 °C",
+            "unit": "°C",
+            "value_min": "-55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "–55 °C to +105 °C",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Category temperature range                                 –55 °C to +105 °C"
+              }
+            ],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "6.3",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "330",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "bafbaebcf53dd6f48198cfb96100af823156cb51966b8908320ae33711206614",
+      "requested_at": "2026-11-15T11:33:38.071468+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "75e39919894a5cd338827a88a6f0f461007089964545af7785473d77c9dc0aec",
+      "part_number": "6TPS150MUD",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 6.219433400023263,
+      "input_tokens": 103705,
+      "output_tokens": 1378,
+      "thinking_tokens": null,
+      "total_tokens": 105083,
+      "response_id": "tpj5arDrOq621e8PpJX9wAs",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPS150MUD\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 15,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p15-e04\",\n      \"evidence\": \"6.3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"105     6.3    105           3.5  2.8  1.1       1400    30    0.10    94.5    6TPS150MUD    2500\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"Rated voltage × 1.15\",\n      \"page\": 15,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p15-e04\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"Surge voltage (V)                                          Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 15,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p15-e04\",\n      \"evidence\": \"150\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"6.3                        150        105     6.3    105           3.5  2.8  1.1       1400    30    0.10    94.5    6TPS150MUD    2500\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / +20 °C\",\n      \"page\": 15,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p15-e04\",\n      \"evidence\": \"±20 % (120 Hz / +20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"Capacitance tolerance                                     ±20 % (120 Hz / +20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"30\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"30\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 15,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p15-e04\",\n      \"evidence\": \"30\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"105     6.3    105           3.5  2.8  1.1       1400    30    0.10    94.5    6TPS150MUD    2500\"\n        },\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"*2: ESR (100 kHz / +20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"–55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 15,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p15-e04\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e04\",\n          \"page\": 15,\n          \"quote\": \"Category temp. range                                        –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "b0d35ba00d91c2d8cb3b9099c93cd81613c12e0284fa09a0de9d21db495ef30e",
+      "requested_at": "2026-11-15T11:34:52.358855+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "10TPC68M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.187833500036504,
+      "input_tokens": 11252,
+      "output_tokens": 1064,
+      "thinking_tokens": null,
+      "total_tokens": 12316,
+      "response_id": "zZj5asz0PP2ovr0PgIOZuQ8",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"10TPC68M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"10\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e02\",\n      \"evidence\": \"10TPC68M\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated voltage (V.DC) 6.3 8.0 10.0 12.5\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V.DC) Rated voltage × 1.15\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"68\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e02\",\n      \"evidence\": \"10TPC68M\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated capacitance range 10 μF to 47 μF 68 μF to 330 μF\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance ±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"45\",\n      \"unit\": \"mΩ max.\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e02\",\n      \"evidence\": \"10TPC68M\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"-55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Category temperature range –55 °C to +105 °C\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "10TPC68M",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "10",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e02",
+            "evidence": "10TPC68M",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Rated voltage (V.DC) 6.3 8.0 10.0 12.5"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Surge voltage (V.DC) Rated voltage × 1.15",
+            "supporting_evidence": [],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "68",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e02",
+            "evidence": "10TPC68M",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Rated capacitance range 10 μF to 47 μF 68 μF to 330 μF"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Capacitance tolerance ±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "45",
+            "unit": "mΩ max.",
+            "value_min": null,
+            "value_max": null,
+            "condition": "100 kHz / +20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e02",
+            "evidence": "10TPC68M",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "ESR (100 kHz/+20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": "-55 °C to +105 °C",
+            "unit": "°C",
+            "value_min": "-55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Category temperature range –55 °C to +105 °C",
+            "supporting_evidence": [],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "10",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "68",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "43cb7f4874301494ba86f772eb185f151082aecd5f0167b95620ba5d62c25874",
+      "requested_at": "2026-11-15T11:35:15.820180+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "12TPC15M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.709359200031031,
+      "input_tokens": 11129,
+      "output_tokens": 1312,
+      "thinking_tokens": null,
+      "total_tokens": 12441,
+      "response_id": "s735arXcGPi-1e8P063RgAU",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"12TPC15M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"12.5\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Rated voltage range 6.3 V.DC to 12.5 V.DC\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated voltage range               6.3 V.DC to 12.5 V.DC                          6.3 V.DC to 10 V.DC\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V.DC) Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"15\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"12TPC15M 15 μF\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"12TPC15M\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance ±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"800\",\n      \"unit\": \"mΩ max.\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"800 mΩ max.\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"800\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"✽2 ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Category temperature range –55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "12TPC15M",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "12.5",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Rated voltage range 6.3 V.DC to 12.5 V.DC",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Rated voltage range               6.3 V.DC to 12.5 V.DC                          6.3 V.DC to 10 V.DC"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Surge voltage (V.DC) Rated voltage × 1.15",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Surge voltage (V.DC)                                 Rated voltage × 1.15"
+              }
+            ],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "15",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "12TPC15M 15 μF",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "12TPC15M"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "15"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Capacitance tolerance ±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "800",
+            "unit": "mΩ max.",
+            "value_min": null,
+            "value_max": null,
+            "condition": "100 kHz / +20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "800 mΩ max.",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "800"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "✽2 ESR (100 kHz/+20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": null,
+            "unit": "°C",
+            "value_min": "-55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Category temperature range –55 °C to +105 °C",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Category temperature range                                 –55 °C to +105 °C"
+              }
+            ],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "12.5",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "15",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "94faa76376b38fc7f3bec23a9ea8c5e17ca112c9bb0a2a12d2590ab4b7e9ba4f",
+      "requested_at": "2026-11-15T14:12:42.587879+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "6TPC150M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.720259000023361,
+      "input_tokens": 11238,
+      "output_tokens": 1388,
+      "thinking_tokens": null,
+      "total_tokens": 12626,
+      "response_id": "ur35as2XI8HZ9tMPvYD70AE",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPC150M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"150\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"40\",\n      \"unit\": \"mΩ max.\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"40\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"-55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "280c2105e2b5ea13f490850fa7ce0305bb09f260fe4f14dbc12461c52d96355a",
+      "requested_at": "2026-11-15T14:12:49.819596+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "8TPC22M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 6.045152299979236,
+      "input_tokens": 11243,
+      "output_tokens": 1397,
+      "thinking_tokens": null,
+      "total_tokens": 12640,
+      "response_id": "zb35as_tCZSz1e8PsqvT6Q0",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"8TPC22M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"8.0\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"8.0\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"TPC         85   6.3  105   22   3.5  2.8  1.1  B1   1000    70     0.10    17.6   8TPC22M     3000\\n         8.0\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"22\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"22\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"TPC         85   6.3  105   22   3.5  2.8  1.1  B1   1000    70     0.10    17.6   8TPC22M     3000\\n         8.0\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"70\",\n      \"unit\": \"mΩ max.\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"70\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"TPC         85   6.3  105   22   3.5  2.8  1.1  B1   1000    70     0.10    17.6   8TPC22M     3000\\n         8.0\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"✽2 ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"–55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"–55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "8TPC22M",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "8.0",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "8.0",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "TPC         85   6.3  105   22   3.5  2.8  1.1  B1   1000    70     0.10    17.6   8TPC22M     3000\n         8.0"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Rated voltage × 1.15",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Surge voltage (V.DC)                                 Rated voltage × 1.15"
+              }
+            ],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "22",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "22",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "TPC         85   6.3  105   22   3.5  2.8  1.1  B1   1000    70     0.10    17.6   8TPC22M     3000\n         8.0"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "70",
+            "unit": "mΩ max.",
+            "value_min": null,
+            "value_max": null,
+            "condition": "100 kHz / +20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "70",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "TPC         85   6.3  105   22   3.5  2.8  1.1  B1   1000    70     0.10    17.6   8TPC22M     3000\n         8.0"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "✽2 ESR (100 kHz/+20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": "–55 °C to +105 °C",
+            "unit": "°C",
+            "value_min": "–55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "–55 °C to +105 °C",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Category temperature range                                 –55 °C to +105 °C"
+              }
+            ],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "8",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "22",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "e274c3c4fe8d5ffe5fa36d52d9cd5aa2e31bcb1e3f151dd51132efe202dd87fe",
+      "requested_at": "2026-11-15T14:13:08.452998+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "12TPC10M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.619237000006251,
+      "input_tokens": 11213,
+      "output_tokens": 1405,
+      "thinking_tokens": null,
+      "total_tokens": 12618,
+      "response_id": "1b35aufpFJLlrfcPqMHcyQ4",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"12TPC10M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"12.5\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"12.5 V.DC\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"12.5       85  10.0  105   10   3.5  2.8  1.1  B1    800    80     0.10    12.5   12TPC10M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"Rated voltage × 1.15\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"10\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"10 μF\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"12.5       85  10.0  105   10   3.5  2.8  1.1  B1    800    80     0.10    12.5   12TPC10M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"800\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"800\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"800 mΩ max.\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"12.5       85  10.0  105   10   3.5  2.8  1.1  B1    800    80     0.10    12.5   12TPC10M    3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"✽2 ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"–55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "5b0e0ed16412e27037b2afbb47ec60ffcfba6709656a53060f3e8e33553eb33e",
+      "requested_at": "2026-11-15T14:13:16.681019+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "10TPC100M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 5.1494324000086635,
+      "input_tokens": 11187,
+      "output_tokens": 1640,
+      "thinking_tokens": null,
+      "total_tokens": 12827,
+      "response_id": "4b35aonUKOau9tMPwuTbkAo",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"10TPC100M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"10\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated voltage (V.DC) 6.3 8.0 10.0 12.5\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"100\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"45\",\n      \"unit\": \"mΩ max.\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR ✽2 (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"–55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Category temperature range                                 –55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "10TPC100M",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "10",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Rated voltage (V.DC) 6.3 8.0 10.0 12.5"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Surge voltage (V.DC)                                 Rated voltage × 1.15",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Surge voltage (V.DC)                                 Rated voltage × 1.15"
+              }
+            ],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "100",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "45",
+            "unit": "mΩ max.",
+            "value_min": null,
+            "value_max": null,
+            "condition": "100 kHz / +20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "10     10.0  105  100   7.3  4.3  1.9  D2   1700    45     0.10   100.0   10TPC100M   3000"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "ESR ✽2 (100 kHz/+20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": null,
+            "unit": "°C",
+            "value_min": "–55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Category temperature range                                 –55 °C to +105 °C",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Category temperature range                                 –55 °C to +105 °C"
+              }
+            ],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "10",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "100",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "39430039194e15bd1c8db1c4deebd63f0a187d99e01c1c01ef9537e895d171bd",
+      "requested_at": "2026-11-15T14:13:28.969393+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "6TPC150M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 5.735820400004741,
+      "input_tokens": 11242,
+      "output_tokens": 1723,
+      "thinking_tokens": null,
+      "total_tokens": 12965,
+      "response_id": "mcL5auraOp3frfcPuvaaqQ8",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPC150M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated voltage (V.DC)\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"Rated voltage × 1.15\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated capacitance (μF)\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"40\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"40\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR ✽2 (mΩ max.)\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"✽2 ESR (100 kHz/+20 °C)\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3   105   6.3  105  150   7.3  4.3  1.9  D2   1900    40     0.10    94.5   6TPC150M    3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"–55 °C\",\n      \"value_max\": \"+105 °C\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Category temperature range                                 –55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range                                 –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "3c8793c5737a8e6c836238a365b26f25bb0ff6db5fd2d6660c486a1b4d40d48b",
+      "requested_at": "2026-11-15T14:33:37.552076+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "6TPC100M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 6.060059099982027,
+      "input_tokens": 11237,
+      "output_tokens": 1245,
+      "thinking_tokens": null,
+      "total_tokens": 12482,
+      "response_id": "8sT5asqmEKGN1e8PyM3rmQk",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPC100M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3   105   6.3  105  100   7.3  4.3  1.9  D2   1700    45     0.10    63.0   6TPC100M    3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated voltage (V.DC)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Surge voltage (V.DC)                                 Rated voltage × 1.15\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"100\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3   105   6.3  105  100   7.3  4.3  1.9  D2   1700    45     0.10    63.0   6TPC100M    3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Rated capacitance (μF)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"45\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"45\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3   105   6.3  105  100   7.3  4.3  1.9  D2   1700    45     0.10    63.0   6TPC100M    3000\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR (100 kHz/+20 °C)\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"mΩ max.\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"-55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Category temperature range                                 –55 °C to +105 °C\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "6TPC100M",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "6.3",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "6.3   105   6.3  105  100   7.3  4.3  1.9  D2   1700    45     0.10    63.0   6TPC100M    3000",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Rated voltage (V.DC)"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Surge voltage (V.DC)                                 Rated voltage × 1.15",
+            "supporting_evidence": [],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "100",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "6.3   105   6.3  105  100   7.3  4.3  1.9  D2   1700    45     0.10    63.0   6TPC100M    3000",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Rated capacitance (μF)"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Capacitance tolerance                            ±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "45",
+            "unit": "mΩ",
+            "value_min": null,
+            "value_max": "45",
+            "condition": "100 kHz / +20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "6.3   105   6.3  105  100   7.3  4.3  1.9  D2   1700    45     0.10    63.0   6TPC100M    3000",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "ESR (100 kHz/+20 °C)"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "mΩ max."
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": "-55 °C to +105 °C",
+            "unit": "°C",
+            "value_min": "-55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e01",
+            "evidence": "Category temperature range                                 –55 °C to +105 °C",
+            "supporting_evidence": [],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "6.3",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "100",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "45",
+            "unit": "mΩ",
+            "rule": "mΩ -> mΩ: multiply by 1"
+          }
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "f9da94726e75ffc240bd05f86dd761e86339c8c575c567b4e545105d3f093280",
+      "requested_at": "2026-11-15T14:43:36.932254+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    },
+    {
+      "document_id": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "part_number": "6TPC150M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 5.2684554000152275,
+      "input_tokens": 11239,
+      "output_tokens": 1441,
+      "thinking_tokens": null,
+      "total_tokens": 12680,
+      "response_id": "-sT5at_7E4ii9tMPgbz7gAQ",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPC150M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"6.3 105 6.3 105 100 7.3 4.3 1.9 D2 1700 45 0.10 63.0 6TPC100M 3000\\n105 6.3 105 150 7.3 4.3 1.9 D2 1900 40 0.10 94.5 6TPC150M 3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC) Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"150\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"105 6.3 105 150 7.3 4.3 1.9 D2 1900 40 0.10 94.5 6TPC150M 3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"40\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"40\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"40\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"105 6.3 105 150 7.3 4.3 1.9 D2 1900 40 0.10 94.5 6TPC150M 3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"✽2 ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"–55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"–55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "6TPC150M",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "6.3",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "6.3",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "6.3 105 6.3 105 100 7.3 4.3 1.9 D2 1700 45 0.10 63.0 6TPC100M 3000\n105 6.3 105 150 7.3 4.3 1.9 D2 1900 40 0.10 94.5 6TPC150M 3000"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "found",
+            "value": "Rated voltage × 1.15",
+            "unit": "V.DC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "Rated voltage × 1.15",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Surge voltage (V.DC) Rated voltage × 1.15"
+              }
+            ],
+            "reason": null
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "150",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "150",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "105 6.3 105 150 7.3 4.3 1.9 D2 1900 40 0.10 94.5 6TPC150M 3000"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": "120 Hz / + 20 °C",
+            "page": 1,
+            "scope": "series",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "±20 % (120 Hz / + 20 °C)",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Capacitance tolerance ±20 % (120 Hz / + 20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "40",
+            "unit": "mΩ",
+            "value_min": null,
+            "value_max": "40",
+            "condition": "100 kHz / +20 °C",
+            "page": 1,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "40",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "105 6.3 105 150 7.3 4.3 1.9 D2 1900 40 0.10 94.5 6TPC150M 3000"
+              },
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "✽2 ESR (100 kHz/+20 °C)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": "–55 °C to +105 °C",
+            "unit": "°C",
+            "value_min": "–55",
+            "value_max": "+105",
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "table",
+            "evidence_id": "p1-e01",
+            "evidence": "–55 °C to +105 °C",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "Category temperature range –55 °C to +105 °C"
+              }
+            ],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "6.3",
+            "unit": "V",
+            "rule": "V.DC -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "failed",
+          "issues": [
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "150",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "value": "40",
+            "unit": "mΩ",
+            "rule": "mΩ -> mΩ: multiply by 1"
+          }
+        },
+        "operating_temperature": {
+          "verification_status": "verified",
+          "issues": [],
+          "source_text_matched": false,
+          "normalized": {
+            "min": "-55",
+            "max": "105",
+            "unit": "°C",
+            "rule": "°C -> °C: multiply by 1"
+          }
+        }
+      },
+      "execution_id": "b890628856d5361cf0e1bb19ef3890d16210c816062f679a633f3e87aa02f296",
+      "requested_at": "2026-11-15T14:43:45.909344+00:00",
+      "request_metadata": {
+        "stage": 21,
+        "source": "user_ui",
+        "retry_attempts": 0
+      }
+    }
+  ]
+}

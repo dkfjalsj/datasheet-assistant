@@ -1,0 +1,11 @@
+﻿attempt_ordinal,document_id,manufacturer,series,part_number,requested_model,execution_status,request_attempted,response_received,http_status,error_type,quota_warning,processing_seconds,input_tokens,output_tokens,thinking_tokens,total_tokens,finish_reason,note
+1,vishay_t58_2025,Vishay,T58,T58MM106M6R3C0300,gemini-3.5-flash-lite,completed,True,True,,,,4.62424249999458,14935,1124,,16059,STOP,single request; no retry
+2,vishay_t58_2025,Vishay,T58,T58W9476M6R3C0200,gemini-3.5-flash-lite,completed,True,True,,,,4.5540173999615945,14943,1304,,16247,STOP,single request; no retry
+3,vishay_t58_2025,Vishay,T58,T58A0107M6R3C0200,gemini-3.5-flash-lite,completed,True,True,,,,4.258197199960705,14946,1147,,16093,STOP,single request; no retry
+4,kyocera_avx_tcs_escc_rev2,KYOCERA AVX,TCS QPL ESCC,301200601477MG0012,gemini-3.5-flash-lite,completed,True,True,,,,6.406531000044197,38569,1465,,40034,STOP,single request; no retry
+5,kyocera_avx_tcs_escc_rev2,KYOCERA AVX,TCS QPL ESCC,301200601337MJ0012,gemini-3.5-flash-lite,completed,True,True,,,,4.952041700016707,38636,1105,,39741,STOP,single request; no retry
+6,kyocera_avx_tcs_escc_rev2,KYOCERA AVX,TCS QPL ESCC,301200601227MA0015,gemini-3.5-flash-lite,completed,True,True,,,,5.446158400038257,38635,1525,,40160,STOP,single request; no retry
+7,panasonic_poscap_tpe,Panasonic,POSCAP TPE,2TPE330MFB,gemini-3.5-flash-lite,completed,True,True,,,,5.034088200016413,40870,1400,,42270,STOP,single request; no retry
+8,panasonic_poscap_tpe,Panasonic,POSCAP TPE,2TPE470MAFB,gemini-3.5-flash-lite,completed,True,True,,,,4.8648403999977745,40883,1207,,42090,STOP,single request; no retry
+9,panasonic_poscap_tpe,Panasonic,POSCAP TPE,2R5TPE220MAFB,gemini-3.5-flash-lite,error,True,False,429,quota_or_rate_limit,http_429_no_retry,1.1144364000065252,,,,,,single request; no retry
+10,panasonic_poscap_tpe,Panasonic,POSCAP TPE,6TPE100MPB,gemini-3.5-flash-lite,not_attempted_after_http_429,False,False,,not_attempted_after_http_429,prior_http_429_stop,,,,,,,Not sent because the preceding request returned HTTP 429; no retry.

@@ -1,0 +1,157 @@
+{
+  "stage": 20,
+  "evaluation_type": "additional post-freeze evaluation",
+  "created_at": "2026-11-15T10:14:10.889696+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "api_limit": 10,
+  "retry_policy": "no_retry; stop on HTTP 429",
+  "qa_api_calls": 0,
+  "ground_truth_source": "data/ground_truth_additional.csv",
+  "ground_truth_rows": 60,
+  "new_part_numbers": [
+    "T58MM106M6R3C0300",
+    "T58W9476M6R3C0200",
+    "T58A0107M6R3C0200",
+    "301200601477MG0012",
+    "301200601337MJ0012",
+    "301200601227MA0015",
+    "2TPE330MFB",
+    "2TPE470MAFB",
+    "2R5TPE220MAFB",
+    "6TPE100MPB"
+  ],
+  "documents": {
+    "vishay_t58_2025": {
+      "manufacturer": "Vishay",
+      "series": "T58",
+      "component_type": "Polymer tantalum capacitor",
+      "filename": "vishay_t58_2025.pdf",
+      "source_url": "https://www.vishay.com/docs/40189/t58.pdf",
+      "document_version": "Revision: 11-Mar-2025; Document Number: 40189",
+      "pages": 20,
+      "parts": [
+        "T58MM106M6R3C0300",
+        "T58W9476M6R3C0200",
+        "T58A0107M6R3C0200"
+      ],
+      "sha256": "6c8cf0bd08f3c24809d45148220cf1f7fab65a1ee81ad60ad463e542aa279bf8"
+    },
+    "kyocera_avx_tcs_escc_rev2": {
+      "manufacturer": "KYOCERA AVX",
+      "series": "TCS QPL ESCC",
+      "component_type": "Polymer tantalum capacitor",
+      "filename": "kyocera_avx_tcs_escc_rev2.pdf",
+      "source_url": "https://datasheets.kyocera-avx.com/AVX-TCS-QPL-ESCC.pdf",
+      "document_version": "TDS-HIRELTANT-0004 | Rev2",
+      "pages": 2,
+      "parts": [
+        "301200601477MG0012",
+        "301200601337MJ0012",
+        "301200601227MA0015"
+      ],
+      "sha256": "0e39c4a98e0a436faa3a9f7385949e6b691b8ea8bccda9788a8ad370c3dd8be7"
+    },
+    "panasonic_poscap_tpe": {
+      "manufacturer": "Panasonic",
+      "series": "POSCAP TPE",
+      "component_type": "Conductive polymer tantalum capacitor",
+      "filename": "panasonic_poscap_tpe.pdf",
+      "source_url": "https://industrial.panasonic.com/content/data/CP/PDF/POSCAP/S_POSCAP_TPE_E.pdf",
+      "document_version": "S_POSCAP_TPE_E",
+      "pages": 4,
+      "parts": [
+        "2TPE330MFB",
+        "2TPE470MAFB",
+        "2R5TPE220MAFB",
+        "6TPE100MPB"
+      ],
+      "sha256": "d48840ddb8771e5d1f20f00e48530befa34992c0de24610a023cdda27c49b3db"
+    }
+  },
+  "source_code_sha256": {
+    "app.py": "7889828b0d6df91b400f75e8704fbda431715f940c653c3d332463d8ded0da51",
+    "datasheet_analysis.py": "7e3c5350b7a5f99fd505349872b114d26a25ffb956c2781d318e2577347ba4c8",
+    "table_detection.py": "8c011fb7c6e9df35eaef1325d8dadbe8094ed5a8258945eec1c1a997f7e0d709"
+  },
+  "frozen_before_dl_and_api": true,
+  "criteria": "exact semantic value/unit comparison; formula preserved, not calculated; not_found correct only when extraction is not_found",
+  "free_tier_confirmation": {
+    "user_confirmation": "prior conversation screenshot and explicit confirmation",
+    "official_pricing_checked": "2026-11-15",
+    "official_pricing_url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "model_standard_input_output": "free of charge"
+  },
+  "api_execution": {
+    "requested_count": 9,
+    "completed_count": 8,
+    "http_429_stop": true,
+    "not_attempted_after_429": 1,
+    "qa_api_calls": 0,
+    "archive": "results/20_raw_extraction.json"
+  },
+  "evaluation": {
+    "planned_specs": 60,
+    "evaluated_specs": 48,
+    "correct_specs": 48,
+    "value_unit_accuracy_pct": 100.0,
+    "excluded_api_failure_specs": 12,
+    "post_freeze_code_hash_verified": true,
+    "normalization_comparison": "canonical value/unit only; diagnostic rule string excluded",
+    "condition_comparison": "frequency and Celsius value; optional positive sign and punctuation normalized"
+  },
+  "evaluation_correction": {
+    "reason": "normalization rule description was diagnostic metadata, not a measured value or unit",
+    "corrected_rows": [
+      {
+        "part_number": "301200601477MG0012",
+        "spec_name": "rated_voltage"
+      },
+      {
+        "part_number": "301200601337MJ0012",
+        "spec_name": "rated_voltage"
+      },
+      {
+        "part_number": "301200601337MJ0012",
+        "spec_name": "capacitance"
+      },
+      {
+        "part_number": "301200601227MA0015",
+        "spec_name": "rated_voltage"
+      },
+      {
+        "part_number": "2TPE330MFB",
+        "spec_name": "rated_voltage"
+      },
+      {
+        "part_number": "2TPE470MAFB",
+        "spec_name": "rated_voltage"
+      }
+    ],
+    "raw_response_changed": false,
+    "ground_truth_changed": false,
+    "source_code_changed": false
+  },
+  "streamlit_test": {
+    "method": "streamlit.testing.v1.AppTest",
+    "tab_count": 6,
+    "tabs": [
+      "데이터시트 분석",
+      "규격 결과",
+      "P/N 비교",
+      "AI 질문",
+      "기존 분석 결과",
+      "정확도 평가"
+    ],
+    "exceptions": 0,
+    "dataframes": 4,
+    "file_uploaders": 1,
+    "saved_data_load_errors": [],
+    "local_korean_qa": "passed using existing saved result; no API",
+    "gemini_korean_qa": "button present but not triggered; 0 API calls",
+    "buttons": [
+      "저장 결과로 답변",
+      "Gemini 한국어 답변 생성"
+    ],
+    "api_calls_during_test": 0
+  }
+}

@@ -1,0 +1,8 @@
+﻿document_id,manufacturer,series,pdf_page,dl_status,region_id,detection_label,detection_confidence,structure_object_count,detection_seconds,structure_seconds,note
+vishay_t58_2025,Vishay,T58,1,no_table_detected,,,,0,1.4497025000164285,0,No table region above existing threshold.
+vishay_t58_2025,Vishay,T58,3,completed,d1,table,0.999789,29,1.1257843999774195,0.9908727000001818,Existing Table Transformer detection and structure recognition.
+kyocera_avx_tcs_escc_rev2,KYOCERA AVX,TCS QPL ESCC,1,completed,d1,table,0.984374,10,1.1461243000230752,0.268999999971129,Existing Table Transformer detection and structure recognition.
+kyocera_avx_tcs_escc_rev2,KYOCERA AVX,TCS QPL ESCC,1,completed,d2,table,0.998814,23,1.1461243000230752,0.7109155000071041,Existing Table Transformer detection and structure recognition.
+kyocera_avx_tcs_escc_rev2,KYOCERA AVX,TCS QPL ESCC,2,completed,d1,table,0.999706,63,1.1288590999902226,1.1080705000204034,Existing Table Transformer detection and structure recognition.
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,1,completed,d1,table,0.989893,22,0.9909625999862328,1.3531750999973156,Existing Table Transformer detection and structure recognition.
+panasonic_poscap_tpe,Panasonic,POSCAP TPE,2,completed,d1,table,0.999317,79,1.0124161000130698,1.707610100042075,Existing Table Transformer detection and structure recognition.

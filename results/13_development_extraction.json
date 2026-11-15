@@ -1,0 +1,318 @@
+{
+  "records": [
+    {
+      "document_id": "vishay_t55",
+      "part_number": "T55A336M2R5C0200",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": null,
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": false,
+      "processing_seconds": 6.511719199996151,
+      "input_tokens": null,
+      "output_tokens": null,
+      "thinking_tokens": null,
+      "total_tokens": null,
+      "response_id": null,
+      "finish_reason": null,
+      "execution_status": "error",
+      "error_type": "ServerError",
+      "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "http_status": 503,
+      "quota_warning": null,
+      "raw_response_text": null,
+      "extraction": null,
+      "verification": null,
+      "execution_id": "5bb68d7931c0c25018a198aa725911e17e68b5d00a73fd4f5c2c62c32d5e4d40",
+      "requested_at": "2026-11-12T05:43:03.953597+00:00",
+      "request_metadata": {
+        "manufacturer": "Vishay",
+        "pdf_sha256": "b6b2af34f4c63971bd089c49e4477fcee69957dbe2d66aee397b23df160595d4"
+      }
+    },
+    {
+      "document_id": "vishay_t55",
+      "part_number": "T55B107M2R5C0070",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": null,
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": false,
+      "processing_seconds": 8.962979500000074,
+      "input_tokens": null,
+      "output_tokens": null,
+      "thinking_tokens": null,
+      "total_tokens": null,
+      "response_id": null,
+      "finish_reason": null,
+      "execution_status": "error",
+      "error_type": "ServerError",
+      "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "http_status": 503,
+      "quota_warning": null,
+      "raw_response_text": null,
+      "extraction": null,
+      "verification": null,
+      "execution_id": "bd53283d1323771def021cd00808dd8e56fe2cbbd67b9183bee2866204b90606",
+      "requested_at": "2026-11-12T05:43:43.725041+00:00",
+      "request_metadata": {
+        "manufacturer": "Vishay",
+        "pdf_sha256": "b6b2af34f4c63971bd089c49e4477fcee69957dbe2d66aee397b23df160595d4"
+      }
+    },
+    {
+      "document_id": "kyocera_avx_tcj",
+      "part_number": "TCJU337M016R0070E",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": null,
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": false,
+      "processing_seconds": 7.639310299993667,
+      "input_tokens": null,
+      "output_tokens": null,
+      "thinking_tokens": null,
+      "total_tokens": null,
+      "response_id": null,
+      "finish_reason": null,
+      "execution_status": "error",
+      "error_type": "ServerError",
+      "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "http_status": 503,
+      "quota_warning": null,
+      "raw_response_text": null,
+      "extraction": null,
+      "verification": null,
+      "execution_id": "8aaf01e87845460a73e1fea1bee5d0a44df8a011fd5c966c9cf8ce5fc3c9b509",
+      "requested_at": "2026-11-12T05:44:22.747442+00:00",
+      "request_metadata": {
+        "manufacturer": "KYOCERA AVX",
+        "pdf_sha256": "ab956be23ec05beb29dc7c9561d28de7263c810d429f86d646a7c470a5edd264"
+      }
+    },
+    {
+      "document_id": "kyocera_avx_tcj",
+      "part_number": "TCJU227M020R0070E",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 9.01288580000255,
+      "input_tokens": 5396,
+      "output_tokens": 1034,
+      "thinking_tokens": null,
+      "total_tokens": 6430,
+      "response_id": "YFL1atz2LtHf9tMPwpWCgAU",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"TCJU227M020R0070E\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"20\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"20\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"Rated Voltage (V)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"not_found\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"Surge voltage value is not directly specified in the row for this specific part number.\"\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"220\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"220\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"Capacitance (μF)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e02\",\n      \"evidence\": \"Capacitance Tolerance: ±20%\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"M Tolerance M = ±20%\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"70\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"100kHz\",\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"70\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"ESR Max. @ 100kHz (mΩ)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"105\",\n      \"unit\": \"ºC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 6,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p6-e10\",\n      \"evidence\": \"105\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p6-e03\",\n          \"page\": 6,\n          \"quote\": \"Maximum Operating Temperature (ºC)\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": {
+        "part_number": "TCJU227M020R0070E",
+        "specifications": {
+          "rated_voltage": {
+            "status": "found",
+            "value": "20",
+            "unit": "V",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 6,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p6-e10",
+            "evidence": "20",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p6-e03",
+                "page": 6,
+                "quote": "Rated Voltage (V)"
+              }
+            ],
+            "reason": null
+          },
+          "surge_voltage": {
+            "status": "not_found",
+            "value": null,
+            "unit": null,
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": null,
+            "scope": null,
+            "source_type": null,
+            "evidence_id": null,
+            "evidence": null,
+            "supporting_evidence": [],
+            "reason": "Surge voltage value is not directly specified in the row for this specific part number."
+          },
+          "capacitance": {
+            "status": "found",
+            "value": "220",
+            "unit": "μF",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 6,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p6-e10",
+            "evidence": "220",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p6-e03",
+                "page": 6,
+                "quote": "Capacitance (μF)"
+              }
+            ],
+            "reason": null
+          },
+          "tolerance": {
+            "status": "found",
+            "value": "±20",
+            "unit": "%",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 1,
+            "scope": "series",
+            "source_type": "text",
+            "evidence_id": "p1-e02",
+            "evidence": "Capacitance Tolerance: ±20%",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p1-e01",
+                "page": 1,
+                "quote": "M Tolerance M = ±20%"
+              }
+            ],
+            "reason": null
+          },
+          "esr": {
+            "status": "found",
+            "value": "70",
+            "unit": "mΩ",
+            "value_min": null,
+            "value_max": null,
+            "condition": "100kHz",
+            "page": 6,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p6-e10",
+            "evidence": "70",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p6-e03",
+                "page": 6,
+                "quote": "ESR Max. @ 100kHz (mΩ)"
+              }
+            ],
+            "reason": null
+          },
+          "operating_temperature": {
+            "status": "found",
+            "value": "105",
+            "unit": "ºC",
+            "value_min": null,
+            "value_max": null,
+            "condition": null,
+            "page": 6,
+            "scope": "pn",
+            "source_type": "table",
+            "evidence_id": "p6-e10",
+            "evidence": "105",
+            "supporting_evidence": [
+              {
+                "evidence_id": "p6-e03",
+                "page": 6,
+                "quote": "Maximum Operating Temperature (ºC)"
+              }
+            ],
+            "reason": null
+          }
+        }
+      },
+      "verification": {
+        "rated_voltage": {
+          "verification_status": "unverifiable",
+          "issues": [
+            "pn_field_or_series_scope_not_proved_by_automatic_check"
+          ],
+          "source_text_matched": true,
+          "normalized": {
+            "value": "20",
+            "unit": "V",
+            "rule": "V -> V: multiply by 1"
+          }
+        },
+        "surge_voltage": {
+          "verification_status": "unverifiable",
+          "issues": [
+            "no_confirmed_value_to_check"
+          ],
+          "source_text_matched": false,
+          "normalized": null
+        },
+        "capacitance": {
+          "verification_status": "unverifiable",
+          "issues": [
+            "pn_field_or_series_scope_not_proved_by_automatic_check"
+          ],
+          "source_text_matched": true,
+          "normalized": {
+            "value": "220",
+            "unit": "µF",
+            "rule": "µF -> µF: multiply by 1"
+          }
+        },
+        "tolerance": {
+          "verification_status": "unverifiable",
+          "issues": [
+            "pn_field_or_series_scope_not_proved_by_automatic_check"
+          ],
+          "source_text_matched": true,
+          "normalized": {
+            "value": "±20",
+            "unit": "%",
+            "rule": "% -> %: multiply by 1"
+          }
+        },
+        "esr": {
+          "verification_status": "failed",
+          "issues": [
+            "esr_measurement_temperature_missing"
+          ],
+          "source_text_matched": true,
+          "normalized": {
+            "value": "70",
+            "unit": "mΩ",
+            "rule": "mΩ -> mΩ: multiply by 1"
+          }
+        },
+        "operating_temperature": {
+          "verification_status": "failed",
+          "issues": [
+            "temperature_range_not_in_primary_evidence",
+            "invalid_unit_value_or_range"
+          ],
+          "source_text_matched": true,
+          "normalized": null
+        }
+      },
+      "execution_id": "8e5907acb22642399ff41e473c69c2a242837c146cec93f4a8c8a407c358d014",
+      "requested_at": "2026-11-12T05:45:02.438759+00:00",
+      "request_metadata": {
+        "manufacturer": "KYOCERA AVX",
+        "pdf_sha256": "ab956be23ec05beb29dc7c9561d28de7263c810d429f86d646a7c470a5edd264"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+﻿test,result,evidence
+stage13_atomic_archive,passed,4 unique execution records persisted; successful response has raw text before verification.
+independent_field_validation,passed,Synthetic ESR/temperature failures still returned all six field outcomes.
+tpb_cropbox_warning,passed,New TPB PDF parses with a preserved CropBox warning rather than silent coordinate conversion.
+part_number_mismatch_detection,passed,6TPB220ML did not match 6TPB220MTL and was retained unresolved.
+stage13_archive_uniqueness,passed,Four distinct stage13 execution identifiers.
+api_calls_stage14,passed,No Gemini request function invoked in this stage.

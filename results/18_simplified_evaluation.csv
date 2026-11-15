@@ -1,0 +1,2 @@
+﻿evaluation_scope,metric,numerator,denominator,accuracy_percent,successful_part_numbers,api_failure_part_numbers,overall_7_pn_accuracy
+successful_responses_only,value_and_unit_accuracy,18,36,50.0,6,1,N/A - 8TPC22M HTTP 503

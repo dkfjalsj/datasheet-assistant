@@ -1,0 +1,21 @@
+﻿document_id,manufacturer,series,part_number,split,pdf_filename,pdf_available,ground_truth_rows,confirmed_rows,needs_review_rows,audit_status
+vishay_293d,Vishay,293D,293D107X9010D2WE3,dev,vishay_293d.pdf,True,6,0,6,ground_truth_complete
+vishay_593d,Vishay,593D,593D107X9010D2WE3,eval,vishay_593d.pdf,True,0,0,0,pending_ground_truth_source_review
+vishay_t55,Vishay,T55,T55A226M2R5C0200,dev,vishay_t55.pdf,True,6,5,1,ground_truth_complete
+vishay_t55,Vishay,T55,T55A336M2R5C0200,dev,vishay_t55.pdf,True,6,6,0,ground_truth_complete
+vishay_t55,Vishay,T55,T55B107M2R5C0070,dev,vishay_t55.pdf,True,6,6,0,ground_truth_complete
+vishay_t59,Vishay,T59,T59EL157M035C0050,eval,vishay_t59.pdf,True,0,0,0,pending_ground_truth_source_review
+vishay_t59,Vishay,T59,T59EL336M050C0075,eval,vishay_t59.pdf,True,0,0,0,pending_ground_truth_source_review
+kyocera_avx_taj,KYOCERA AVX,TAJ,TAJC106M035RNJ,dev,kyocera_avx_taj.pdf,True,6,0,6,ground_truth_complete
+kyocera_avx_tps,KYOCERA AVX,TPS,TPSC107M010R0100,dev,kyocera_avx_tps.pdf,True,6,0,6,ground_truth_complete
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU337M016R0050E,dev,kyocera_avx_tcj.pdf,True,6,6,0,ground_truth_complete
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU337M016R0070E,dev,kyocera_avx_tcj.pdf,True,6,6,0,ground_truth_complete
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU227M020R0070E,dev,kyocera_avx_tcj.pdf,True,6,6,0,ground_truth_complete
+kyocera_avx_tcj,KYOCERA AVX,TCJ,TCJU107M025R0070E,dev,kyocera_avx_tcj.pdf,True,6,6,0,ground_truth_complete
+kyocera_avx_tcn,KYOCERA AVX,TCN,TCNT157M006R0200E,eval,kyocera_avx_tcn.pdf,True,0,0,0,pending_ground_truth_source_review
+panasonic_tpb,Panasonic,TPB,4TPB68M,dev,panasonic_tpb.pdf,True,6,6,0,ground_truth_complete_user_provided_revision
+panasonic_tpb,Panasonic,TPB,6TPB220ML,dev,panasonic_tpb.pdf,True,6,0,6,ambiguous_part_number_mismatch_user_revision
+panasonic_tpb,Panasonic,TPB,10TPB150ML,dev,panasonic_tpb.pdf,True,6,6,0,ground_truth_complete_user_provided_revision
+panasonic_tpc,Panasonic,TPC,6TPC47M,eval,panasonic_tpc.pdf,False,0,0,0,pending_pdf_missing
+panasonic_tpc,Panasonic,TPC,8TPC22M,eval,panasonic_tpc.pdf,False,0,0,0,pending_pdf_missing
+panasonic_tpc,Panasonic,TPC,10TPC100M,eval,panasonic_tpc.pdf,False,0,0,0,pending_pdf_missing

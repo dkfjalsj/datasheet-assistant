@@ -1,0 +1,8 @@
+﻿document_id,manufacturer,series,part_number,pn_connection,official_pdf,pdf_integrity,ground_truth_rows,ground_truth_confirmed_rows,dl_analysis,input_quality,ground_truth_leakage,gemini_api_calls,readiness,reason
+vishay_593d,Vishay,593D,293D107X9010D2WE3,ordering_code_match,pass,pass,6,6,pass,warning,none,0,needs_review,Only a unique ordering-code pattern is visible; the exact assembled P/N is not a standalone source token.
+vishay_t59,Vishay,T59,T59EL157M035C0050,exact_match,pass,pass,6,6,pass,pass,none,0,ready,Exact target P/N is visible in the selected official PDF pages.
+vishay_t59,Vishay,T59,T59EL336M050C0075,exact_match,pass,pass,6,6,pass,pass,none,0,ready,Exact target P/N is visible in the selected official PDF pages.
+kyocera_avx_tcn,KYOCERA AVX,TCN,TCNT157M006R0200E,ordering_code_match,pass,pass,6,6,pass,warning,none,0,needs_review,Only a unique ordering-code pattern is visible; the exact assembled P/N is not a standalone source token.
+panasonic_tpc,Panasonic,TPC,6TPC47M,not_found,pass,pass,6,0,pass,fail,none,0,blocked,Target P/N is not present in the official TPC characteristics list; no substitution is permitted.
+panasonic_tpc,Panasonic,TPC,8TPC22M,not_found,pass,pass,6,0,pass,fail,none,0,blocked,Target P/N is not present in the official TPC characteristics list; no substitution is permitted.
+panasonic_tpc,Panasonic,TPC,10TPC100M,exact_match,pass,pass,6,6,pass,pass,none,0,ready,Exact target P/N is visible in the selected official PDF pages.

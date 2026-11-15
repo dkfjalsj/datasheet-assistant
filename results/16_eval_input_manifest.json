@@ -1,0 +1,938 @@
+{
+  "stage": "16",
+  "prompt_version": "07.3-gemini",
+  "gemini_api_calls": 0,
+  "ground_truth_included_in_inputs": false,
+  "inputs": [
+    {
+      "document_id": "vishay_593d",
+      "manufacturer": "Vishay",
+      "series": "593D",
+      "part_number": "293D107X9010D2WE3",
+      "pdf_filename": "vishay_593d.pdf",
+      "pdf_sha256": "dbcc10b3b4a95d434dff49591f92b49eca89641e0822ff547abb4809b587c7b5",
+      "pdf_page_count": 19,
+      "selected_pages": [
+        1,
+        5
+      ],
+      "pn_connection": "ordering_code_match",
+      "exact_source_occurrences": [],
+      "estimated_input_tokens": 1618,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Unique reviewed ordering-code mapping.",
+      "prepared_input": {
+        "request": {
+          "document_id": "vishay_593d",
+          "manufacturer": "Vishay",
+          "series": "593D",
+          "part_number": "293D107X9010D2WE3",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 1,
+            "page_text": "593D\nwww.vishay.com\nVishay Sprague\nUpgrade for High Reliability With T83\n \nRevision: 21-Nov-2023\n1\nDocument Number: 40005\nFor technical questions, contact: tantalum@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\nSolid Tantalum Surface Mount Chip Capacitors\nTANTAMOUNT™, Molded Case, Low ESR\nLINKS TO ADDITIONAL RESOURCES\nEffective September 2005, new capacitor ratings will not be \nadded to the 593D series. All new ratings are available in the \nTR3 series. The TR3 series offers state-of-the-art low ESR \nfor switch mode power supplies and DC/DC converters. \nPERFORMANCE / ELECTRICAL \nCHARACTERISTICS\nwww.vishay.com/doc?40192\nOperating Temperature: -55 °C to +125 °C \n(above +85 °C voltage derating is required)\nCapacitance Range: 0.47 μF to 680 μF\nCapacitance Tolerance: ± 5 %, ± 10 %, ± 20 % \n100 % Surge Current Tested (C, D and E Case Sizes)\nVoltage Rating: 4 VDC to 50 VDC\nNote\n•\nFor recommended voltage derating guidelines see “Typical \nPerformance Characteristics”\nFEATURES\n• Low ESR\n• Molded case available in five case codes\n• Terminations: 100 % matte tin standard, \ntin / lead available\n• High ripple current carrying capability\n• Compatible with “high volume” automatic pick \nand place equipment\n• Qualified to EIA-717\n• Moisture sensitivity level 1\n• Compliant terminations\n• Standard EIA-535-BAAC case sizes (A through E)\n• Material categorization: for definitions of compliance \nplease see www.vishay.com/doc?99912\nNote \n* This    datasheet    provides    information    about    parts    that    are \nRoHS-compliant and / or parts that are non RoHS-compliant.  For \nexample, parts with lead (Pb) terminations are not RoHS-compliant. \nPlease see the information / tables in this datasheet for details\nAPPLICATIONS\n• Industrial\n• Telecom infrastructure\n• General purpose\nNotes\n•\nWe reserve the right to supply higher voltage ratings and tighter capacitance tolerance capacitors in the same case size. \nVoltage substitutions will be marked with the higher voltage rating. \nLow ESR solid tantalum chip capacitors allow delta ESR of 1.25 times the datasheet limits after mounting\n•\nDry pack as specified in J-STD-033\n3\nD\n3\nD\n3D Models\nCalculators\nRelated\nDocuments\nDid You\nKnow?\nTechnical\nNotes\nAvailable\nAvailable\nAvailable\nORDERING INFORMATION\n593D\n107\nX9\n010\nD\n2WE3\nTYPE\nCAPACITANCE\nCAPACITANCE\nDC VOLTAGE RATING\nCASE CODE\nTERMINATION AND\nTOLERANCE\nAT +85 °C\nPACKAGING\nThis is expressed in\npicofarads. The first\ntwo digits are the\nsignificant figures.\nThe third is the number\nof zeros to follow.\nX0 = ± 20 %\nX9 = ± 10 %\nX5 = ± 5 %\n(special order)\nThis is expressed in V.\nTo complete the three-digit\nblock, zeros precede the\nvoltage rating. A decimal\npoint is indicated by an “R”\n(6R3 = 6.3 V).\nSee Ratings\nand Case\nCodes table\nMatte tin\n2TE3 = 7\" (178 mm) reel \n2WE3 = 13\" (330 mm) reel \n2DE3 = 7\" (178 mm) reel, \ndry pack \n2RE3 = 13\" (330 mm) reel, \ndry pack \nTin / lead\n8T = 7\" (178 mm) reel \n8W = 13\" (330 mm) reel \n8D = 7\" (178 mm) reel, \ndry pack \n8R = 13\" (330 mm) reel, \ndry pack\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 5,
+            "page_text": "593D\nwww.vishay.com\nVishay Sprague\nUpgrade for High Reliability With T83\n \nRevision: 21-Nov-2023\n5\nDocument Number: 40005\nFor technical questions, contact: tantalum@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\n 10 VDC AT +85 °C; 7 VDC AT +125 °C\n4.7\nA\n593D475(1)010A(2)\n0.5\n6\n3.000\n0.16\n6.8\nA\n593D685(1)010A(2)\n0.7\n6\n3.000\n0.16\n10\nA\n593D106(1)010A(2)\n1.0\n6\n2.000\n0.19\n15\nA\n593D156(1)010A(2)\n1.5\n6\n2.000\n0.19\n15\nB\n593D156(1)010B(2)\n1.5\n6\n0.700\n0.35\n22\nA\n593D226(1)010A(2)\n2.2\n8\n1.500\n0.22\n22\nB\n593D226(1)010B(2)\n2.2\n6\n0.700\n0.35\n22\nC\n593D226(1)010C(2)\n2.2\n6\n0.345\n0.56\n33\nB\n593D336(1)010B(2)\n3.3\n6\n0.600\n0.38\n33\nC\n593D336(1)010C(2)\n3.3\n6\n0.300\n0.61\n47\nB\n593D476(1)010B(2)\n4.7\n6\n0.600\n0.38\n47\nC\n593D476(1)010C(2)\n4.7\n6\n0.300\n0.61\n47\nD\n593D476(1)010D(2)\n4.7\n6\n0.200\n0.87\n68\nC\n593D686(1)010C(2)\n6.8\n6\n0.275\n0.63\n68\nD\n593D686(1)010D(2)\n6.8\n6\n0.150\n1.00\n100\nC\n593D107(1)010C(2)\n10.0\n8\n0.200\n0.74\n100\nD\n593D107(1)010D(2)\n10.0\n6\n0.100\n1.22\n150\nD\n593D157(1)010D(2)\n15.0\n8\n0.100\n1.22\n150\nE\n593D157(1)010E(2)\n15.0\n8\n0.100\n1.28\n220\nD\n593D227(1)010D(2)\n22.0\n8\n0.125\n1.10\n220\nE\n593D227(1)010E(2)\n22.0\n8\n0.100\n1.28\n330\nE\n593D337(1)010E(2)\n33.0\n10\n0.100\n1.28\n16 VDC AT +85 °C; 10 VDC AT +125 °C\n1.0\nA\n593D105(1)016A(2)\n0.5\n4\n5.500\n0.12\n3.3\nA\n593D335(1)016A(2)\n0.5\n6\n3.500\n0.15\n4.7\nA\n593D475(1)016A(2)\n0.8\n6\n2.500\n0.17\n4.7\nB\n593D475(1)016B(2)\n0.8\n6\n1.500\n0.24\n6.8\nA\n593D685(1)016A(2)\n1.1\n6\n3.000\n0.16\n10\nA\n593D106(1)016A(2)\n1.6\n6\n1.700\n0.21\n10\nB\n593D106(1)016B(2)\n1.6\n6\n0.800\n0.33\n10\nC\n593D106(1)016C(2)\n1.6\n6\n0.450\n0.49\n15\nB\n593D156(1)016B(2)\n2.4\n6\n0.800\n0.33\n15\nC\n593D156(1)016C(2)\n2.4\n6\n0.400\n0.52\n22\nB\n593D226(1)016B(2)\n3.5\n6\n0.700\n0.35\n22\nC\n593D226(1)016C(2)\n3.5\n6\n0.350\n0.56\n33\nB\n593D336(1)016B(2)\n5.3\n6\n0.700\n0.35\n33\nC\n593D336(1)016C(2)\n5.3\n6\n0.300\n0.61\n33\nD\n593D336(1)016D(2)\n4.2\n4\n0.225\n0.82\n47\nC\n593D476(1)016C(2)\n7.5\n6\n0.300\n0.61\n47\nD\n593D476(1)016D(2)\n7.5\n6\n0.150\n1.00\n68\nD\n593D686(1)016D(2)\n10.9\n6\n0.150\n1.00\n100\nD\n593D107(1)016D(2)\n16.0\n8\n0.125\n1.10\n100\nE\n593D107(1)016E(2)\n16.0\n8\n0.100\n1.28\n150\nE\n593D157(1)016E(2)\n24.0\n8\n0.100\n1.28\nSTANDARD RATINGS\nCAPACITANCE \n(μF)\nCASE CODE\nPART NUMBER\nMAX. DCL\nAT +25 °C\n(μA)\nMAX. DF\nAT +25 °C\n120 Hz\n(%)\nMAX. ESR\nAT +25 °C\n100 kHz\n(Ω)\nMAX. RIPPLE \n100 kHz\nIRMS\n(A)\nNote\n•\nPart number definitions:\n(1) Tolerance: X0, X9. For ± 5 % tolerance (code X5) contact factory\n(2) Terminations and packaging: 2TE3, 2WE3, 8T, 8W, 2DE3, 2RE3, 8D, 8R\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "1": {
+            "detection_count": 0,
+            "detection_seconds": 0.988,
+            "regions": [],
+            "detection_status": "not_detected"
+          },
+          "5": {
+            "detection_count": 1,
+            "detection_seconds": 0.994,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.9999,
+                "bbox_pdf": [
+                  48.39,
+                  87.47,
+                  559.3,
+                  695.83
+                ],
+                "row_candidates": 60,
+                "column_candidates": 7,
+                "header_candidates": 1,
+                "structure_seconds": 1.607
+              }
+            ],
+            "detection_status": "detected"
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [],
+          "pn_connection": "ordering_code_match",
+          "target_row_pdf_quote": "PDF source evidence retained in selected pages.",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    },
+    {
+      "document_id": "vishay_t59",
+      "manufacturer": "Vishay",
+      "series": "T59",
+      "part_number": "T59EL157M035C0050",
+      "pdf_filename": "vishay_t59.pdf",
+      "pdf_sha256": "67757e5ae4fb51b72a637410d2d4311b1f25ed55ec606802c61bee09d59a495c",
+      "pdf_page_count": 21,
+      "selected_pages": [
+        1,
+        3,
+        6
+      ],
+      "pn_connection": "exact_match",
+      "exact_source_occurrences": [
+        {
+          "pdf_page": 3,
+          "text": "T59EL157M035C0050",
+          "bbox_pdf": [
+            151.14,
+            666.91,
+            231.15,
+            674.89
+          ]
+        }
+      ],
+      "estimated_input_tokens": 2176,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Exact P/N and conditions are present.",
+      "prepared_input": {
+        "request": {
+          "document_id": "vishay_t59",
+          "manufacturer": "Vishay",
+          "series": "T59",
+          "part_number": "T59EL157M035C0050",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 1,
+            "page_text": "T59\nwww.vishay.com\nVishay\nUpgrade for High Reliability With T54\n \nRevision: 20-May-2026\n1\nDocument Number: 40191\nFor technical questions, contact: polytech@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\nvPolyTanTM Polymer Surface-Mount Chip Capacitors,\nLow ESR, Leadframeless Molded Type\nLINKS TO ADDITIONAL RESOURCES\nPERFORMANCE / ELECTRICAL \nCHARACTERISTICS\nOperating Temperature: -55 °C to +125 °C \n(above 105 °C, additional voltage derating is required)\nCapacitance Range: 15 μF to 470 μF\nCapacitance Tolerance: ± 20 % standard\nVoltage Rating: 16 VDC to 75 VDC\nFEATURES\n• Ultra low ESR\n• 100 % surge current tested\n• Accelerated voltage conditioning\n• High ripple current capability\n• Stable capacitance over operating temperature, \nvoltage, and frequency range\n• No wear out effect\n• Molded case 7343 EIA size and stacks\nThe molding compound has been selected to \nmeet the requirements of UL 94 V-0 and outgassing \nrequirements of ASTM E-595\n• Terminations: \nall cases (except EL): 3-sided wraparound\nMetallization areas on the left and right sides of the \ncapacitor are not subject for inspection.\nEL-case: L-shape compatible with standard molded chip \nJ-style termination\n• 12 mm tape and 7\" (178 mm) reel packaging per EIA-481 \nstandard\n• Material categorization: for definitions of compliance \nplease see www.vishay.com/doc?99912\nNote \n* This    datasheet    provides    information    about    parts    that    are \nRoHS-compliant and / or parts that are non RoHS-compliant.  For \nexample, parts with lead (Pb) terminations are not RoHS-compliant. \nPlease see the information / tables in this datasheet for details\nAPPLICATIONS\n• Decoupling, smoothing, filtering\n• Bulk energy storage in Solid State Drives (SSD)\n• Infrastructure equipment\n• Storage and networking\n• Computer motherboards\n• Smartphones and tablets\nNotes\n•\nWe reserve the right to supply higher voltage ratings and tighter capacitance tolerance capacitors in the same case size. \nVoltage substitutions will be marked with the higher voltage rating\n•\nWe reserve the right to supply better series with more extensive screening\n3\nD\n3\nD\n3D Models\nModels\nCalculators\nAvailable\nAvailable\nAvailable\nAvailable\nORDERING INFORMATION\nT59\nEE\n337\nM\n016\nC\n0025\nTYPE\nCASE\nCAPACITANCE\nCAPACITANCE\nDC VOLTAGE\nTERMINATION /\nESR\nCODE\nTOLERANCE\nRATING\nPACKAGING\nSee\nRatings\nand\nCase\nCodes\ntable.\nThis is expressed in\npicofarads. The first\ntwo digits are the\nsignificant figures.\nThe third is the\nnumber of zeros\nto follow.\nM = ± 20 %\nThis is expressed\nin volts. To\ncomplete the\nthree-digit block,\nzeros precede the\nvoltage rating.\nA decimal point is\nindicated by an “R”\n(6R3 = 6.3 V)\nE = Sn / Pb solder / \n7\" (178 mm) reel \nC = 100 % tin / \n7\" (178 mm) reel\nMaximum\n100 kHz ESR\nin mΩ\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 3,
+            "page_text": "T59\nwww.vishay.com\nVishay\nUpgrade for High Reliability With T54\n \nRevision: 20-May-2026\n3\nDocument Number: 40191\nFor technical questions, contact: polytech@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\nNote\n•\nCapacitors may bear T54 marking scheme if parts are substituted with high rel COTS performance grade product. \nCall the factory for further explanation\nMARKING\nSTANDARD RATINGS\nCAPACITANCE\n(μF)\nCASE\nCODE\nPART NUMBER\nMAX. DCL\nAT +25 °C\n(μA)\nMAX. DF \nAT +25 °C\n120 Hz\n(%)\nMAX. ESR \nAT +25 °C\n100 kHz\n(mΩ)\nMAX.\nRIPPLE,\n100 kHz\nIRMS\n(A)\nMAX.\nOPERATING\nTEMPERATURE\n(°C)\nHIGH\nTEMPERATURE\nLOAD, TIME\n(h)\nMSL\n16 VDC\n220\nEE\nT59EE227M016(1)0025\n352\n10\n25\n4.195\n125\n2000\n3\n220\nEL\nT59EL227M016(1)0025\n352\n10\n25\n4.195\n125\n2000\n3\n330\nEE\nT59EE337M016(1)0025\n528\n10\n25\n4.195\n125\n2000\n3\n330\nEL\nT59EL337M016(1)0025\n528\n10\n25\n4.195\n125\n2000\n3\n470\nEE\nT59EE477M016(1)0025\n752\n10\n25\n4.195\n125\n2000\n3\n470\nEL\nT59EL477M016(1)0025\n752\n10\n25\n4.195\n125\n2000\n3\n470\nEE\nT59EE477M016(1)0020\n752\n10\n20\n4.690\n125\n2000\n3\n470\nEL\nT59EL477M016(1)0020\n752\n10\n20\n4.690\n125\n2000\n3\n30 VDC\n150\nEE\nT59EE157M030(1)0150\n450\n10\n150\n1.713\n125\n2000\n3\n150\nEL\nT59EL157M030(1)0150\n450\n10\n150\n1.713\n125\n2000\n3\n150\nEE\nT59EE157M030(1)0075\n450\n10\n75\n2.422\n125\n2000\n3\n150\nEL\nT59EL157M030(1)0075\n450\n10\n75\n2.422\n125\n2000\n3\n150\nEE\nT59EE157M030(1)0050\n450\n10\n50\n3.114\n125\n2000\n3\n150\nEL\nT59EL157M030(1)0050\n450\n10\n50\n3.114\n125\n2000\n3\n35 VDC\n47\nEE\nT59EE476M035(1)0070\n165\n10\n70\n2.507\n125\n2000\n3\n47\nEL\nT59EL476M035(1)0070\n165\n10\n70\n2.507\n125\n2000\n3\n47\nEE\nT59EE476M035(1)0055\n165\n10\n55\n2.828\n125\n2000\n3\n47\nEL\nT59EL476M035(1)0055\n165\n10\n55\n2.828\n125\n2000\n3\n150\nEE\nT59EE157M035(1)0100\n525\n10\n100\n2.098\n125\n1000\n3\n150\nEL\nT59EL157M035(1)0100\n525\n10\n100\n2.098\n125\n1000\n3\n150\nEE\nT59EE157M035(1)0050\n525\n10\n50\n2.966\n125\n1000\n3\n150\nEL\nT59EL157M035C0050\n525\n10\n50\n2.966\n125\n1000\n3\nNotes\n• Part number definitions:\n(1) Termination and packaging: E, C\n(1)Rating in development, contact factory for availability\n476   35\nxxxx\nVishay\nidentification\nmark\n+   +\n2\nVoltage\nID code\nCapacitance\ncode\nPolarity\nPolarity\nEE case\nPolarity\nCapacitance\ncode\nID code\nVoltage\n476\nxxxx\n2\n35\nPolarity\nPlant code\nEL case\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 6,
+            "page_text": "T59\nwww.vishay.com\nVishay\nUpgrade for High Reliability With T54\n \nRevision: 20-May-2026\n6\nDocument Number: 40191\nFor technical questions, contact: polytech@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\nHumidity tests\nAt 60 °C / 90 % RH 500 h, no voltage applied\nCapacitance change\n-20 % to +40 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nStability at low and \nhigh temperatures\n-55 °C\nCapacitance change\nWithin -20 % to 0 % of initial value\nDissipation factor\nShall not exceed 150 % of initial limit\nLeakage current\nn/a\n25 °C\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nWithin initial limit\n85 °C\nCapacitance change\nWithin -0 % to +50 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 1000 % of initial value\n105 °C      \nCapacitance change\nWithin -0 % to +50 % of initial value\nDissipation factor\nWithin initial limits\nLeakage current\nShall not exceed 1000 % of initial limits\nSurge voltage\n85 °C, 1000 successive test cycles at 1.3 of rated \nvoltage in series with a 33 Ω resistor at the rate \nof 30 s ON, 30 s OFF\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nShock \n(specified pulse)\nMIL-STD-202, method 213, condition E, \n1000 g peak\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nVibration\nMIL-STD-202, method 204, condition D, \n10 Hz to 2000 Hz 20 g peak\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nThere shall be no mechanical or visual damage to capacitors \npost-conditioning.\nShear test\nApply a pressure load of 17.7 N for 10 s ± 1 s \nhorizontally to the center of capacitor side body\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nPRODUCT INFORMATION\nPolymer Guide\nwww.vishay.com/doc?40076\nMoisture Sensitivity\nwww.vishay.com/doc?40135\nInfographic\nwww.vishay.com/doc?48084\nSample Board\nwww.vishay.com/doc?48073\nFAQ\nFrequently Asked Questions\nwww.vishay.com/doc?42106\nPERFORMANCE CHARACTERISTICS\nITEM\nCONDITION\nPOST TEST PERFORMANCE\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "1": {
+            "detection_count": 0,
+            "detection_seconds": 1.043,
+            "regions": [],
+            "detection_status": "not_detected"
+          },
+          "3": {
+            "detection_count": 1,
+            "detection_seconds": 0.944,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.999737,
+                "bbox_pdf": [
+                  46.48,
+                  328.49,
+                  565.67,
+                  681.16
+                ],
+                "row_candidates": 26,
+                "column_candidates": 10,
+                "header_candidates": 1,
+                "structure_seconds": 1.437
+              }
+            ],
+            "detection_status": "detected"
+          },
+          "6": {
+            "detection_count": 2,
+            "detection_seconds": 0.998,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.947706,
+                "bbox_pdf": [
+                  51.0,
+                  90.26,
+                  561.59,
+                  477.06
+                ],
+                "row_candidates": 30,
+                "column_candidates": 4,
+                "header_candidates": 1,
+                "structure_seconds": 1.577
+              },
+              {
+                "region_id": "d2",
+                "confidence": 0.890925,
+                "bbox_pdf": [
+                  51.13,
+                  89.25,
+                  561.44,
+                  478.23
+                ],
+                "row_candidates": 35,
+                "column_candidates": 4,
+                "header_candidates": 1,
+                "structure_seconds": 1.582
+              }
+            ],
+            "detection_status": "detected"
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [
+            {
+              "pdf_page": 3,
+              "text": "T59EL157M035C0050",
+              "bbox_pdf": [
+                151.14,
+                666.91,
+                231.15,
+                674.89
+              ]
+            }
+          ],
+          "pn_connection": "exact_match",
+          "target_row_pdf_quote": "PDF source evidence retained in selected pages.",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    },
+    {
+      "document_id": "vishay_t59",
+      "manufacturer": "Vishay",
+      "series": "T59",
+      "part_number": "T59EL336M050C0075",
+      "pdf_filename": "vishay_t59.pdf",
+      "pdf_sha256": "67757e5ae4fb51b72a637410d2d4311b1f25ed55ec606802c61bee09d59a495c",
+      "pdf_page_count": 21,
+      "selected_pages": [
+        1,
+        4,
+        6
+      ],
+      "pn_connection": "exact_match",
+      "exact_source_occurrences": [
+        {
+          "pdf_page": 4,
+          "text": "T59EL336M050C0075",
+          "bbox_pdf": [
+            151.14,
+            189.31,
+            231.15,
+            197.29
+          ]
+        }
+      ],
+      "estimated_input_tokens": 2070,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Exact P/N and conditions are present.",
+      "prepared_input": {
+        "request": {
+          "document_id": "vishay_t59",
+          "manufacturer": "Vishay",
+          "series": "T59",
+          "part_number": "T59EL336M050C0075",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 1,
+            "page_text": "T59\nwww.vishay.com\nVishay\nUpgrade for High Reliability With T54\n \nRevision: 20-May-2026\n1\nDocument Number: 40191\nFor technical questions, contact: polytech@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\nvPolyTanTM Polymer Surface-Mount Chip Capacitors,\nLow ESR, Leadframeless Molded Type\nLINKS TO ADDITIONAL RESOURCES\nPERFORMANCE / ELECTRICAL \nCHARACTERISTICS\nOperating Temperature: -55 °C to +125 °C \n(above 105 °C, additional voltage derating is required)\nCapacitance Range: 15 μF to 470 μF\nCapacitance Tolerance: ± 20 % standard\nVoltage Rating: 16 VDC to 75 VDC\nFEATURES\n• Ultra low ESR\n• 100 % surge current tested\n• Accelerated voltage conditioning\n• High ripple current capability\n• Stable capacitance over operating temperature, \nvoltage, and frequency range\n• No wear out effect\n• Molded case 7343 EIA size and stacks\nThe molding compound has been selected to \nmeet the requirements of UL 94 V-0 and outgassing \nrequirements of ASTM E-595\n• Terminations: \nall cases (except EL): 3-sided wraparound\nMetallization areas on the left and right sides of the \ncapacitor are not subject for inspection.\nEL-case: L-shape compatible with standard molded chip \nJ-style termination\n• 12 mm tape and 7\" (178 mm) reel packaging per EIA-481 \nstandard\n• Material categorization: for definitions of compliance \nplease see www.vishay.com/doc?99912\nNote \n* This    datasheet    provides    information    about    parts    that    are \nRoHS-compliant and / or parts that are non RoHS-compliant.  For \nexample, parts with lead (Pb) terminations are not RoHS-compliant. \nPlease see the information / tables in this datasheet for details\nAPPLICATIONS\n• Decoupling, smoothing, filtering\n• Bulk energy storage in Solid State Drives (SSD)\n• Infrastructure equipment\n• Storage and networking\n• Computer motherboards\n• Smartphones and tablets\nNotes\n•\nWe reserve the right to supply higher voltage ratings and tighter capacitance tolerance capacitors in the same case size. \nVoltage substitutions will be marked with the higher voltage rating\n•\nWe reserve the right to supply better series with more extensive screening\n3\nD\n3\nD\n3D Models\nModels\nCalculators\nAvailable\nAvailable\nAvailable\nAvailable\nORDERING INFORMATION\nT59\nEE\n337\nM\n016\nC\n0025\nTYPE\nCASE\nCAPACITANCE\nCAPACITANCE\nDC VOLTAGE\nTERMINATION /\nESR\nCODE\nTOLERANCE\nRATING\nPACKAGING\nSee\nRatings\nand\nCase\nCodes\ntable.\nThis is expressed in\npicofarads. The first\ntwo digits are the\nsignificant figures.\nThe third is the\nnumber of zeros\nto follow.\nM = ± 20 %\nThis is expressed\nin volts. To\ncomplete the\nthree-digit block,\nzeros precede the\nvoltage rating.\nA decimal point is\nindicated by an “R”\n(6R3 = 6.3 V)\nE = Sn / Pb solder / \n7\" (178 mm) reel \nC = 100 % tin / \n7\" (178 mm) reel\nMaximum\n100 kHz ESR\nin mΩ\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 4,
+            "page_text": "T59\nwww.vishay.com\nVishay\nUpgrade for High Reliability With T54\n \nRevision: 20-May-2026\n4\nDocument Number: 40191\nFor technical questions, contact: polytech@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\n50 VDC\n22\nEE\nT59EE226M050(1)0100\n110\n10\n100\n2.098\n125\n1000\n3\n22\nEL\nT59EL226M050(1)0100\n110\n10\n100\n2.098\n125\n1000\n3\n33\nEL (1)\nT59EL336M050C0075\n165\n10\n75\n2.422\n125\n1000\n3\n47\nEE\nT59EE476M050(1)0100\n235\n10\n100\n2.098\n125\n2000\n3\n47\nEL\nT59EL476M050(1)0100\n235\n10\n100\n2.098\n125\n2000\n3\n47\nEE\nT59EE476M050(1)0070\n235\n10\n70\n2.507\n125\n2000\n3\n47\nEL\nT59EL476M050(1)0070\n235\n10\n70\n2.507\n125\n2000\n3\n47\nEE\nT59EE476M050(1)0055\n235\n10\n55\n2.828\n105\n2000\n3\n47\nEL\nT59EL476M050(1)0055\n235\n10\n55\n2.828\n105\n2000\n3\n63 VDC\n15\nEE\nT59EE156M063(1)0100\n95\n10\n100\n2.098\n125\n2000\n3\n15\nEL\nT59EL156M063(1)0100\n95\n10\n100\n2.098\n125\n2000\n3\n22\nEE\nT59EE226M063(1)0100\n139\n10\n100\n2.098\n125\n1000\n3\n22\nEL\nT59EL226M063(1)0100\n139\n10\n100\n2.098\n125\n1000\n3\n75 VDC\n15\nEE\nT59EE156M075(1)0100\n113\n10\n100\n2.098\n125\n2000\n3\n15\nEL\nT59EL156M075(1)0100\n113\n10\n100\n2.098\n125\n2000\n3\n22\nEE\nT59EE226M075(1)0100\n165\n12\n100\n2.098\n125\n1000\n3\n22\nEL\nT59EL226M075(1)0100\n165\n12\n100\n2.098\n125\n1000\n3\nRATED AND RECOMMENDED DERATED VOLTAGES VS. TEMPERATURE\nSTANDARD RATINGS\nCAPACITANCE\n(μF)\nCASE\nCODE\nPART NUMBER\nMAX. DCL\nAT +25 °C\n(μA)\nMAX. DF \nAT +25 °C\n120 Hz\n(%)\nMAX. ESR \nAT +25 °C\n100 kHz\n(mΩ)\nMAX.\nRIPPLE,\n100 kHz\nIRMS\n(A)\nMAX.\nOPERATING\nTEMPERATURE\n(°C)\nHIGH\nTEMPERATURE\nLOAD, TIME\n(h)\nMSL\nNotes\n• Part number definitions:\n(1) Termination and packaging: E, C\n(1)Rating in development, contact factory for availability\n10\n100\n1000\n10000\n50\n55\n60\n65\n70\n75\n80\n85\n90\n95\n100\n-55\n25\n55\n85\n105\n125\nAxis Title\n1st line\n2nd line\n2nd line\nRated Voltage (%)\nTemperature (°C)\n67 %\n54 %\nRecommended application voltage\nRated voltage\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 6,
+            "page_text": "T59\nwww.vishay.com\nVishay\nUpgrade for High Reliability With T54\n \nRevision: 20-May-2026\n6\nDocument Number: 40191\nFor technical questions, contact: polytech@vishay.com\nTHIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT\nARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000\nHumidity tests\nAt 60 °C / 90 % RH 500 h, no voltage applied\nCapacitance change\n-20 % to +40 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nStability at low and \nhigh temperatures\n-55 °C\nCapacitance change\nWithin -20 % to 0 % of initial value\nDissipation factor\nShall not exceed 150 % of initial limit\nLeakage current\nn/a\n25 °C\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nWithin initial limit\n85 °C\nCapacitance change\nWithin -0 % to +50 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 1000 % of initial value\n105 °C      \nCapacitance change\nWithin -0 % to +50 % of initial value\nDissipation factor\nWithin initial limits\nLeakage current\nShall not exceed 1000 % of initial limits\nSurge voltage\n85 °C, 1000 successive test cycles at 1.3 of rated \nvoltage in series with a 33 Ω resistor at the rate \nof 30 s ON, 30 s OFF\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nShock \n(specified pulse)\nMIL-STD-202, method 213, condition E, \n1000 g peak\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nVibration\nMIL-STD-202, method 204, condition D, \n10 Hz to 2000 Hz 20 g peak\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nThere shall be no mechanical or visual damage to capacitors \npost-conditioning.\nShear test\nApply a pressure load of 17.7 N for 10 s ± 1 s \nhorizontally to the center of capacitor side body\nCapacitance change\nWithin ± 20 % of initial value\nDissipation factor\nWithin initial limit\nLeakage current\nShall not exceed 300 % of initial limit\nPRODUCT INFORMATION\nPolymer Guide\nwww.vishay.com/doc?40076\nMoisture Sensitivity\nwww.vishay.com/doc?40135\nInfographic\nwww.vishay.com/doc?48084\nSample Board\nwww.vishay.com/doc?48073\nFAQ\nFrequently Asked Questions\nwww.vishay.com/doc?42106\nPERFORMANCE CHARACTERISTICS\nITEM\nCONDITION\nPOST TEST PERFORMANCE\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "1": {
+            "detection_count": 0,
+            "detection_seconds": 1.043,
+            "regions": [],
+            "detection_status": "not_detected"
+          },
+          "4": {
+            "detection_count": 1,
+            "detection_seconds": 0.947,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.999854,
+                "bbox_pdf": [
+                  47.42,
+                  94.96,
+                  564.62,
+                  402.52
+                ],
+                "row_candidates": 21,
+                "column_candidates": 10,
+                "header_candidates": 1,
+                "structure_seconds": 1.232
+              }
+            ],
+            "detection_status": "detected"
+          },
+          "6": {
+            "detection_count": 2,
+            "detection_seconds": 0.998,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.947706,
+                "bbox_pdf": [
+                  51.0,
+                  90.26,
+                  561.59,
+                  477.06
+                ],
+                "row_candidates": 30,
+                "column_candidates": 4,
+                "header_candidates": 1,
+                "structure_seconds": 1.577
+              },
+              {
+                "region_id": "d2",
+                "confidence": 0.890925,
+                "bbox_pdf": [
+                  51.13,
+                  89.25,
+                  561.44,
+                  478.23
+                ],
+                "row_candidates": 35,
+                "column_candidates": 4,
+                "header_candidates": 1,
+                "structure_seconds": 1.582
+              }
+            ],
+            "detection_status": "detected"
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [
+            {
+              "pdf_page": 4,
+              "text": "T59EL336M050C0075",
+              "bbox_pdf": [
+                151.14,
+                189.31,
+                231.15,
+                197.29
+              ]
+            }
+          ],
+          "pn_connection": "exact_match",
+          "target_row_pdf_quote": "PDF source evidence retained in selected pages.",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    },
+    {
+      "document_id": "kyocera_avx_tcn",
+      "manufacturer": "KYOCERA AVX",
+      "series": "TCN",
+      "part_number": "TCNT157M006R0200E",
+      "pdf_filename": "kyocera_avx_tcn.pdf",
+      "pdf_sha256": "53524f93164f6f02e79c979d66fc3fa1a08f363ccc52ed979b2db69516de69e2",
+      "pdf_page_count": 6,
+      "selected_pages": [
+        1,
+        2,
+        3
+      ],
+      "pn_connection": "ordering_code_match",
+      "exact_source_occurrences": [],
+      "estimated_input_tokens": 2842,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Unique reviewed ordering-code mapping.",
+      "prepared_input": {
+        "request": {
+          "document_id": "kyocera_avx_tcn",
+          "manufacturer": "KYOCERA AVX",
+          "series": "TCN",
+          "part_number": "TCNT157M006R0200E",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 1,
+            "page_text": "194\nTCN Series\nHighest CV/CC Conductive Polymer Chip Capacitors Undertab\nTCN Series – High CV/cc - Undertab\nFEATURES\n•\t Highest CV/cc in Broad Range of Low Profiles\n•\t Conductive Polymer Electrode\n•\t Lower ESR\n•\t Undertab Terminations Layout:\n\t»\nHigh Volumetric Efficiency\n\t»\nHigh PCB Assembly Density\n\t»\nHigh Capacitance in Smaller Dimensions\n•\t 3x reflow cycles according to J-STD-020\n•\t 100% Surge Current Tested\n•\t 8 Case Sizes Available\nCASE DIMENSIONS millimeters (inches)\nMARKING\nHOW TO ORDER\nH, L, T, X, Y, Z CASE\n4, 8 CASE\nCode\nEIA\nCode\nEIA\nMetric\nL±0.20  \n(0.008)\nW+0.20 (0.008)\n-0.10 (0.004)\nH max.\nWP±0.10  \n(0.004)\nWN±0.10 \n(0.004)\nAP±0.10  \n(0.004)\nAN±0.10  \n(0.004)\nS Min.\nH\n1210\n3528-15\n3.50 (0.138)\n2.80 (0.110) \n1.50 (0.059)\n2.50 (0.098)\n2.10 (0.083)\n1.15 (0.045)\n1.35 (0.053)\n1.00 (0.039)\nL\n1210\n3528-10\n3.50 (0.138)\n2.80 (0.110)\n1.00 (0.039)\n2.50 (0.098)\n2.10 (0.083)\n1.15 (0.045)\n1.35 (0.053)\n1.00 (0.039)\nT\n1210\n3528-12\n3.50 (0.138)\n2.80 (0.110)\n1.20 (0.047)\n2.50 (0.098)\n2.10 (0.083)\n1.15 (0.045)\n1.35 (0.053)\n1.00 (0.039)\nX\n2917\n7343-15\n7.30 (0.287)\n4.30 (0.169)\n1.50 (0.059)\n3.25 (0.128)\n3.25 (0.128)\n2.00 (0.079)\n3.20 (0.126)\n2.10 (0.083)\nY\n2917\n7343-20\n7.30±0.30\n(0.287±0.012)\n4.30±0.30\n(0.169±0.012)\n2.00 (0.079)\n2.40 (0.094)\n2.40 (0.094)\n1.30±0.30\n(0.051±0.012)\n1.30±0.30\n(0.051±0.012)\n4.40 (0.173)\nZ\n2917\n7343-15\n7.30 ± 0.30 \n(0.287 ± 0.012)\n4.30 ± 0.30 \n(0.169 ± 0.012)\n1.50 (0.059)\n2.40 (0.094)\n2.40 (0.094)\n1.30 ± 0.30 \n(0.051 ± 0.012)\n1.30 ± 0.30 \n(0.051 ± 0.012)\n4.40 (0.173)\n4\n2924\n7361-20\n7.30 (0.287)\n6.10 (0.240)\n2.00 (0.079)\n4.75 (0.187)\n4.75 (0.187)\n2.00 (0.079)\n3.20 (0.126)\n2.10 (0.083)\n8\n2924\n7360-20\n7.30 ± 0.30 \n(0.287 ± 0.012)\n6.00 ± 0.30\n(0.236 ± 0.012)\n2.00 (0.079)\n4.45 (0.175)\n4.45 (0.175)\n1.60 ± 0.30 \n(0.063 ± 0.012)\n1.60 ± 0.30 \n(0.063 ± 0.012)\n3.80 (0.150)\nLEAD-FREE COMPATIBLE\nCOMPONENT\nW\nWP\nAP\nS\nH\nAN\nWN\nW\nL\nPolarity Band (Anode+)\nAPPLICATIONS\n•\t Consumer Applications \n(e.g. Mobiles, MP3 etc.)\n•\t Bulk Decoupling of SoC \n(System on Chip)\nPolymer Logo\nPolymer Logo\nTDS-PTNO-0029 | Rev 17\nType\nTCN\nE\nAdditional Character\nE = Black Resin\n(it is possible to order PN \nwithout \"E\" as identical \nproduct)\nT\nCase Size\nSee table \nabove\n157\nCapacitance Code\npF code: 1st two digits \nrepresent significant \nfigures 3rd digit \nrepresents multiplier \n(number of zeros to \nfollow)\nM\nTolerance\n\t M = ± 20%\nR\nPackaging\nR = Pure Tin 7\" Reel\nS = Pure Tin 13\" Reel\n0200\nESR in mΩ\n006\nRated DC Voltage\n006 = 6.3Vdc\n010 = 10Vdc\n016 = 16Vdc\n020 = 20Vdc \n025 = 25Vdc\n035 = 35Vdc\n040 = 40Vdc\n050 = 50Vdc\nThe Important Information/Disclaimer is incorporated in the catalog where these specifications came from or available \nonline at www.kyocera-avx.com/disclaimer/ by reference and should be reviewed in full before placing any order.\n – polymer, tantalum and niobium oxide capacitors –\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 2,
+            "page_text": "195\nTCN Series\nHighest CV/CC Conductive Polymer Chip Capacitors Undertab\nTECHNICAL SPECIFICATIONS\nTechnical Data:\nAll technical data relate to an ambient temperature of +25°C\nCapacitance Range:\n4.7 μF to 1500 μF\nCapacitance Tolerance:\n±20%\nLeakage Current DCL:\n0.1CV\nRated Voltage DC (VR)\n≤   +85°C:\n6.3\n10\n16\n20\n25\n35\n40\n50\nCategory Voltage (VC)\n≤ +105ºC:\n5\n8\n13\n16\n20\n28\n32\n40\nSurge Voltage (VS)\n≤   +85ºC:\n8\n13\n21\n26\n33\n46\n52\n65\nSurge Voltage (VS)\n≤ +105ºC:\n6\n10\n16\n20\n25\n35\n40\n50\nTemperature Range:\n-55°C to +105°C\nNOTE: Conductive Polymer Capacitors are designed to operate within the limits of the environmental conditions specified for each series. If operated continuously at their maximum \ntemperature and / or humidity limit, or beyond these limits, capacitors may exhibit a parametric shift in capacitance and increases in ESR. These changes may occur earlier if the specified \nenvironmental conditions are exceeded. Similarly, their normal operational time period will be significantly extended if their general duty cycle includes operation below maximum temperature \nwithin humidity controlled environments. Careful attention should be paid to maximum temperature with associated high humidity environments as well as voltage derating, ripple current \nand current surges. Please reference the KYOCERA AVX Conductive Polymer Capacitor Guidelines for more information or contact factory for application assistance.\nCAPACITANCE AND RATED VOLTAGE RANGE \n(LETTER DENOTES CASE SIZE)\nCapacitance\nRated Voltage DC to 85°C / 0.66DC to 105°C\nμF\nCode\n6.3V (J)\n10V (A)\n16V (C)\n20V (D)\n25V (E)\n35V (V)\n40V (G)\n50V (T)\n4.7\n475\nT(200)\n10\n106\nT(150, 200)\n22\n226\nT(200)\n33\n336\nL(200)/T(200)\nH(250)\n4(200)\n47\n476\nT(150)\nX(100)\nX(100,150)/\nZ(100,150)\nZ(100, 150)\n56\n566\nZ(100,150)\n68\n686\nY(100,150)\n100\n107\nZ(100)\n4(100)\n4(100)/8(100)\n8(100)\n150\n157\nT(200)\nX(100)\n4(70)/8(70)\n220\n227\n4(70)\n4(100)\n4(100)\n330\n337\n4(70)/8(70)\n4(100)\n470\n477\nX(50)\n4(70,100)\n680\n687\n4(70)\n1000\n108\nX(200)/4(55)\n1500\n158\n4(55)\nReleased ratings, (ESR ratings in mOhms in parentheses)\nEngineering Samples - Please Contact KYOCERA AVX\nNote:\t Voltage ratings are minimum values. KYOCERA AVX reserves the right to supply \nhigher voltage ratings in the same case size, to the same reliability standards.\nTDS-PTNO-0029 | Rev 17\n – polymer, tantalum and niobium oxide capacitors –\nThe Important Information/Disclaimer is incorporated in the catalog where these specifications came from or available \nonline at www.kyocera-avx.com/disclaimer/ by reference and should be reviewed in full before placing any order.\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 3,
+            "page_text": "196\nTCN Series\nHighest CV/CC Conductive Polymer Chip Capacitors Undertab\nRATINGS & PART NUMBER REFERENCE\nPart Number\nCase \nSize\nCapacitance \n(μF)\nRated  \nVoltage  \n(V)\nMaximum \nOperating \nTemperature \n(ºC)\nDCL\nMax.  \n(μA)\nDF\nMax.  \n(%)\nESR Max.\n@ 100kHz  \n(mΩ)\n100kHz RMS Current (mA)\nProduct \nCategory\nMSL\n45ºC\n85ºC\n105ºC\n6.3 Volt\nTCNT157M006#0200E\nT\n150\n6.3\n105\n90\n10\n200\n700\n500\n300\n3\n4\nTCNX477M006#0050E\nX\n470\n6.3\n85\n282\n10\n50\n1900\n1300\n–\n5\n5\nTCNX108M006#0200E\nX\n1000\n6.3\n85\n600\n30\n200\n900\n600\n–\n5\n5\nTCN4108M006#0055E\n4\n1000\n6.3\n85\n600\n20\n55\n1860\n1302\n–\n5\n4\nTCN4158M006#0055E\n4\n1500\n6.3\n85\n900\n20\n55\n1860\n1302\n–\n5\n4\n10 Volt\nTCN4687M010#0070E\n4\n680\n10\n105\n680\n20\n70\n1650\n1155\n660\n3\n4\n16 Volt\nTCNL336M016#0200E\nL\n33\n16\n85\n52.8\n6\n200\n700\n500\n-\n5\n5\nTCNT336M016#0200E\nT\n33\n16\n105\n52.8\n6\n200\n700\n500\n300\n3\n4\nTCNT476M016#0150E\nT\n47\n16\n105\n75.2\n6\n150\n800\n600\n400\n3\n4\nTCNX157M016#0100E\nX\n150\n16\n105\n240\n6\n100\n1300\n900\n600\n3\n4\nTCN4227M016#0070E\n4\n220\n16\n105\n352\n20\n70\n1650\n1155\n660\n2\n4\nTCN4337M016#0070E\n4\n330\n16\n105\n528\n20\n70\n1650\n1155\n660\n3\n4\nTCN8337M016#0070E\n8\n330\n16\n105\n528\n20\n70\n1650\n1155\n660\n3\n4\nTCN4477M016#0070E\n4\n470\n16\n105\n752\n20\n70\n1650\n1155\n660\n3\n4\nTCN4477M016#0100E\n4\n470\n16\n105\n752\n20\n100\n1380\n966\n552\n3\n4\n20 Volt\nTCNZ107M020#0100E\nZ\n100\n20\n105\n200\n8\n100\n1300\n900\n600\n3\n4\nTCN4227M020#0100E\n4\n220\n20\n85\n440\n10\n100\n1380\n966\n–\n5\n4\nTCN4337M020#0100E\n4\n330\n20\n105\n660\n20\n100\n1380\n966\n552\n3\n4\n25 Volt\nTCNT226M025#0200E\nT\n22\n25\n105\n55\n6\n200\n700\n500\n300\n3\n4\nTCNH336M025#0250E\nH\n33\n25\n105\n82.5\n10\n250\n600\n400\n300\n3\n4\nTCNX476M025#0100E\nX\n47\n25\n105\n117.5\n6\n100\n1300\n900\n600\n2\n5\nTCN4107M025#0100E\n4\n100\n25\n105\n250\n6\n100\n1380\n966\n552\n2\n4\nTCN4157M025#0070E\n4\n150\n25\n105\n375\n6\n70\n1650\n1155\n660\n2\n4\nTCN8157M025#0070E\n8\n150\n25\n105\n375\n8\n70\n1650\n1155\n660\n2\n3\nTCN4227M025#0100E\n4\n220\n25\n105\n550\n10\n100\n1380\n966\n552\n3\n4\n35 Volt\nTCNT475M035#0200E\nT\n4.7\n35\n105\n16.5\n10\n200\n700\n500\n300\n3\n4\nTCNT106M035#0150E\nT\n10\n35\n105\n35\n10\n150\n800\n600\n400\n3\n4\nTCNT106M035#0200E\nT\n10\n35\n105\n35\n10\n200\n700\n500\n300\n3\n4\nTCNX476M035#0100E\nX\n47\n35\n105\n165\n10\n100\n1300\n900\n600\n3\n4\nTCNX476M035#0150E\nX\n47\n35\n105\n165\n10\n150\n1100\n800\n500\n3\n4\nTCNZ476M035#0100E\nZ\n47\n35\n105\n165\n10\n100\n1300\n900\n600\n3\n4\nTCNZ476M035#0150E\nZ\n47\n35\n105\n165\n10\n150\n1100\n800\n500\n3\n4\nTCNZ566M035#0100E\nZ\n56\n35\n105\n196\n10\n100\n1300\n900\n600\n3\n4\nTCNZ566M035#0150E\nZ\n56\n35\n105\n196\n10\n150\n1100\n800\n500\n3\n4\nTCNY686M035#0100E\nY\n68\n35\n105\n238\n10\n100\n1400\n1000\n600\n3\n4\nTCNY686M035#0150E\nY\n68\n35\n105\n238\n10\n150\n1100\n800\n500\n3\n4\nTCN4107M035#0100E\n4\n100\n35\n105\n350\n10\n100\n1380\n966\n552\n2\n3\nTCN8107M035#0100E\n8\n100\n35\n105\n350\n10\n100\n1380\n966\n552\n2\n3\n40 Volt\nTCNZ476M040#0100E\nZ\n47\n40\n105\n188\n10\n100\n1300\n900\n600\n3\n4\nTCNZ476M040#0150E\nZ\n47\n40\n105\n188\n10\n150\n1100\n800\n500\n3\n4\nTCN8107M040#0100E\n8\n100\n40\n105\n400\n10\n100\n1380\n966\n552\n2\n4\n50 Volt\nTCN4336M050#0200E\n4\n33\n50\n85\n165\n12\n200\n970\n679\n-\n5\n3\nMoisture Sensitivity Level (MSL) is defined according to J-STD-020. \nAll technical data relates to an ambient temperature of +25ºC. Capacitance and DF are measured at 120Hz, 0.5RMS with DC bias of 2.2 volts. \nDCL is measured at rated voltage after 5 minutes. \nESR allowed to move up to 1.25 times catalog limit post mounting. For typical weight and composition, refer to the Product Safety Information Datasheet at the end of the Polymer, \nTantalum and Niobium Oxide Capacitors catalog.\nNOTE: KYOCERA AVX reserves the right to supply higher voltage ratings in the same case size to the same reliability standards.\nRECOMMENDED DERATING FACTOR\nVoltage and temperature derating as percentage of Vr\n100%\n95%\n90%\n85%\n80%\n75%\n70%\n65%\n60%\n55%\n50%\nC\nº\n5\n0\n1\nC\nº\n5\n8\nC\nº\n5\n5\n-\nRated Voltage\nProduct Category 2\nRecommended Application \nVoltage for Vr ≤ 10V\nRecommended Application \nVoltage for Vr ≥ 16V\n100%\n95%\n90%\n85%\n80%\n75%\n70%\n65%\n60%\n55%\n50%\n-55ºC\n85ºC\nRated Voltage\nProduct Category 5\nRecommended Application \nVoltage for Vr ≤ 10V\nRecommended Application \nVoltage for Vr ≥16V\n100%\n95%\n90%\n85%\n80%\n75%\n70%\n65%\n60%\n55%\n50%\nC\nº\n5\n0\n1\nC\nº\n5\n8\nC\nº\n5\n5\n-\nProduct Category 3\nRated Voltage\nRecommended Application \nVoltage for Vr ≤ 10V\nRecommended Application \nVoltage for Vr ≥ 16V\n80%\n72%\n64%\nTDS-PTNO-0029 | Rev 17\nThe Important Information/Disclaimer is incorporated in the catalog where these specifications came from or available \nonline at www.kyocera-avx.com/disclaimer/ by reference and should be reviewed in full before placing any order.\n – polymer, tantalum and niobium oxide capacitors –\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              612.0,
+              792.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "1": {
+            "detection_count": 1,
+            "detection_seconds": 0.978,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.999548,
+                "bbox_pdf": [
+                  24.44,
+                  316.51,
+                  544.61,
+                  433.58
+                ],
+                "row_candidates": 8,
+                "column_candidates": 11,
+                "header_candidates": 1,
+                "structure_seconds": 0.509
+              }
+            ],
+            "detection_status": "detected"
+          },
+          "2": {
+            "detection_count": 2,
+            "detection_seconds": 0.951,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.999713,
+                "bbox_pdf": [
+                  25.15,
+                  303.49,
+                  560.65,
+                  507.51
+                ],
+                "row_candidates": 15,
+                "column_candidates": 10,
+                "header_candidates": 1,
+                "structure_seconds": 0.771
+              },
+              {
+                "region_id": "d2",
+                "confidence": 0.998138,
+                "bbox_pdf": [
+                  20.6,
+                  98.78,
+                  508.33,
+                  206.27
+                ],
+                "row_candidates": 7,
+                "column_candidates": 10,
+                "header_candidates": 1,
+                "structure_seconds": 0.464
+              }
+            ],
+            "detection_status": "detected"
+          },
+          "3": {
+            "detection_count": 1,
+            "detection_seconds": 0.948,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.996906,
+                "bbox_pdf": [
+                  19.75,
+                  98.2,
+                  582.71,
+                  558.95
+                ],
+                "row_candidates": 60,
+                "column_candidates": 13,
+                "header_candidates": 1,
+                "structure_seconds": 1.58
+              }
+            ],
+            "detection_status": "detected"
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [],
+          "pn_connection": "ordering_code_match",
+          "target_row_pdf_quote": "PDF source evidence retained in selected pages.",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    },
+    {
+      "document_id": "panasonic_tpc_2015",
+      "manufacturer": "Panasonic",
+      "series": "TPC",
+      "part_number": "6TPC47M",
+      "pdf_filename": "6TPC47M.PDF",
+      "pdf_sha256": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "pdf_page_count": 1,
+      "selected_pages": [
+        1
+      ],
+      "pn_connection": "exact_match",
+      "exact_source_occurrences": [
+        {
+          "pdf_page": 1,
+          "text": "6TPC47M",
+          "bbox_pdf": [
+            452.24,
+            640.13,
+            492.75,
+            649.13
+          ]
+        }
+      ],
+      "estimated_input_tokens": 884,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Exact P/N and conditions are present; DL target-table miss is retained with original-PDF fallback.",
+      "prepared_input": {
+        "request": {
+          "document_id": "panasonic_tpc_2015",
+          "manufacturer": "Panasonic",
+          "series": "TPC",
+          "part_number": "6TPC47M",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 1,
+            "page_text": "Design and specifications are each subject to change without notice.  Ask factory for the current technical specifications before purchase and/or use.\nShould a safety concern arise regarding this product, please be sure to contact us immediately.\nConductive Polymer Tantalum Solid Capacitors\nS\nW1\nH\nL\nW\nS\nR. Voltage code\nLot. No.\nR.Cap. code\nPolarity marking(+)\nR. Voltage code\nLot. No.\nR.Cap. code\nPolarity marking(+)\nSurface Mount Type\nSeries : TPC\nFeatures\n● Low proﬁ le (Height 1.1 mm)\n● RoHS compliance, Halogen free\nSize code\nB1\nD2\nCategory temperature range\n–55 °C to +105 °C\nRated voltage range\n6.3 V.DC to 12.5 V.DC\n6.3 V.DC to 10 V.DC\nCategory voltage range\n5.0 V.DC to 10.0 V.DC\n6.3 V.DC to 10 V.DC\nRated capacitance range\n10 μF to 47 μF\n68 μF to 330 μF\nCapacitance tolerance\n±20 % (120 Hz / + 20 °C)\nLeakage current\nPlease see the attached characteristics list\nDissipation factor (tan d)\nPlease see the attached characteristics list\nSurge voltage (V.DC)\nRated voltage × 1.15\nEndurance\n+105 °C 2000h, (B1 size : 1000h) rated voltage appled \n✽ Rated temp. +85 °C 1000h rated voltage applied\nCapacitance change\nWithin ±20 % of the initial value\ntan d\n< 1.5 times of the initial limit\nDC leakage current\nWithin the initial limit\nDamp heat\n(Steady State)\n+60 °C, 90 % to 95 %, 500 h, No-applied voltage\nCapacitance change\nWithin +40 %, −20 % of the initial value\ntan d\n< 1.5 times of the initial limit\nDC leakage current\n< 3 times of the initial limit\nSize code\nL±0.2\nW±0.2\nH±0.1\nS±0.2\nW1±0.1\nB1\n3.5\n2.8\n1.1\n0.8\n2.2\nD2\n7.3\n4.3\n1.9\n1.3\n2.4\nR. Voltage (V.DC)\n6.3\n8.0\n10.0\n12.5\nCode\nj\nk\nA\nB\nR. Cap. (μF)\n10\n15\n22\n33\n47\nCode\nA7\nE7\nJ7\nN7\nS7\nSeries\nRated\nvoltage\n(V.DC)\nRated\ntemp.\n(°C)\nCategory\nvoltage\n(V.DC)\nCategory\ntemp.\n(°C)\nRated\ncapacitance\n(μF)\nCase size (mm)\nSize\ncode\nSpecifications\nStandard\nL\nW\nH\nRipple ✽1 \ncurrent\n(mAr.m.s.)\nESR ✽2\n(mΩ max.) tan d ✽3\nLC ✽4\n(μA)\nPart number\nMin. \nPackaging Q'ty\n(pcs)\nTPC\n6.3\n 85\n 5.0\n105\n 47\n3.5\n2.8\n1.1\nB1\n1100\n55\n0.10\n 29.6\n6TPC47M\n3000\n 85\n 5.0\n105\n3.5\n2.8\n1.1\n1000\n70\n0.10\n 29.6\n6TPC47MB\n3000\n105\n 6.3\n105\n100\n7.3\n4.3\n1.9\nD2\n1700\n45\n0.10\n 63.0\n6TPC100M\n3000\n105\n 6.3\n105\n150\n7.3\n4.3\n1.9\nD2\n1900\n40\n0.10\n 94.5\n6TPC150M\n3000\n 85\n 5.0\n105\n330\n7.3\n4.3\n1.9\nD2\n1900\n40\n0.10\n207.9\n6TPC330MA\n3000\n8.0\n 85\n 6.3\n105\n 22\n3.5\n2.8\n1.1\nB1\n1000\n70\n0.10\n 17.6\n8TPC22M\n3000\n105\n 8.0\n105\n150\n7.3\n4.3\n1.9\nD2\n1900\n40\n0.10\n120.0\n8TPC150M\n3000\n10\n105\n10.0\n105\n 68\n7.3\n4.3\n1.9\nD2\n1700\n45\n0.10\n 68.0\n10TPC68M\n3000\n105\n10.0\n105\n100\n7.3\n4.3\n1.9\nD2\n1700\n45\n0.10\n100.0\n10TPC100M\n3000\n12.5\n 85\n10.0\n105\n 10\n3.5\n2.8\n1.1\nB1\n 800\n80\n0.10\n 12.5\n12TPC10M\n3000\n 85\n10.0\n105\n 15\n3.5\n2.8\n1.1\nB1\n 800\n80\n0.10\n 18.8\n12TPC15M\n3000\n✽1 Ripple current (100 kHz/ +45 °C ), ✽2 ESR (100 kHz/+20 °C)  ✽3 tan d (120 Hz/+20 °C)  ✽4 After 5 minutes\n◆ Please refer to each page in this catarog for “Reflow conditions” and “Taping specifications”.\nUnit : mm\nMarking\n✽ Externals of ﬁ gure are the reference.\nB1 Size\nB1 Size\nD2 Size\nDimensions (not to scale) \nCharacteristics list\nSpecifi cations\nNov. 2015\n01\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              595.0,
+              842.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "1": {
+            "detection_count": 1,
+            "detection_status": "target_characteristics_table_not_detected; original PDF exact-row fallback used",
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.751099,
+                "bbox_pdf": [
+                  47.35,
+                  191.16,
+                  498.06,
+                  405.28
+                ],
+                "row_candidates": 15,
+                "column_candidates": 2,
+                "header_candidates": 0,
+                "structure_seconds": 1.49
+              }
+            ],
+            "pn_occurrences": [
+              {
+                "page_key": "panasonic_tpc_2015:p1",
+                "pdf_page": 1,
+                "word_id": 365,
+                "text": "6TPC47M",
+                "bbox_pdf": [
+                  452.23687744140625,
+                  640.1263427734375,
+                  492.745849609375,
+                  649.1263427734375
+                ]
+              }
+            ]
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [
+            {
+              "pdf_page": 1,
+              "text": "6TPC47M",
+              "bbox_pdf": [
+                452.24,
+                640.13,
+                492.75,
+                649.13
+              ]
+            }
+          ],
+          "pn_connection": "exact_match",
+          "target_row_pdf_quote": "TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000 || *2 ESR (100 kHz/+20 °C)",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    },
+    {
+      "document_id": "panasonic_tpc_2015",
+      "manufacturer": "Panasonic",
+      "series": "TPC",
+      "part_number": "8TPC22M",
+      "pdf_filename": "6TPC47M.PDF",
+      "pdf_sha256": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+      "pdf_page_count": 1,
+      "selected_pages": [
+        1
+      ],
+      "pn_connection": "exact_match",
+      "exact_source_occurrences": [
+        {
+          "pdf_page": 1,
+          "text": "8TPC22M",
+          "bbox_pdf": [
+            452.24,
+            693.98,
+            492.75,
+            702.98
+          ]
+        }
+      ],
+      "estimated_input_tokens": 884,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Exact P/N and conditions are present; DL target-table miss is retained with original-PDF fallback.",
+      "prepared_input": {
+        "request": {
+          "document_id": "panasonic_tpc_2015",
+          "manufacturer": "Panasonic",
+          "series": "TPC",
+          "part_number": "8TPC22M",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 1,
+            "page_text": "Design and specifications are each subject to change without notice.  Ask factory for the current technical specifications before purchase and/or use.\nShould a safety concern arise regarding this product, please be sure to contact us immediately.\nConductive Polymer Tantalum Solid Capacitors\nS\nW1\nH\nL\nW\nS\nR. Voltage code\nLot. No.\nR.Cap. code\nPolarity marking(+)\nR. Voltage code\nLot. No.\nR.Cap. code\nPolarity marking(+)\nSurface Mount Type\nSeries : TPC\nFeatures\n● Low proﬁ le (Height 1.1 mm)\n● RoHS compliance, Halogen free\nSize code\nB1\nD2\nCategory temperature range\n–55 °C to +105 °C\nRated voltage range\n6.3 V.DC to 12.5 V.DC\n6.3 V.DC to 10 V.DC\nCategory voltage range\n5.0 V.DC to 10.0 V.DC\n6.3 V.DC to 10 V.DC\nRated capacitance range\n10 μF to 47 μF\n68 μF to 330 μF\nCapacitance tolerance\n±20 % (120 Hz / + 20 °C)\nLeakage current\nPlease see the attached characteristics list\nDissipation factor (tan d)\nPlease see the attached characteristics list\nSurge voltage (V.DC)\nRated voltage × 1.15\nEndurance\n+105 °C 2000h, (B1 size : 1000h) rated voltage appled \n✽ Rated temp. +85 °C 1000h rated voltage applied\nCapacitance change\nWithin ±20 % of the initial value\ntan d\n< 1.5 times of the initial limit\nDC leakage current\nWithin the initial limit\nDamp heat\n(Steady State)\n+60 °C, 90 % to 95 %, 500 h, No-applied voltage\nCapacitance change\nWithin +40 %, −20 % of the initial value\ntan d\n< 1.5 times of the initial limit\nDC leakage current\n< 3 times of the initial limit\nSize code\nL±0.2\nW±0.2\nH±0.1\nS±0.2\nW1±0.1\nB1\n3.5\n2.8\n1.1\n0.8\n2.2\nD2\n7.3\n4.3\n1.9\n1.3\n2.4\nR. Voltage (V.DC)\n6.3\n8.0\n10.0\n12.5\nCode\nj\nk\nA\nB\nR. Cap. (μF)\n10\n15\n22\n33\n47\nCode\nA7\nE7\nJ7\nN7\nS7\nSeries\nRated\nvoltage\n(V.DC)\nRated\ntemp.\n(°C)\nCategory\nvoltage\n(V.DC)\nCategory\ntemp.\n(°C)\nRated\ncapacitance\n(μF)\nCase size (mm)\nSize\ncode\nSpecifications\nStandard\nL\nW\nH\nRipple ✽1 \ncurrent\n(mAr.m.s.)\nESR ✽2\n(mΩ max.) tan d ✽3\nLC ✽4\n(μA)\nPart number\nMin. \nPackaging Q'ty\n(pcs)\nTPC\n6.3\n 85\n 5.0\n105\n 47\n3.5\n2.8\n1.1\nB1\n1100\n55\n0.10\n 29.6\n6TPC47M\n3000\n 85\n 5.0\n105\n3.5\n2.8\n1.1\n1000\n70\n0.10\n 29.6\n6TPC47MB\n3000\n105\n 6.3\n105\n100\n7.3\n4.3\n1.9\nD2\n1700\n45\n0.10\n 63.0\n6TPC100M\n3000\n105\n 6.3\n105\n150\n7.3\n4.3\n1.9\nD2\n1900\n40\n0.10\n 94.5\n6TPC150M\n3000\n 85\n 5.0\n105\n330\n7.3\n4.3\n1.9\nD2\n1900\n40\n0.10\n207.9\n6TPC330MA\n3000\n8.0\n 85\n 6.3\n105\n 22\n3.5\n2.8\n1.1\nB1\n1000\n70\n0.10\n 17.6\n8TPC22M\n3000\n105\n 8.0\n105\n150\n7.3\n4.3\n1.9\nD2\n1900\n40\n0.10\n120.0\n8TPC150M\n3000\n10\n105\n10.0\n105\n 68\n7.3\n4.3\n1.9\nD2\n1700\n45\n0.10\n 68.0\n10TPC68M\n3000\n105\n10.0\n105\n100\n7.3\n4.3\n1.9\nD2\n1700\n45\n0.10\n100.0\n10TPC100M\n3000\n12.5\n 85\n10.0\n105\n 10\n3.5\n2.8\n1.1\nB1\n 800\n80\n0.10\n 12.5\n12TPC10M\n3000\n 85\n10.0\n105\n 15\n3.5\n2.8\n1.1\nB1\n 800\n80\n0.10\n 18.8\n12TPC15M\n3000\n✽1 Ripple current (100 kHz/ +45 °C ), ✽2 ESR (100 kHz/+20 °C)  ✽3 tan d (120 Hz/+20 °C)  ✽4 After 5 minutes\n◆ Please refer to each page in this catarog for “Reflow conditions” and “Taping specifications”.\nUnit : mm\nMarking\n✽ Externals of ﬁ gure are the reference.\nB1 Size\nB1 Size\nD2 Size\nDimensions (not to scale) \nCharacteristics list\nSpecifi cations\nNov. 2015\n01\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              595.0,
+              842.0
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "1": {
+            "detection_count": 1,
+            "detection_status": "target_characteristics_table_not_detected; original PDF exact-row fallback used",
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.751099,
+                "bbox_pdf": [
+                  47.35,
+                  191.16,
+                  498.06,
+                  405.28
+                ],
+                "row_candidates": 15,
+                "column_candidates": 2,
+                "header_candidates": 0,
+                "structure_seconds": 1.49
+              }
+            ],
+            "pn_occurrences": [
+              {
+                "page_key": "panasonic_tpc_2015:p1",
+                "pdf_page": 1,
+                "word_id": 434,
+                "text": "8TPC22M",
+                "bbox_pdf": [
+                  452.23675537109375,
+                  693.984130859375,
+                  492.7457275390625,
+                  702.984130859375
+                ]
+              }
+            ]
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [
+            {
+              "pdf_page": 1,
+              "text": "8TPC22M",
+              "bbox_pdf": [
+                452.24,
+                693.98,
+                492.75,
+                702.98
+              ]
+            }
+          ],
+          "pn_connection": "exact_match",
+          "target_row_pdf_quote": "TPC 8.0 85 6.3 105 22 3.5 2.8 1.1 B1 1000 70 0.10 17.6 8TPC22M 3000 || *2 ESR (100 kHz/+20 °C)",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    },
+    {
+      "document_id": "panasonic_tpc",
+      "manufacturer": "Panasonic",
+      "series": "TPC",
+      "part_number": "10TPC100M",
+      "pdf_filename": "panasonic_tpc_catalog_2025.pdf",
+      "pdf_sha256": "644cbe84202bcf848df370f8575356e09cdf55bfdb69aec959dde9de9398ab0f",
+      "pdf_page_count": 222,
+      "selected_pages": [
+        86,
+        87
+      ],
+      "pn_connection": "exact_match",
+      "exact_source_occurrences": [
+        {
+          "pdf_page": 87,
+          "text": "10TPC100M",
+          "bbox_pdf": [
+            411.13,
+            201.63,
+            458.53,
+            213.26
+          ]
+        }
+      ],
+      "estimated_input_tokens": 857,
+      "token_budget_status": "pass",
+      "prompt_version": "07.3-gemini",
+      "ground_truth_included": false,
+      "api_request_performed": false,
+      "quality_status": "pass",
+      "quality_reason": "Exact P/N and conditions are present.",
+      "prepared_input": {
+        "request": {
+          "document_id": "panasonic_tpc",
+          "manufacturer": "Panasonic",
+          "series": "TPC",
+          "part_number": "10TPC100M",
+          "prompt_version": "07.3-gemini"
+        },
+        "source_pages": [
+          {
+            "pdf_page": 86,
+            "page_text": "● RoHS compliance, Halogen free\nUnit：ｍｍ\nR. voltage code\nUnit：V\n* Externals of figure are the reference.\n  Dimensions (not to scale)\n–55 °C to +105 °C\nSize code\nCategory temp. range\nDissipation factor(tan δ)\n ≤ 1.5 times of the initial limit\nRated voltage range\nCategory voltage range\nRated capacitance range\nCapacitance tolerance\n±20 % (120 Hz / +20 °C)\nLeakage current\nPlease see the attached characteristics list\nDissipation factor(tan δ)\nPlease see the attached characteristics list\nShould a safety concern arise regarding this product, please be sure to contact us immediately.\n21-Oct-24\nH±0.1\n1.9\nL±0.2\nDesign and specifications are each subject to change without notice. Ask factory for the current technical specifications before purchase and/or use.\nD2\nSize code\n7.3\n1.3\n2.4\n4.3\nW±0.2\nS±0.2\nW1±0.1\n  Specifications\nEndurance\n +105 °C 2000 h , rated voltage applied\nCapacitance change\nD2\n10 V\n10 V\n68 μF to 100 μF\nConductive Polymer Tantalum\nSolid Capacitors\nSurface Mount Type\nTPC series\n  Features\nA\n10\nSurge voltage (V)\nRated voltage × 1.15\nLeakage current\n ≤ 3 times of the initial limit\nDamp heat\n(Steady State)\n +60 °C, 90 % to 95 % RH, 500 h, No-applied voltage\nCapacitance change\n Within +40 %, −20 % of the initial value\nDissipation factor(tan δ)\n ≤ 1.5 times of the initial limit\nLeakage current\n Within the initial limit\n Within ±20 % of the initial value\n  Marking\nRated capacitance (μF)\nRated voltage code\nPolarity marking (+)\nLot No.\nL\nS\nS\nW1\nW\nH\nSome part numbers are not a recommended product.\nNot recommended for new design.\n83\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              595.3203735351562,
+              841.9196166992188
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          },
+          {
+            "pdf_page": 87,
+            "page_text": "TPC series\n*1: Ripple current (100 kHz / +45 °C)\n*2: ESR (100 kHz / +20 °C)\nNot recommended for new design\n*3: tan δ (120 Hz / +20 °C)\n*4: After 5 minutes\n◆Please refer to each page in this catarog for “Reflow conditions” ,“Taping specifications” and \"Floor life level\" .\n10\n105\n7.3\n7.3\n7.3\n7.3\n4.3\n4.3\n10\n10\n10\n105\n68  \n105\n105\n105\n105\n105\n105\n105\nDesign and specifications are each subject to change without notice. Ask factory for the current technical specifications before purchase and/or use.\nShould a safety concern arise regarding this product, please be sure to contact us immediately.\n21-Oct-24\n1.9\n1.9\n1.9\n1.9\n100.0  10TPC100MG\n3000\n10\n105\n7.3\n0.10\n1500\n55\n0.10\n4.3\n1.9\n50\nD2\n4.3\n10\n100.0  10TPC100MT\n3000\n0.10\n105\n10\n105\n7.3\n4.3\n1.9\n1700\n45\n0.10\n100.0  10TPC100M\n3000\n68.0\n  10TPC68ME\n3000\n100\n1100\n1600\nL\nW\nH\n3000\n3000\n1700\n45\n0.10\n68.0\n  10TPC68M\n60\n0.10\n68.0\n  10TPC68MM\n1450\n4.3\n3\n2a\n100  \n  Characteristics list\nRated\nvoltage\n(V)\nRated\ntemper-\nature\n(°C)\nCate-\ngory\nvoltage\n(V)\nCate-\ngory\ntemper-\nature\n(°C)\nRated\ncapaci-\ntance\n(μF)\nReflow\ntemp\n≤260°C\nReflow\ntemp\n≤250°C\nRipple*1\ncurrent\n(mA rms)\nESR*2\n(mΩ max.)\ntan δ*3\nLC*4\n(μA)\nPart number\nMin.\npackaging\nq'ty\n(pcs)\nCase size\nSize\ncode\nSpecifications\nStandard\nFloor life\n（ｍｍ）\nlevel\nNRFND\nNRFND\n84\n",
+            "page_bbox_pdf": [
+              0.0,
+              0.0,
+              595.3203735351562,
+              841.9196166992188
+            ],
+            "rotation": 0,
+            "source_kind": "pdf_original_text"
+          }
+        ],
+        "dl_table_candidates": {
+          "86": {
+            "detection_count": 1,
+            "detection_seconds": 1.052,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.999193,
+                "bbox_pdf": [
+                  38.38,
+                  223.44,
+                  442.41,
+                  469.13
+                ],
+                "row_candidates": 15,
+                "column_candidates": 3,
+                "header_candidates": 1,
+                "structure_seconds": 1.471
+              }
+            ],
+            "detection_status": "detected"
+          },
+          "87": {
+            "detection_count": 1,
+            "detection_seconds": 1.03,
+            "regions": [
+              {
+                "region_id": "d1",
+                "confidence": 0.999885,
+                "bbox_pdf": [
+                  34.58,
+                  83.09,
+                  568.64,
+                  243.88
+                ],
+                "row_candidates": 8,
+                "column_candidates": 19,
+                "header_candidates": 1,
+                "structure_seconds": 0.73
+              }
+            ],
+            "detection_status": "detected"
+          }
+        },
+        "relationship_context": {
+          "target_pn_occurrences": [
+            {
+              "pdf_page": 87,
+              "text": "10TPC100M",
+              "bbox_pdf": [
+                411.13,
+                201.63,
+                458.53,
+                213.26
+              ]
+            }
+          ],
+          "pn_connection": "exact_match",
+          "target_row_pdf_quote": "PDF source evidence retained in selected pages.",
+          "connection_policy": "No P/N substitution. Accept ordering codes only after unique mapping review."
+        },
+        "ground_truth_included": false,
+        "api_request_performed": false
+      }
+    }
+  ]
+}

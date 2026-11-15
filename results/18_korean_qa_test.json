@@ -1,0 +1,35 @@
+{
+  "records": [
+    {
+      "kind": "korean_qa",
+      "part_number": "T59EL157M035C0050",
+      "question": "선택한 부품의 주요 규격을 한국어로 설명하고, 확인되지 않는 정보는 알 수 없음이라고 알려줘.",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "18-korean-qa",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 1.746925999999803,
+      "input_tokens": 556,
+      "output_tokens": 121,
+      "thinking_tokens": null,
+      "total_tokens": 677,
+      "response_id": "UH31aqnhEb_b9tMPoNSqqAo",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "http_status": null,
+      "error_type": null,
+      "error_message": null,
+      "raw_response_text": "대상 P/N: T59EL157M035C0050\n\n선택한 부품의 주요 규격은 다음과 같습니다:\n- 정격 전압: 35 VDC\n- 서지 전압: 알 수 없음\n- 정전용량: 150 μF\n- 허용 오차: ± 20 %\n- ESR: 50 mΩ (+25 °C, 100 kHz 조건)\n- 동작 온도: -55 °C ~ +125 °C",
+      "post_processing_status": "saved_raw_answer",
+      "execution_id": "741a92b6da8b20f1decf169ea618ccf439ec48cf7eae830d4769426d6a8594e6",
+      "requested_at": "2026-11-12T08:48:16.642396+00:00",
+      "request_metadata": {
+        "source": "saved_gemini_extraction_only",
+        "ground_truth_supplied": false,
+        "retry_attempts": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+﻿group,metric,correct,denominator,accuracy_percent,planned_pns,response_pns,evaluated_rows,api_error_rows,ground_truth_uncertain_rows
+development_actual_responses,value_and_unit_accuracy,5,6,83.33,4,1,6,18,0
+development_actual_responses,condition_accuracy,0,1,0.0,4,1,6,18,0
+development_actual_responses,pn_match_accuracy,5,5,100.0,4,1,6,18,0
+development_actual_responses,evidence_accuracy,3,6,50.0,4,1,6,18,0
+development_actual_responses,full_spec_accuracy,2,6,33.33,4,1,6,18,0

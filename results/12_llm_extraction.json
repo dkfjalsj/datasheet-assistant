@@ -1,0 +1,305 @@
+{
+  "stage": "12",
+  "records": [
+    {
+      "document_id": "vishay_t55",
+      "part_number": "T55A226M2R5C0200",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 5.29865410000275,
+      "input_tokens": 10661,
+      "output_tokens": 1593,
+      "thinking_tokens": null,
+      "total_tokens": 12254,
+      "response_id": "VjL1asfSLq220-kPoprRoAw",
+      "finish_reason": "STOP",
+      "execution_status": "error",
+      "error_type": "structured_response_validation_error",
+      "error_message": "Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"T55A226M2R5C0200\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"2.5\",\n      \"unit\": \"VDC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 5,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p5-e05\",\n      \"evidence\": \"2.5 VDC\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p5-e05\",\n          \"page\": 5,\n          \"quote\": \"2.5 VDC\"\n        }\n      ],\n      \"reason\": \"Rated voltage is provided by the voltage group header applicable to this part row.\"\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"3.2\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"105 °C, 1000 successive test cycles in series with a 1 kΩ resistor at the rate of 30 s ON, 30 s OFF\",\n      \"page\": 15,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p15-e07\",\n      \"evidence\": \"3.2\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p15-e07\",\n          \"page\": 15,\n          \"quote\": \"Rated voltage 2.5 4.0 6.3 7.0 10 12.5 16 20 25 35 50 63\"\n        },\n        {\n          \"evidence_id\": \"p15-e07\",\n          \"page\": 15,\n          \"quote\": \"Surge voltage 3.2 5.2 8.2 9.0 13 16.2 20 23 29 40 57 72\"\n        }\n      ],\n      \"reason\": \"Surge voltage corresponding to 2.5 V rated voltage is specified in the performance characteristics table.\"\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"22\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 5,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p5-e09\",\n      \"evidence\": \"22\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p5-e09\",\n          \"page\": 5,\n          \"quote\": \"22 A T55A226M2R5C0200 5.5 10 200 0.75 105 1000\"\n        },\n        {\n          \"evidence_id\": \"p5-e04\",\n          \"page\": 5,\n          \"quote\": \"CAPACITANCE (μF)\"\n        }\n      ],\n      \"reason\": \"Capacitance value is extracted directly from the target part row under the capacitance column.\"\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"± 20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance Tolerance: ± 20 %\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance Tolerance: ± 20 %\"\n        }\n      ],\n      \"reason\": \"Capacitance tolerance for the series is stated in the electrical characteristics.\"\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"200\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"200\",\n      \"condition\": \"+ 25 °C 100 kHz\",\n      \"page\": 5,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p5-e09\",\n      \"evidence\": \"200\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p5-e09\",\n          \"page\": 5,\n          \"quote\": \"22 A T55A226M2R5C0200 5.5 10 200 0.75 105 1000\"\n        },\n        {\n          \"evidence_id\": \"p5-e04\",\n          \"page\": 5,\n          \"quote\": \"MAX. ESR AT + 25 °C 100 kHz (mΩ)\"\n        }\n      ],\n      \"reason\": \"ESR maximum value and conditions are extracted from the table for this specific part number.\"\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": \"/ +125 °C (above 105 °C, additional voltage derating is required)\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"-55 °C to +105 °C / +125 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Operating Temperature: -55 °C to +105 °C / +125 °C (above 105 °C, additional voltage derating is required)\"\n        }\n      ],\n      \"reason\": \"Operating temperature range is given in the series electrical characteristics.\"\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "posthoc_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "T55A226M2R5C0200",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "2.5",
+              "unit": "VDC",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 5,
+              "scope": "series",
+              "source_type": "table",
+              "evidence_id": "p5-e05",
+              "evidence": "2.5 VDC",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p5-e05",
+                  "page": 5,
+                  "quote": "2.5 VDC"
+                }
+              ],
+              "reason": "Rated voltage is provided by the voltage group header applicable to this part row."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "2.5",
+              "unit": "V",
+              "rule": "VDC -> V: multiply by 1"
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "3.2",
+              "unit": "V",
+              "value_min": null,
+              "value_max": null,
+              "condition": "105 °C, 1000 successive test cycles in series with a 1 kΩ resistor at the rate of 30 s ON, 30 s OFF",
+              "page": 15,
+              "scope": "series",
+              "source_type": "table",
+              "evidence_id": "p15-e07",
+              "evidence": "3.2",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p15-e07",
+                  "page": 15,
+                  "quote": "Rated voltage 2.5 4.0 6.3 7.0 10 12.5 16 20 25 35 50 63"
+                },
+                {
+                  "evidence_id": "p15-e07",
+                  "page": 15,
+                  "quote": "Surge voltage 3.2 5.2 8.2 9.0 13 16.2 20 23 29 40 57 72"
+                }
+              ],
+              "reason": "Surge voltage corresponding to 2.5 V rated voltage is specified in the performance characteristics table."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "unit_not_in_evidence",
+              "condition_not_in_evidence"
+            ],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "3.2",
+              "unit": "V",
+              "rule": "V -> V: multiply by 1"
+            }
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "22",
+              "unit": "μF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 5,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p5-e09",
+              "evidence": "22",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p5-e09",
+                  "page": 5,
+                  "quote": "22 A T55A226M2R5C0200 5.5 10 200 0.75 105 1000"
+                },
+                {
+                  "evidence_id": "p5-e04",
+                  "page": 5,
+                  "quote": "CAPACITANCE (μF)"
+                }
+              ],
+              "reason": "Capacitance value is extracted directly from the target part row under the capacitance column."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "22",
+              "unit": "µF",
+              "rule": "µF -> µF: multiply by 1"
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "± 20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "Capacitance Tolerance: ± 20 %",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Capacitance Tolerance: ± 20 %"
+                }
+              ],
+              "reason": "Capacitance tolerance for the series is stated in the electrical characteristics."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "pn_field_or_series_scope_not_proved_by_automatic_check"
+            ],
+            "source_text_matched": true,
+            "normalized": {
+              "value": "±20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "200",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": "200",
+              "condition": "+ 25 °C 100 kHz",
+              "page": 5,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p5-e09",
+              "evidence": "200",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p5-e09",
+                  "page": 5,
+                  "quote": "22 A T55A226M2R5C0200 5.5 10 200 0.75 105 1000"
+                },
+                {
+                  "evidence_id": "p5-e04",
+                  "page": 5,
+                  "quote": "MAX. ESR AT + 25 °C 100 kHz (mΩ)"
+                }
+              ],
+              "reason": "ESR maximum value and conditions are extracted from the table for this specific part number."
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, 범위 경계는 두 값 모두 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error"
+            ],
+            "source_text_matched": true,
+            "normalized": null
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": null,
+              "unit": "°C",
+              "value_min": "-55",
+              "value_max": "+105",
+              "condition": "/ +125 °C (above 105 °C, additional voltage derating is required)",
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "-55 °C to +105 °C / +125 °C",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Operating Temperature: -55 °C to +105 °C / +125 °C (above 105 °C, additional voltage derating is required)"
+                }
+              ],
+              "reason": "Operating temperature range is given in the series electrical characteristics."
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, found에는 값·단위·범위·유형·근거 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "missing_value"
+            ],
+            "source_text_matched": true,
+            "normalized": null
+          }
+        }
+      }
+    },
+    {
+      "document_id": "kyocera_avx_tcj",
+      "part_number": "TCJU337M016R0050E",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": null,
+      "prompt_version": "07.2-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": null,
+      "input_tokens": null,
+      "output_tokens": null,
+      "thinking_tokens": null,
+      "total_tokens": null,
+      "response_id": null,
+      "finish_reason": null,
+      "execution_status": "error",
+      "error_type": "post_response_validation_error",
+      "error_message": "Gemini 응답 수신 후 보조 페이지 내부 메타데이터 누락으로 원문 인용 검증이 중단됨. API 재호출하지 않음.",
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": null,
+      "extraction": null,
+      "verification": null
+    }
+  ]
+}

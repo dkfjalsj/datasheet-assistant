@@ -1,0 +1,8 @@
+﻿document_id,part_number,ground_truth_rows,found_rows,not_found_rows,ambiguous_rows,confirmed_rows,needs_review_rows,audit_status
+vishay_593d,293D107X9010D2WE3,6,5,1,0,6,0,complete
+vishay_t59,T59EL157M035C0050,6,5,1,0,6,0,complete
+vishay_t59,T59EL336M050C0075,6,5,1,0,6,0,complete
+kyocera_avx_tcn,TCNT157M006R0200E,6,6,0,0,6,0,complete
+panasonic_tpc,6TPC47M,6,0,6,0,0,6,complete
+panasonic_tpc,8TPC22M,6,0,6,0,0,6,complete
+panasonic_tpc,10TPC100M,6,5,1,0,6,0,complete

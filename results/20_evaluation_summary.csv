@@ -1,0 +1,11 @@
+﻿group_type,group,planned_specs,evaluated_specs,correct_specs,value_unit_accuracy_pct,api_failure_or_not_attempted_specs,condition_correct_or_na,condition_assessed_specs
+overall,All planned P/N,60,48,48,100.0,12,48,48
+spec_name,rated_voltage,10,8,8,100.0,2,8,8
+spec_name,surge_voltage,10,8,8,100.0,2,8,8
+spec_name,capacitance,10,8,8,100.0,2,8,8
+spec_name,tolerance,10,8,8,100.0,2,8,8
+spec_name,esr,10,8,8,100.0,2,8,8
+spec_name,operating_temperature,10,8,8,100.0,2,8,8
+manufacturer,Vishay,18,18,18,100.0,0,18,18
+manufacturer,KYOCERA AVX,18,18,18,100.0,0,18,18
+manufacturer,Panasonic,24,12,12,100.0,12,12,12

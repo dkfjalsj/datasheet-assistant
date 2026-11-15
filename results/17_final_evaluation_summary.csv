@@ -1,0 +1,6 @@
+﻿group,metric,correct,denominator,accuracy_percent,successful_pns,failed_pns,evaluated_rows,api_failure_rows,overall_7_pn_final_accuracy
+partial_successful_responses_only,value_and_unit_accuracy,18,36,50.0,6,1,36,6,N/A - one API failure
+partial_successful_responses_only,condition_accuracy,5,11,45.45,6,1,36,6,N/A - one API failure
+partial_successful_responses_only,pn_match_accuracy,22,28,78.57,6,1,36,6,N/A - one API failure
+partial_successful_responses_only,evidence_accuracy,0,36,0.0,6,1,36,6,N/A - one API failure
+partial_successful_responses_only,full_spec_accuracy,0,36,0.0,6,1,36,6,N/A - one API failure

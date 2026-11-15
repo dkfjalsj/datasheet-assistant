@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "kind": "korean_qa",
+      "part_number": "10TPC68M",
+      "comparison_part_number": "6TPC330MA",
+      "question": "두 제품의 주요 차이를 설명하고, 정격전압과 정전용량을 비교해줘.",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "mock-gemini-3.5-flash-lite",
+      "prompt_version": "18-korean-qa",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 0.004360100021585822,
+      "input_tokens": 111,
+      "output_tokens": 22,
+      "thinking_tokens": 0,
+      "total_tokens": 133,
+      "response_id": "mock-qa-22",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "http_status": null,
+      "error_type": null,
+      "error_message": null,
+      "raw_response_text": "대상 P/N: 10TPC68M · 6TPC330MA\n정격전압은 10TPC68M이 10 V로 더 높고, 정전용량은 6TPC330MA가 330 µF로 더 큽니다.",
+      "post_processing_status": "saved_raw_answer",
+      "execution_id": "2071933a59a7bdbc7fae586d823d5a272393518a80a1b8dfeb7953592155d5d8",
+      "requested_at": "2026-11-15T14:18:54.911783+00:00",
+      "request_metadata": {
+        "source": "saved_gemini_extraction_only",
+        "ground_truth_supplied": false,
+        "retry_attempts": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+﻿document_id,filename,pdf_header,page_count,sha256,manufacturer_marking,series,document_date,source_reliability,source_url,part_number,pn_match,pdf_page,characteristics_table,legacy_revision_relation
+panasonic_tpc_2015,6TPC47M.PDF,%PDF-1.7,1,eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9,Panasonic / POSCAP (visual verification),TPC,01 Nov. 2015,user_provided,user_provided,6TPC47M,exact_match,1,present,distinct from 2025 catalog; no automatic merge
+panasonic_tpc_2015,6TPC47M.PDF,%PDF-1.7,1,eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9,Panasonic / POSCAP (visual verification),TPC,01 Nov. 2015,user_provided,user_provided,8TPC22M,exact_match,1,present,distinct from 2025 catalog; no automatic merge

@@ -1,0 +1,10 @@
+﻿part_number,spec_name,recovery_kind,raw_value,raw_unit,recovered_value,recovered_unit,postprocess_status,ground_truth_not_used_for_recovery
+T59EL157M035C0050,operating_temperature,schema_error,,°C,-55 °C to +125 °C,°C,recovered,True
+T59EL336M050C0075,operating_temperature,schema_error,,°C,-55 °C to +125 °C,°C,recovered,True
+TCNT157M006R0200E,capacitance,normalization_error,150,uF,150,uF,validated,True
+TCNT157M006R0200E,esr,schema_error,200,mΩ,200,mΩ,validated,True
+TCNT157M006R0200E,operating_temperature,schema_error,,°C,-55 °C to +105 °C,°C,recovered,True
+6TPC47M,esr,schema_error,55,mΩ,55,mΩ,validated,True
+6TPC47M,operating_temperature,schema_error,,°C,-55 °C to +105 °C,°C,recovered,True
+10TPC100M,capacitance,normalization_error,100.0,μF,100,μF,recovered,True
+10TPC100M,esr,schema_error,45,mΩ,45,mΩ,validated,True

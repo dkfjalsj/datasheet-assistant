@@ -1,0 +1,3 @@
+﻿document_id,part_number,result,review_status,source_pages,evidence,remaining_uncertainty
+vishay_593d,293D107X9010D2WE3,ordering_code_match,confirmed,1;5,593D / 107 / X9 / 010 / D / 2WE3 ordering segments map uniquely to 593D107(1)010D(2).,No standalone assembled table token; mapping itself is unique.
+kyocera_avx_tcn,TCNT157M006R0200E,ordering_code_match,confirmed,1;3,"T case, 157, M, 006, R, 0200 and E are defined; ratings row uses TCNT157M006#0200E.",# is packaging placeholder; R is uniquely defined.

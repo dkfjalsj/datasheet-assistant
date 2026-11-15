@@ -1,0 +1,1834 @@
+{
+  "stage": "17",
+  "preflight": {
+    "prompt_version": "07.3-gemini",
+    "model": "gemini-3.5-flash-lite",
+    "code_sha256": "dfb86d6701ba26a7e119f3429ef661b068368eea6a31bcba3707b6712f668219",
+    "ground_truth_sha256": "7faf174b311f1a8e1dcb59573fbca430ff9a7da6c71038e6505e59d4fefcbc68",
+    "input_manifest_sha256": "d64c970b2626682da787f99f8af0e665bd41c38ce92a362cf0833dada94d4522",
+    "free_tier_local_configuration": false,
+    "user_confirmed_ai_studio_free_tier": "prior_conversation_screenshot",
+    "official_pricing_checked": true,
+    "input_construction_ground_truth_access": false,
+    "targets": [
+      {
+        "document_id": "vishay_593d",
+        "part_number": "293D107X9010D2WE3",
+        "pdf_filename": "vishay_593d.pdf",
+        "pdf_sha256": "dbcc10b3b4a95d434dff49591f92b49eca89641e0822ff547abb4809b587c7b5",
+        "input_hash": "853da1bbe96c2a83645b45196842d0c00c0288071fc3907eb0bd28d059cae52c",
+        "estimated_tokens": 5273,
+        "source_pages": [
+          1,
+          5
+        ],
+        "pn_connection": "ordering_code_match"
+      },
+      {
+        "document_id": "vishay_t59",
+        "part_number": "T59EL157M035C0050",
+        "pdf_filename": "vishay_t59.pdf",
+        "pdf_sha256": "67757e5ae4fb51b72a637410d2d4311b1f25ed55ec606802c61bee09d59a495c",
+        "input_hash": "c2664c56c1e52fcd8ac4ea7ef1e4b2503448832f6f86884f2fd16e24e1386e21",
+        "estimated_tokens": 5604,
+        "source_pages": [
+          1,
+          3,
+          6
+        ],
+        "pn_connection": "exact_match"
+      },
+      {
+        "document_id": "vishay_t59",
+        "part_number": "T59EL336M050C0075",
+        "pdf_filename": "vishay_t59.pdf",
+        "pdf_sha256": "67757e5ae4fb51b72a637410d2d4311b1f25ed55ec606802c61bee09d59a495c",
+        "input_hash": "9d35ca30048996abb941b22e9e33a215d34fb982b22a6145f172de0b35ace21b",
+        "estimated_tokens": 5419,
+        "source_pages": [
+          1,
+          4,
+          6
+        ],
+        "pn_connection": "exact_match"
+      },
+      {
+        "document_id": "kyocera_avx_tcn",
+        "part_number": "TCNT157M006R0200E",
+        "pdf_filename": "kyocera_avx_tcn.pdf",
+        "pdf_sha256": "53524f93164f6f02e79c979d66fc3fa1a08f363ccc52ed979b2db69516de69e2",
+        "input_hash": "dc84e790f2ca9ae4e5c7c9156a8ac93a3d508dbd7936fad2dd44bea20be3a461",
+        "estimated_tokens": 7351,
+        "source_pages": [
+          1,
+          2,
+          3
+        ],
+        "pn_connection": "ordering_code_match"
+      },
+      {
+        "document_id": "panasonic_tpc_2015",
+        "part_number": "6TPC47M",
+        "pdf_filename": "6TPC47M.PDF",
+        "pdf_sha256": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+        "input_hash": "561597156665baa944d8db29581bc33e57437911db7778a64c7429fd178021ed",
+        "estimated_tokens": 3127,
+        "source_pages": [
+          1
+        ],
+        "pn_connection": "exact_match"
+      },
+      {
+        "document_id": "panasonic_tpc_2015",
+        "part_number": "8TPC22M",
+        "pdf_filename": "6TPC47M.PDF",
+        "pdf_sha256": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+        "input_hash": "04d152f6126379c5387d372cedaf20e044dad9566de9dbcf4c676d29eef08121",
+        "estimated_tokens": 3130,
+        "source_pages": [
+          1
+        ],
+        "pn_connection": "exact_match"
+      },
+      {
+        "document_id": "panasonic_tpc",
+        "part_number": "10TPC100M",
+        "pdf_filename": "panasonic_tpc_catalog_2025.pdf",
+        "pdf_sha256": "644cbe84202bcf848df370f8575356e09cdf55bfdb69aec959dde9de9398ab0f",
+        "input_hash": "228c56bb5c515d7914427e5ca4c547f3343ae14c82db299af72a20a9629ee7e7",
+        "estimated_tokens": 3131,
+        "source_pages": [
+          86,
+          87
+        ],
+        "pn_connection": "exact_match"
+      }
+    ],
+    "duplicate_successes_reused": 0,
+    "free_tier_runtime_confirmation": "user-provided AI Studio Free-tier screenshot plus official pricing; runtime environment set only for this process",
+    "free_tier_runtime_configuration": true
+  },
+  "records": [
+    {
+      "document_id": "vishay_593d",
+      "part_number": "293D107X9010D2WE3",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.057294300000649,
+      "input_tokens": 7472,
+      "output_tokens": 866,
+      "thinking_tokens": null,
+      "total_tokens": 8338,
+      "response_id": "aXT1aqOVIKLVrfcP-bWRsAE",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"293D107X9010D2WE3\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"ambiguous\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"The exact part number starts with 293D, but the datasheet is for the 593D series. Therefore, ratings specific to this part number cannot be conclusively extracted from the provided 593D document.\"\n    },\n    \"surge_voltage\": {\n      \"status\": \"not_found\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"Surge voltage is not explicitly specified for this part number in the provided document.\"\n    },\n    \"capacitance\": {\n      \"status\": \"ambiguous\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"The exact part number starts with 293D while the datasheet is for 593D series, preventing definitive matching.\"\n    },\n    \"tolerance\": {\n      \"status\": \"ambiguous\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"The exact part number starts with 293D while the datasheet is for 593D series.\"\n    },\n    \"esr\": {\n      \"status\": \"ambiguous\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"The exact part number starts with 293D while the datasheet is for 593D series.\"\n    },\n    \"operating_temperature\": {\n      \"status\": \"ambiguous\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"The exact part number starts with 293D while the datasheet is for 593D series.\"\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "853da1bbe96c2a83645b45196842d0c00c0288071fc3907eb0bd28d059cae52c",
+      "requested_at": "2026-11-12T08:07:31.586464+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "853da1bbe96c2a83645b45196842d0c00c0288071fc3907eb0bd28d059cae52c",
+        "pdf_sha256": "dbcc10b3b4a95d434dff49591f92b49eca89641e0822ff547abb4809b587c7b5",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      },
+      "independent_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "293D107X9010D2WE3",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "ambiguous",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "The exact part number starts with 293D, but the datasheet is for the 593D series. Therefore, ratings specific to this part number cannot be conclusively extracted from the provided 593D document."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "not_found",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "Surge voltage is not explicitly specified for this part number in the provided document."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "capacitance": {
+            "raw": {
+              "status": "ambiguous",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "The exact part number starts with 293D while the datasheet is for 593D series, preventing definitive matching."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "tolerance": {
+            "raw": {
+              "status": "ambiguous",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "The exact part number starts with 293D while the datasheet is for 593D series."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "esr": {
+            "raw": {
+              "status": "ambiguous",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "The exact part number starts with 293D while the datasheet is for 593D series."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "ambiguous",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "The exact part number starts with 293D while the datasheet is for 593D series."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          }
+        }
+      }
+    },
+    {
+      "document_id": "vishay_t59",
+      "part_number": "T59EL157M035C0050",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 3.8912099999943166,
+      "input_tokens": 6755,
+      "output_tokens": 1235,
+      "thinking_tokens": null,
+      "total_tokens": 7990,
+      "response_id": "bXT1aoaZDfmt1e8Pn_3KwQU",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"T59EL157M035C0050\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"35\",\n      \"unit\": \"VDC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 3,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p3-e03\",\n      \"evidence\": \"35 VDC\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p3-e03\",\n          \"page\": 3,\n          \"quote\": \"35 VDC\"\n        },\n        {\n          \"evidence_id\": \"p3-e05\",\n          \"page\": 3,\n          \"quote\": \"T59EL157M035C0050\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"not_found\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"Surge voltage is not explicitly specified for this specific part number in the provided tables.\"\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 3,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p3-e03\",\n      \"evidence\": \"150\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p3-e03\",\n          \"page\": 3,\n          \"quote\": \"150\"\n        },\n        {\n          \"evidence_id\": \"p3-e05\",\n          \"page\": 3,\n          \"quote\": \"T59EL157M035C0050\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"± 20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance Tolerance: ± 20 % standard\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance Tolerance: ± 20 % standard\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"50\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"+25 °C, 100 kHz\",\n      \"page\": 3,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p3-e03\",\n      \"evidence\": \"50\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p3-e03\",\n          \"page\": 3,\n          \"quote\": \"50\"\n        },\n        {\n          \"evidence_id\": \"p3-e03\",\n          \"page\": 3,\n          \"quote\": \"MAX. ESR AT +25 °C 100 kHz (mΩ)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+125\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Operating Temperature: -55 °C to +125 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Operating Temperature: -55 °C to +125 °C (above 105 °C, additional voltage derating is required)\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "c2664c56c1e52fcd8ac4ea7ef1e4b2503448832f6f86884f2fd16e24e1386e21",
+      "requested_at": "2026-11-12T08:10:21.921145+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "c2664c56c1e52fcd8ac4ea7ef1e4b2503448832f6f86884f2fd16e24e1386e21",
+        "pdf_sha256": "67757e5ae4fb51b72a637410d2d4311b1f25ed55ec606802c61bee09d59a495c",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      },
+      "independent_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "T59EL157M035C0050",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "35",
+              "unit": "VDC",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 3,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p3-e03",
+              "evidence": "35 VDC",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p3-e03",
+                  "page": 3,
+                  "quote": "35 VDC"
+                },
+                {
+                  "evidence_id": "p3-e05",
+                  "page": 3,
+                  "quote": "T59EL157M035C0050"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "35",
+              "unit": "V",
+              "rule": "VDC -> V: multiply by 1"
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "not_found",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "Surge voltage is not explicitly specified for this specific part number in the provided tables."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "150",
+              "unit": "μF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 3,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p3-e03",
+              "evidence": "150",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p3-e03",
+                  "page": 3,
+                  "quote": "150"
+                },
+                {
+                  "evidence_id": "p3-e05",
+                  "page": 3,
+                  "quote": "T59EL157M035C0050"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "150",
+              "unit": "µF",
+              "rule": "µF -> µF: multiply by 1"
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "± 20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "Capacitance Tolerance: ± 20 % standard",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Capacitance Tolerance: ± 20 % standard"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "±20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "50",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": null,
+              "condition": "+25 °C, 100 kHz",
+              "page": 3,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p3-e03",
+              "evidence": "50",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p3-e03",
+                  "page": 3,
+                  "quote": "50"
+                },
+                {
+                  "evidence_id": "p3-e03",
+                  "page": 3,
+                  "quote": "MAX. ESR AT +25 °C 100 kHz (mΩ)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "esr_frequency_not_in_evidence",
+              "esr_temperature_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "50",
+              "unit": "mΩ",
+              "rule": "mΩ -> mΩ: multiply by 1"
+            }
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": null,
+              "unit": "°C",
+              "value_min": "-55",
+              "value_max": "+125",
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "Operating Temperature: -55 °C to +125 °C",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Operating Temperature: -55 °C to +125 °C (above 105 °C, additional voltage derating is required)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, found에는 값·단위·범위·유형·근거 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "missing_value",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          }
+        }
+      }
+    },
+    {
+      "document_id": "vishay_t59",
+      "part_number": "T59EL336M050C0075",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.37768280000455,
+      "input_tokens": 6315,
+      "output_tokens": 1387,
+      "thinking_tokens": null,
+      "total_tokens": 7702,
+      "response_id": "cXT1atWlBuLf9tMPz7zjyAQ",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"T59EL336M050C0075\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"50\",\n      \"unit\": \"VDC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 4,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p4-e03\",\n      \"evidence\": \"50 VDC 22 EE T59EE226M050(1)0100 110 10 100 2.098 125 1000 3 22 EL T59EL226M050(1)0100 110 10 100 2.098 125 1000 3 33 EL (1) T59EL336M050C0075 165 10 75 2.422 125 1000 3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p4-e03\",\n          \"page\": 4,\n          \"quote\": \"50 VDC\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"not_found\",\n      \"value\": null,\n      \"unit\": null,\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": null,\n      \"scope\": null,\n      \"source_type\": null,\n      \"evidence_id\": null,\n      \"evidence\": null,\n      \"supporting_evidence\": [],\n      \"reason\": \"Surge voltage is not explicitly specified for this specific part number in the datasheet.\"\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"33\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 4,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p4-e03\",\n      \"evidence\": \"33 EL (1) T59EL336M050C0075 165 10 75 2.422 125 1000 3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p4-e03\",\n          \"page\": 4,\n          \"quote\": \"33 EL (1) T59EL336M050C0075\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"± 20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Capacitance Tolerance: ± 20 % standard\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance Tolerance: ± 20 % standard\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"75\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"Frequency: 100 kHz, Temperature: +25 °C\",\n      \"page\": 4,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p4-e03\",\n      \"evidence\": \"33 EL (1) T59EL336M050C0075 165 10 75 2.422 125 1000 3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p4-e03\",\n          \"page\": 4,\n          \"quote\": \"MAX. ESR AT +25 °C 100 kHz (mΩ)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+125\",\n      \"condition\": \"above 105 °C, additional voltage derating is required\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Operating Temperature: -55 °C to +125 °C (above 105 °C, additional voltage derating is required)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Operating Temperature: -55 °C to +125 °C (above 105 °C, additional voltage derating is required)\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "9d35ca30048996abb941b22e9e33a215d34fb982b22a6145f172de0b35ace21b",
+      "requested_at": "2026-11-12T08:10:25.826907+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "9d35ca30048996abb941b22e9e33a215d34fb982b22a6145f172de0b35ace21b",
+        "pdf_sha256": "67757e5ae4fb51b72a637410d2d4311b1f25ed55ec606802c61bee09d59a495c",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      },
+      "independent_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "T59EL336M050C0075",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "50",
+              "unit": "VDC",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 4,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p4-e03",
+              "evidence": "50 VDC 22 EE T59EE226M050(1)0100 110 10 100 2.098 125 1000 3 22 EL T59EL226M050(1)0100 110 10 100 2.098 125 1000 3 33 EL (1) T59EL336M050C0075 165 10 75 2.422 125 1000 3",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p4-e03",
+                  "page": 4,
+                  "quote": "50 VDC"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "50",
+              "unit": "V",
+              "rule": "VDC -> V: multiply by 1"
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "not_found",
+              "value": null,
+              "unit": null,
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": null,
+              "scope": null,
+              "source_type": null,
+              "evidence_id": null,
+              "evidence": null,
+              "supporting_evidence": [],
+              "reason": "Surge voltage is not explicitly specified for this specific part number in the datasheet."
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "unverifiable",
+            "issues": [
+              "no_confirmed_value_to_check"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "33",
+              "unit": "μF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 4,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p4-e03",
+              "evidence": "33 EL (1) T59EL336M050C0075 165 10 75 2.422 125 1000 3",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p4-e03",
+                  "page": 4,
+                  "quote": "33 EL (1) T59EL336M050C0075"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "33",
+              "unit": "µF",
+              "rule": "µF -> µF: multiply by 1"
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "± 20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "Capacitance Tolerance: ± 20 % standard",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Capacitance Tolerance: ± 20 % standard"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "±20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "75",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": null,
+              "condition": "Frequency: 100 kHz, Temperature: +25 °C",
+              "page": 4,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p4-e03",
+              "evidence": "33 EL (1) T59EL336M050C0075 165 10 75 2.422 125 1000 3",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p4-e03",
+                  "page": 4,
+                  "quote": "MAX. ESR AT +25 °C 100 kHz (mΩ)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "esr_frequency_not_in_evidence",
+              "esr_temperature_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "75",
+              "unit": "mΩ",
+              "rule": "mΩ -> mΩ: multiply by 1"
+            }
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": null,
+              "unit": "°C",
+              "value_min": "-55",
+              "value_max": "+125",
+              "condition": "above 105 °C, additional voltage derating is required",
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "Operating Temperature: -55 °C to +125 °C (above 105 °C, additional voltage derating is required)",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Operating Temperature: -55 °C to +125 °C (above 105 °C, additional voltage derating is required)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, found에는 값·단위·범위·유형·근거 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "missing_value",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          }
+        }
+      }
+    },
+    {
+      "document_id": "kyocera_avx_tcn",
+      "part_number": "TCNT157M006R0200E",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.1704126999975415,
+      "input_tokens": 13559,
+      "output_tokens": 1159,
+      "thinking_tokens": null,
+      "total_tokens": 14718,
+      "response_id": "dXT1atT_H_i10-kPnLyrcQ",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"TCNT157M006R0200E\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"≤ +85°C\",\n      \"page\": 2,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p2-e03\",\n      \"evidence\": \"Rated Voltage DC (VR) ≤ +85°C: 6.3 10 16 20 25 35 40 50\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p3-e05\",\n          \"page\": 3,\n          \"quote\": \"6.3 Volt\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"8\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"≤ +85ºC\",\n      \"page\": 2,\n      \"scope\": \"series\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p2-e03\",\n      \"evidence\": \"Surge Voltage (VS) ≤ +85ºC: 8 13 21 26 33 46 52 65\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"150\",\n      \"unit\": \"uF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 3,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p3-e05\",\n      \"evidence\": \"TCNT157M006#0200E T 150 6.3 105\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"157 Capacitance Code pF code: 1st two digits represent significant figures 3rd digit represents multiplier (number of zeros to follow)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 2,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p2-e03\",\n      \"evidence\": \"Capacitance Tolerance: ±20%\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"M Tolerance M = ± 20%\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"200\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"200\",\n      \"condition\": \"@ 100kHz, +25°C\",\n      \"page\": 3,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p3-e05\",\n      \"evidence\": \"ESR Max. @ 100kHz (mΩ) ... 200\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p3-e05\",\n          \"page\": 3,\n          \"quote\": \"All technical data relates to an ambient temperature of +25ºC.\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 2,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p2-e03\",\n      \"evidence\": \"Temperature Range: -55°C to +105°C\",\n      \"supporting_evidence\": [],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "dc84e790f2ca9ae4e5c7c9156a8ac93a3d508dbd7936fad2dd44bea20be3a461",
+      "requested_at": "2026-11-12T08:10:30.225421+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "dc84e790f2ca9ae4e5c7c9156a8ac93a3d508dbd7936fad2dd44bea20be3a461",
+        "pdf_sha256": "53524f93164f6f02e79c979d66fc3fa1a08f363ccc52ed979b2db69516de69e2",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      },
+      "independent_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "TCNT157M006R0200E",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "6.3",
+              "unit": "V",
+              "value_min": null,
+              "value_max": null,
+              "condition": "≤ +85°C",
+              "page": 2,
+              "scope": "series",
+              "source_type": "table",
+              "evidence_id": "p2-e03",
+              "evidence": "Rated Voltage DC (VR) ≤ +85°C: 6.3 10 16 20 25 35 40 50",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p3-e05",
+                  "page": 3,
+                  "quote": "6.3 Volt"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "condition_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "6.3",
+              "unit": "V",
+              "rule": "V -> V: multiply by 1"
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "8",
+              "unit": "V",
+              "value_min": null,
+              "value_max": null,
+              "condition": "≤ +85ºC",
+              "page": 2,
+              "scope": "series",
+              "source_type": "table",
+              "evidence_id": "p2-e03",
+              "evidence": "Surge Voltage (VS) ≤ +85ºC: 8 13 21 26 33 46 52 65",
+              "supporting_evidence": [],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "condition_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "8",
+              "unit": "V",
+              "rule": "V -> V: multiply by 1"
+            }
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "150",
+              "unit": "uF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 3,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p3-e05",
+              "evidence": "TCNT157M006#0200E T 150 6.3 105",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "157 Capacitance Code pF code: 1st two digits represent significant figures 3rd digit represents multiplier (number of zeros to follow)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "150",
+              "unit": "µF",
+              "rule": "uF -> µF: multiply by 1"
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 2,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p2-e03",
+              "evidence": "Capacitance Tolerance: ±20%",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "M Tolerance M = ± 20%"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "tolerance_sign_missing"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "200",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": "200",
+              "condition": "@ 100kHz, +25°C",
+              "page": 3,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p3-e05",
+              "evidence": "ESR Max. @ 100kHz (mΩ) ... 200",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p3-e05",
+                  "page": 3,
+                  "quote": "All technical data relates to an ambient temperature of +25ºC."
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, 범위 경계는 두 값 모두 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": null,
+              "unit": "°C",
+              "value_min": "-55",
+              "value_max": "+105",
+              "condition": null,
+              "page": 2,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p2-e03",
+              "evidence": "Temperature Range: -55°C to +105°C",
+              "supporting_evidence": [],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, found에는 값·단위·범위·유형·근거 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "missing_value",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          }
+        }
+      }
+    },
+    {
+      "document_id": "panasonic_tpc_2015",
+      "part_number": "6TPC47M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.834948200004874,
+      "input_tokens": 3876,
+      "output_tokens": 1669,
+      "thinking_tokens": null,
+      "total_tokens": 5545,
+      "response_id": "eXT1apCnKcfW9tMP0eKX4AQ",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"6TPC47M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"6.3\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"6.3\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V.DC\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Surge voltage (V.DC) Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"47\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"47\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / + 20 °C\",\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"±20 % (120 Hz / + 20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Capacitance tolerance ±20 % (120 Hz / + 20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"55\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"55\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 1,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"55\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"ESR ✽2 (mΩ max.)\"\n        },\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"✽2 ESR (100 kHz/+20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": null,\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 1,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p1-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p1-e01\",\n          \"page\": 1,\n          \"quote\": \"Category temperature range –55 °C to +105 °C\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "561597156665baa944d8db29581bc33e57437911db7778a64c7429fd178021ed",
+      "requested_at": "2026-11-12T08:10:34.406139+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "561597156665baa944d8db29581bc33e57437911db7778a64c7429fd178021ed",
+        "pdf_sha256": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      },
+      "independent_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "6TPC47M",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "6.3",
+              "unit": "V.DC",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p1-e01",
+              "evidence": "6.3",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000"
+                },
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "6.3",
+              "unit": "V",
+              "rule": "V.DC -> V: multiply by 1"
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "Rated voltage × 1.15",
+              "unit": "V.DC",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "Rated voltage × 1.15",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Surge voltage (V.DC) Rated voltage × 1.15"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "invalid_unit_value_or_range"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "47",
+              "unit": "μF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 1,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p1-e01",
+              "evidence": "47",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000"
+                },
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Series Rated voltage (V.DC) Rated temp. (°C) Category voltage (V.DC) Category temp. (°C) Rated capacitance (μF) Case size (mm) Size code Specifications Standard L W H Ripple ✽1 current (mAr.m.s.) ESR ✽2 (mΩ max.) tan d ✽3 LC ✽4 (μA) Part number Min. Packaging Q'ty (pcs)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "47",
+              "unit": "µF",
+              "rule": "µF -> µF: multiply by 1"
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "±20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": "120 Hz / + 20 °C",
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "±20 % (120 Hz / + 20 °C)",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Capacitance tolerance ±20 % (120 Hz / + 20 °C)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "condition_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "±20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "55",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": "55",
+              "condition": "100 kHz / +20 °C",
+              "page": 1,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p1-e01",
+              "evidence": "55",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "TPC 6.3 85 5.0 105 47 3.5 2.8 1.1 B1 1100 55 0.10 29.6 6TPC47M 3000"
+                },
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "ESR ✽2 (mΩ max.)"
+                },
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "✽2 ESR (100 kHz/+20 °C)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, 범위 경계는 두 값 모두 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": null,
+              "unit": "°C",
+              "value_min": "-55",
+              "value_max": "+105",
+              "condition": null,
+              "page": 1,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p1-e01",
+              "evidence": "–55 °C to +105 °C",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p1-e01",
+                  "page": 1,
+                  "quote": "Category temperature range –55 °C to +105 °C"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, found에는 값·단위·범위·유형·근거 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "missing_value",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          }
+        }
+      }
+    },
+    {
+      "document_id": "panasonic_tpc_2015",
+      "part_number": "8TPC22M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": null,
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": false,
+      "processing_seconds": 4.905560399995011,
+      "input_tokens": null,
+      "output_tokens": null,
+      "thinking_tokens": null,
+      "total_tokens": null,
+      "response_id": null,
+      "finish_reason": null,
+      "execution_status": "error",
+      "error_type": "ServerError",
+      "error_message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "http_status": 503,
+      "quota_warning": null,
+      "raw_response_text": null,
+      "extraction": null,
+      "verification": null,
+      "execution_id": "04d152f6126379c5387d372cedaf20e044dad9566de9dbcf4c676d29eef08121",
+      "requested_at": "2026-11-12T08:10:39.270057+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "04d152f6126379c5387d372cedaf20e044dad9566de9dbcf4c676d29eef08121",
+        "pdf_sha256": "eede091c3f10b5f4d92d47920036114083462f0eedde86c3bd147cbb5b8087a9",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      }
+    },
+    {
+      "document_id": "panasonic_tpc",
+      "part_number": "10TPC100M",
+      "provider": "gemini",
+      "requested_model": "gemini-3.5-flash-lite",
+      "model": "gemini-3.5-flash-lite",
+      "prompt_version": "07.3-gemini",
+      "request_attempted": true,
+      "response_received": true,
+      "processing_seconds": 4.69728419999592,
+      "input_tokens": 3196,
+      "output_tokens": 1332,
+      "thinking_tokens": null,
+      "total_tokens": 4528,
+      "response_id": "g3T1aufkGaLVrfcP-bWRsAE",
+      "finish_reason": "STOP",
+      "execution_status": "completed",
+      "error_type": null,
+      "error_message": null,
+      "http_status": null,
+      "quota_warning": null,
+      "raw_response_text": "{\n  \"part_number\": \"10TPC100M\",\n  \"specifications\": {\n    \"rated_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"10\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 87,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p87-e03\",\n      \"evidence\": \"10\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p87-e04\",\n          \"page\": 87,\n          \"quote\": \"Rated voltage (V)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"surge_voltage\": {\n      \"status\": \"found\",\n      \"value\": \"Rated voltage × 1.15\",\n      \"unit\": \"V\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 86,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p86-e01\",\n      \"evidence\": \"Rated voltage × 1.15\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p86-e01\",\n          \"page\": 86,\n          \"quote\": \"Surge voltage (V) Rated voltage × 1.15\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"capacitance\": {\n      \"status\": \"found\",\n      \"value\": \"100.0\",\n      \"unit\": \"μF\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": null,\n      \"page\": 87,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p87-e03\",\n      \"evidence\": \"100.0\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p87-e04\",\n          \"page\": 87,\n          \"quote\": \"Rated capaci- tance (μF)\"\n        },\n        {\n          \"evidence_id\": \"p87-e05\",\n          \"page\": 87,\n          \"quote\": \"7.3 4.3 10 105 105 1.9 1700 45 0.10 100.0 10TPC100M 3000\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"tolerance\": {\n      \"status\": \"found\",\n      \"value\": \"±20\",\n      \"unit\": \"%\",\n      \"value_min\": null,\n      \"value_max\": null,\n      \"condition\": \"120 Hz / +20 °C\",\n      \"page\": 86,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p86-e01\",\n      \"evidence\": \"±20 % (120 Hz / +20 °C)\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p86-e01\",\n          \"page\": 86,\n          \"quote\": \"Capacitance tolerance ±20 % (120 Hz / +20 °C)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"esr\": {\n      \"status\": \"found\",\n      \"value\": \"45\",\n      \"unit\": \"mΩ\",\n      \"value_min\": null,\n      \"value_max\": \"45\",\n      \"condition\": \"100 kHz / +20 °C\",\n      \"page\": 87,\n      \"scope\": \"pn\",\n      \"source_type\": \"table\",\n      \"evidence_id\": \"p87-e03\",\n      \"evidence\": \"45\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p87-e03\",\n          \"page\": 87,\n          \"quote\": \"*2: ESR (100 kHz / +20 °C)\"\n        },\n        {\n          \"evidence_id\": \"p87-e04\",\n          \"page\": 87,\n          \"quote\": \"ESR*2 (mΩ max.)\"\n        }\n      ],\n      \"reason\": null\n    },\n    \"operating_temperature\": {\n      \"status\": \"found\",\n      \"value\": \"-55 °C to +105 °C\",\n      \"unit\": \"°C\",\n      \"value_min\": \"-55\",\n      \"value_max\": \"+105\",\n      \"condition\": null,\n      \"page\": 86,\n      \"scope\": \"series\",\n      \"source_type\": \"text\",\n      \"evidence_id\": \"p86-e01\",\n      \"evidence\": \"–55 °C to +105 °C\",\n      \"supporting_evidence\": [\n        {\n          \"evidence_id\": \"p86-e01\",\n          \"page\": 86,\n          \"quote\": \"–55 °C to +105 °C Size code Category temp. range\"\n        }\n      ],\n      \"reason\": null\n    }\n  }\n}",
+      "extraction": null,
+      "verification": null,
+      "execution_id": "228c56bb5c515d7914427e5ca4c547f3343ae14c82db299af72a20a9629ee7e7",
+      "requested_at": "2026-11-12T08:10:44.198587+00:00",
+      "request_metadata": {
+        "stage": "17",
+        "input_hash": "228c56bb5c515d7914427e5ca4c547f3343ae14c82db299af72a20a9629ee7e7",
+        "pdf_sha256": "644cbe84202bcf848df370f8575356e09cdf55bfdb69aec959dde9de9398ab0f",
+        "free_tier_confirmation": "user-screenshot-and-official-pricing",
+        "attempt_limit": 1
+      },
+      "independent_validation": {
+        "structure": {
+          "status": "passed",
+          "json_parsed": true,
+          "part_number": "10TPC100M",
+          "part_number_matches": true,
+          "field_shapes": {
+            "rated_voltage": "object",
+            "surge_voltage": "object",
+            "capacitance": "object",
+            "tolerance": "object",
+            "esr": "object",
+            "operating_temperature": "object"
+          },
+          "issues": []
+        },
+        "specifications": {
+          "rated_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "10",
+              "unit": "V",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 87,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p87-e03",
+              "evidence": "10",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p87-e04",
+                  "page": 87,
+                  "quote": "Rated voltage (V)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "10",
+              "unit": "V",
+              "rule": "V -> V: multiply by 1"
+            }
+          },
+          "surge_voltage": {
+            "raw": {
+              "status": "found",
+              "value": "Rated voltage × 1.15",
+              "unit": "V",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 86,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p86-e01",
+              "evidence": "Rated voltage × 1.15",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p86-e01",
+                  "page": 86,
+                  "quote": "Surge voltage (V) Rated voltage × 1.15"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "invalid_unit_value_or_range"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "capacitance": {
+            "raw": {
+              "status": "found",
+              "value": "100.0",
+              "unit": "μF",
+              "value_min": null,
+              "value_max": null,
+              "condition": null,
+              "page": 87,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p87-e03",
+              "evidence": "100.0",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p87-e04",
+                  "page": 87,
+                  "quote": "Rated capaci- tance (μF)"
+                },
+                {
+                  "evidence_id": "p87-e05",
+                  "page": 87,
+                  "quote": "7.3 4.3 10 105 105 1.9 1700 45 0.10 100.0 10TPC100M 3000"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "100.0",
+              "unit": "µF",
+              "rule": "µF -> µF: multiply by 1"
+            }
+          },
+          "tolerance": {
+            "raw": {
+              "status": "found",
+              "value": "±20",
+              "unit": "%",
+              "value_min": null,
+              "value_max": null,
+              "condition": "120 Hz / +20 °C",
+              "page": 86,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p86-e01",
+              "evidence": "±20 % (120 Hz / +20 °C)",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p86-e01",
+                  "page": 86,
+                  "quote": "Capacitance tolerance ±20 % (120 Hz / +20 °C)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "unit_not_in_evidence",
+              "condition_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "value": "±20",
+              "unit": "%",
+              "rule": "% -> %: multiply by 1"
+            }
+          },
+          "esr": {
+            "raw": {
+              "status": "found",
+              "value": "45",
+              "unit": "mΩ",
+              "value_min": null,
+              "value_max": "45",
+              "condition": "100 kHz / +20 °C",
+              "page": 87,
+              "scope": "pn",
+              "source_type": "table",
+              "evidence_id": "p87-e03",
+              "evidence": "45",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p87-e03",
+                  "page": 87,
+                  "quote": "*2: ESR (100 kHz / +20 °C)"
+                },
+                {
+                  "evidence_id": "p87-e04",
+                  "page": 87,
+                  "quote": "ESR*2 (mΩ max.)"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "failed",
+            "schema_errors": [
+              {
+                "type": "value_error",
+                "loc": [],
+                "msg": "Value error, 범위 경계는 두 값 모두 필요함"
+              }
+            ],
+            "verification_status": "failed",
+            "issues": [
+              "specification_schema_error",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch"
+            ],
+            "source_text_matched": false,
+            "normalized": null
+          },
+          "operating_temperature": {
+            "raw": {
+              "status": "found",
+              "value": "-55 °C to +105 °C",
+              "unit": "°C",
+              "value_min": "-55",
+              "value_max": "+105",
+              "condition": null,
+              "page": 86,
+              "scope": "series",
+              "source_type": "text",
+              "evidence_id": "p86-e01",
+              "evidence": "–55 °C to +105 °C",
+              "supporting_evidence": [
+                {
+                  "evidence_id": "p86-e01",
+                  "page": 86,
+                  "quote": "–55 °C to +105 °C Size code Category temp. range"
+                }
+              ],
+              "reason": null
+            },
+            "schema_status": "passed",
+            "schema_errors": [],
+            "verification_status": "failed",
+            "issues": [
+              "evidence_page_or_id_mismatch",
+              "evidence_page_or_id_mismatch",
+              "temperature_range_not_in_primary_evidence",
+              "unit_not_in_evidence"
+            ],
+            "source_text_matched": false,
+            "normalized": {
+              "min": "-55",
+              "max": "105",
+              "unit": "°C",
+              "rule": "°C -> °C: multiply by 1"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "evaluation": {
+    "api_attempted": 7,
+    "api_successful_responses": 6,
+    "api_failed_responses": 1,
+    "overall_7_pn_accuracy": "N/A - partial evaluation only",
+    "evaluated_rows": 36,
+    "api_failure_rows": 6,
+    "metrics": [
+      {
+        "group": "partial_successful_responses_only",
+        "metric": "value_and_unit_accuracy",
+        "correct": 18,
+        "denominator": 36,
+        "accuracy_percent": 50.0,
+        "successful_pns": 6,
+        "failed_pns": 1,
+        "evaluated_rows": 36,
+        "api_failure_rows": 6,
+        "overall_7_pn_final_accuracy": "N/A - one API failure"
+      },
+      {
+        "group": "partial_successful_responses_only",
+        "metric": "condition_accuracy",
+        "correct": 5,
+        "denominator": 11,
+        "accuracy_percent": 45.45,
+        "successful_pns": 6,
+        "failed_pns": 1,
+        "evaluated_rows": 36,
+        "api_failure_rows": 6,
+        "overall_7_pn_final_accuracy": "N/A - one API failure"
+      },
+      {
+        "group": "partial_successful_responses_only",
+        "metric": "pn_match_accuracy",
+        "correct": 22,
+        "denominator": 28,
+        "accuracy_percent": 78.57,
+        "successful_pns": 6,
+        "failed_pns": 1,
+        "evaluated_rows": 36,
+        "api_failure_rows": 6,
+        "overall_7_pn_final_accuracy": "N/A - one API failure"
+      },
+      {
+        "group": "partial_successful_responses_only",
+        "metric": "evidence_accuracy",
+        "correct": 0,
+        "denominator": 36,
+        "accuracy_percent": 0.0,
+        "successful_pns": 6,
+        "failed_pns": 1,
+        "evaluated_rows": 36,
+        "api_failure_rows": 6,
+        "overall_7_pn_final_accuracy": "N/A - one API failure"
+      },
+      {
+        "group": "partial_successful_responses_only",
+        "metric": "full_spec_accuracy",
+        "correct": 0,
+        "denominator": 36,
+        "accuracy_percent": 0.0,
+        "successful_pns": 6,
+        "failed_pns": 1,
+        "evaluated_rows": 36,
+        "api_failure_rows": 6,
+        "overall_7_pn_final_accuracy": "N/A - one API failure"
+      }
+    ]
+  }
+}

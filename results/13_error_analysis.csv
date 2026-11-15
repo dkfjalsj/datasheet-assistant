@@ -1,0 +1,27 @@
+﻿document_id,part_number,spec_name,category,error_type,description
+vishay_t55,T55A336M2R5C0200,rated_voltage,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55A336M2R5C0200,surge_voltage,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55A336M2R5C0200,capacitance,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55A336M2R5C0200,tolerance,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55A336M2R5C0200,esr,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55A336M2R5C0200,operating_temperature,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55B107M2R5C0070,rated_voltage,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55B107M2R5C0070,surge_voltage,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55B107M2R5C0070,capacitance,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55B107M2R5C0070,tolerance,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55B107M2R5C0070,esr,api,http_503,No model output was received; excluded from accuracy denominator.
+vishay_t55,T55B107M2R5C0070,operating_temperature,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU337M016R0070E,rated_voltage,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU337M016R0070E,surge_voltage,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU337M016R0070E,capacitance,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU337M016R0070E,tolerance,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU337M016R0070E,esr,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU337M016R0070E,operating_temperature,api,http_503,No model output was received; excluded from accuracy denominator.
+kyocera_avx_tcj,TCJU227M020R0070E,rated_voltage,independent_validation,pn_field_or_series_scope_not_proved_by_automatic_check,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,surge_voltage,independent_validation,no_confirmed_value_to_check,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,capacitance,independent_validation,pn_field_or_series_scope_not_proved_by_automatic_check,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,tolerance,independent_validation,pn_field_or_series_scope_not_proved_by_automatic_check,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,esr,independent_validation,esr_measurement_temperature_missing,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,operating_temperature,independent_validation,temperature_range_not_in_primary_evidence,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,operating_temperature,independent_validation,invalid_unit_value_or_range,Stored Gemini output independently checked against PDF evidence.
+kyocera_avx_tcj,TCJU227M020R0070E,operating_temperature,ground_truth_comparison,value_or_unit_mismatch,Model output retained as-is and does not match confirmed Ground Truth.

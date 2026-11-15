@@ -1,0 +1,9 @@
+﻿item,status,detail
+saved_response_source,passed,17_final_extraction.json의 원본 Gemini 응답 6건만 사용
+ground_truth_change,not_changed,Ground Truth를 수정하지 않음
+evidence_id_and_quote_match,removed_from_user_result,PDF는 추출 입력으로 유지하고 엄격한 ID·인용문 일치 판정은 사용자 결과에서 제거
+value_and_unit_rule,passed,17단계와 동일한 value_match 열을 사용: 18/36
+api_failure,not_scored,"8TPC22M HTTP 503, 재호출하지 않음; 전체 7개 P/N은 N/A"
+local_korean_qa,passed_no_api,정격전압·ESR 비교·확인 불가 정보의 세 질문을 저장 응답만으로 처리
+gemini_korean_qa,passed,"1회 호출, HTTP 성공, gemini-3.5-flash-lite, 입력 556 / 출력 121 / 총 677 토큰"
+raw_response_archive,passed,18_korean_qa_test.json에 요청 전·응답 직후·최종 상태를 원자적으로 저장

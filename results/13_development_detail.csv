@@ -1,0 +1,25 @@
+﻿document_id,manufacturer,part_number,spec_name,ground_truth_status,review_status,prediction_status,ground_truth_value,prediction_value,ground_truth_unit,prediction_unit,ground_truth_condition,prediction_condition,ground_truth_scope,prediction_scope,ground_truth_source_type,prediction_source_type,ground_truth_page,prediction_page,prediction_evidence,independent_verification_status,status_match,value_match,condition_match,pn_match,page_match,quote_match,source_type_match,evidence_match,full_match,evaluation_status
+vishay_t55,Vishay,T55A336M2R5C0200,rated_voltage,found,confirmed,,2.5,,VDC,,,,pn,,table,,5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55A336M2R5C0200,surge_voltage,ambiguous,confirmed,,,,,,,,pn,,table,,5;15,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55A336M2R5C0200,capacitance,found,confirmed,,33,,µF,,,,pn,,table,,5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55A336M2R5C0200,tolerance,found,confirmed,,±20,,%,,,,series,,text,,1;5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55A336M2R5C0200,esr,found,confirmed,,200,,mΩ,,+25 °C; 100 kHz,,pn,,table,,5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55A336M2R5C0200,operating_temperature,found,confirmed,,-55 °C to +105 °C,,°C,,,,pn,,table,,1;5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55B107M2R5C0070,rated_voltage,found,confirmed,,2.5,,VDC,,,,pn,,table,,5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55B107M2R5C0070,surge_voltage,ambiguous,confirmed,,,,,,,,pn,,table,,5;15,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55B107M2R5C0070,capacitance,found,confirmed,,100,,µF,,,,pn,,table,,5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55B107M2R5C0070,tolerance,found,confirmed,,±20,,%,,,,series,,text,,1;5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55B107M2R5C0070,esr,found,confirmed,,70,,mΩ,,+25 °C; 100 kHz,,pn,,table,,5,,,,,,,,,,,,,not_evaluated_api_error
+vishay_t55,Vishay,T55B107M2R5C0070,operating_temperature,found,confirmed,,-55 °C to +125 °C,,°C,,,,pn,,table,,1;5,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0070E,rated_voltage,found,confirmed,,16,,V,,,,pn,,table,,6,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0070E,surge_voltage,not_found,confirmed,,,,,,,,pn,,table,,6;10,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0070E,capacitance,found,confirmed,,330,,µF,,,,pn,,table,,6,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0070E,tolerance,found,confirmed,,±20,,%,,,,series,,ordering_code,,1;6,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0070E,esr,found,confirmed,,70,,mΩ,,+25 °C; 100 kHz,,pn,,table,,1;6,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU337M016R0070E,operating_temperature,found,confirmed,,-55 °C to +125 °C,,°C,,,,pn,,table,,6;10,,,,,,,,,,,,,not_evaluated_api_error
+kyocera_avx_tcj,KYOCERA AVX,TCJU227M020R0070E,rated_voltage,found,confirmed,found,20,20,V,V,,,pn,pn,table,table,6,6.0,20,unverifiable,True,True,,True,True,True,True,True,True,evaluated
+kyocera_avx_tcj,KYOCERA AVX,TCJU227M020R0070E,surge_voltage,not_found,confirmed,not_found,,,,,,,pn,,table,,6;10,,,unverifiable,True,True,,,False,False,False,False,False,evaluated
+kyocera_avx_tcj,KYOCERA AVX,TCJU227M020R0070E,capacitance,found,confirmed,found,220,220,µF,μF,,,pn,pn,table,table,6,6.0,220,unverifiable,True,True,,True,True,True,True,True,True,evaluated
+kyocera_avx_tcj,KYOCERA AVX,TCJU227M020R0070E,tolerance,found,confirmed,found,±20,±20,%,%,,,series,series,ordering_code,text,1;6,1.0,Capacitance Tolerance: ±20%,unverifiable,True,True,,True,True,True,False,False,False,evaluated
+kyocera_avx_tcj,KYOCERA AVX,TCJU227M020R0070E,esr,found,confirmed,found,70,70,mΩ,mΩ,+25 °C; 100 kHz,100kHz,pn,pn,table,table,1;6,6.0,70,failed,True,True,False,True,True,True,True,True,False,evaluated
+kyocera_avx_tcj,KYOCERA AVX,TCJU227M020R0070E,operating_temperature,found,confirmed,found,-55 °C to +105 °C,105,°C,ºC,,,pn,pn,table,table,6;10,6.0,105,failed,True,False,,True,True,True,True,False,False,evaluated

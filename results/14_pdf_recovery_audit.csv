@@ -1,0 +1,2 @@
+﻿document_id,manufacturer,series,dataset_split,filename,manifest_url,alternate_official_url,download_attempts,download_result,file_available,page_count,target_pns,identity_status,notes
+panasonic_tpc,Panasonic,TPC,eval,panasonic_tpc.pdf,https://industrial.panasonic.com/content/data/CP/PDF/POSCAP/S_POSCAP_TPC_E.pdf,https://industrial.panasonic.com/cdbs/www-data/pdf/AAA8000/ast-ind-319767.pdf,2,no_payload_within_timeout,False,,6TPC47M;8TPC22M;10TPC100M,unverified,Both manufacturer-controlled endpoints were attempted. No PDF bytes were written; no substitution used.

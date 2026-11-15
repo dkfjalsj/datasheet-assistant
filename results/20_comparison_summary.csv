@@ -1,0 +1,6 @@
+﻿metric,value,denominator,percent,note
+planned P/N,10,10,100.0,new official PDF samples
+attempted Gemini extractions,9,10,90.0,one request per attempted P/N; no retry
+completed Gemini extractions,8,10,80.0,HTTP 429 stopped subsequent calls
+value-unit correct among evaluated,48,48,100.0,API failure and unsent P/N excluded from accuracy denominator
+value-unit correct among all planned,48,60,80.0,availability-inclusive; not a model accuracy measure
