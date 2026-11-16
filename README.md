@@ -8,6 +8,7 @@
 | 인원 | 개인 프로젝트 |
 | 대상 | 탄탈륨 · 폴리머 탄탈륨 커패시터 데이터시트 (Vishay · KYOCERA AVX · Panasonic) |
 | 기술 | Python · PyMuPDF · Microsoft Table Transformer · Gemini API · Streamlit |
+| 웹앱 | [datasheet-assistant.streamlit.app](https://datasheet-assistant-7itl3bl23tyzaovwzzctp2.streamlit.app/) |
 
 ---
 
@@ -209,7 +210,7 @@ ESR 측정 조건(100 kHz, +20 °C)을 함께 표시해, 조건이 같을 때만
 > A. 정전용량이 150 µF에서 22 µF로 크게 낮아지므로, … 직접 대체할 수 있다고 확정할 수 없습니다.
 
 - 확인되지 않은 회로 조건은 '추가 확인 필요'로 답변
-- Streamlit Community Cloud에 배포해, 업로드부터 AI 분석 완료까지 배포 환경에서 확인
+- [Streamlit Community Cloud](https://datasheet-assistant-7itl3bl23tyzaovwzzctp2.streamlit.app/)에 배포해, 업로드부터 AI 분석 완료까지 배포 환경에서 확인
 
 ---
 
