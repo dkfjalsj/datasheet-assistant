@@ -645,11 +645,11 @@ def user_identity(part_number: str, part: dict[str, Any]) -> tuple[str, str]:
     metadata = as_dict(record.get("request_metadata"))
     if metadata.get("manufacturer"):
         return str(metadata["manufacturer"]), str(metadata.get("series") or "시리즈 확인 필요")
-    if part_number.startswith(("293D", "T58", "T59")):
+    if part_number.startswith(("293D", "593D", "T55", "T58", "T59")):
         return "Vishay", "Tantalum"
-    if part_number.startswith(("TCNT", "TCJU", "301")):
+    if part_number.startswith(("TAJ", "TPS", "TCNT", "TCJU", "301")):
         return "KYOCERA AVX", "Tantalum"
-    if part_number.startswith(("2TPE", "2R5TPE", "6TPE", "6TPC", "8TPC", "10TPC")):
+    if part_number.startswith(("2TPE", "2R5TPE", "6TPE", "4TPB", "6TPB", "10TPB", "6TPC", "8TPC", "10TPC")):
         return "Panasonic", "POSCAP"
     return "제조사 확인 필요", "시리즈 확인 필요"
 
