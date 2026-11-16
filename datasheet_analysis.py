@@ -551,6 +551,32 @@ def normalize_spec_value(field, value, unit, value_min=None, value_max=None):
     return {'value':('±' if symmetric else '')+compact(number*scale),'unit':canonical,'rule':rule}
 
 
+def surge_voltage_unit_is_supported(spec, page_texts):
+    """원문에서 서지전압에 직접 연결된 단위 표기만 인정함."""
+    # 정격전압이나 다른 표의 단위가 서지전압에 적용된다고 추정하지 않음
+    voltage_unit = r'(kV|mV|V(?:\.?\s*DC)?)(?![A-Za-z0-9/])'
+    label = r'\bsurge(?:[ \t]+test)?\s+voltage\b'
+    header = re.compile(label + r'[ \t]*[:(\[]?[ \t]*' + voltage_unit, re.I)
+    inline_value = re.compile(label + r'[ \t]*[:=]?[ \t]*(' + _NUM + r')[ \t]*' + voltage_unit, re.I)
+
+    def voltage_scale(unit):
+        """직류 기호와 공백만 접고 단위 배율을 반환함."""
+        unit = re.sub(r'\s+', '', unit).casefold().replace('.', '')
+        return {'v': 1, 'vdc': 1, 'mv': Decimal('0.001'), 'kv': 1000}.get(unit)
+
+    expected_scale = voltage_scale(spec.get('unit') or '')
+    if expected_scale is None:
+        return False
+    for text in page_texts:
+        scales = {voltage_scale(match[1]) for match in header.finditer(text)}
+        if scales == {expected_scale}:
+            return True
+        for match in inline_value.finditer(text):
+            if match[1] == str(spec.get('value') or '').strip() and voltage_scale(match[2]) == expected_scale:
+                return True
+    return False
+
+
 def recover_specification_for_display(field, raw):
     """저장된 원본 값을 바꾸지 않고 안전한 표시용 사본을 생성함.
 
