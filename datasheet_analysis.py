@@ -514,6 +514,9 @@ def normalize_spec_value(field, value, unit, value_min=None, value_max=None):
     """근거에 있는 스칼라나 온도 범위만 변환하고 변환 규칙을 반환함."""
     group='voltage' if field in {'rated_voltage','surge_voltage'} else field
     key=normalize_whitespace(unit).replace(' ','').replace('μ','µ')
+    if field=='esr':
+        # ESR은 상한값 규격이므로 단위 뒤의 max. 표기는 단위로 보지 않음
+        key=re.sub(r'\(?(?:max(?:imum)?)\.?\)?$','',key,flags=re.I)
     if key not in _UNIT_TABLE[group]:
         raise ValueError('지원하지 않거나 규격과 맞지 않는 단위임')
     canonical,scale_text=_UNIT_TABLE[group][key]
@@ -549,6 +552,12 @@ def normalize_spec_value(field, value, unit, value_min=None, value_max=None):
     if (field in {'rated_voltage','surge_voltage','capacitance','esr'} or symmetric) and number<=0:
         raise ValueError('크기 값이 양수가 아님')
     return {'value':('±' if symmetric else '')+compact(number*scale),'unit':canonical,'rule':rule}
+
+
+def is_surge_voltage_formula(field, value):
+    """서지전압이 정격전압 배수 공식으로 표기된 경우인지 판별함."""
+    return (field=='surge_voltage' and isinstance(value,str) and
+            re.search(r'\b(?:rated|surge)\s+voltage\b.*[×x*]',value,re.I) is not None)
 
 
 def surge_voltage_unit_is_supported(spec, page_texts):
@@ -591,8 +600,7 @@ def recover_specification_for_display(field, raw):
         normalized=normalize_spec_value(field,item.get('value'),item.get('unit'),
                                         item.get('value_min'),item.get('value_max'))
     except ValueError as error:
-        formula=(field=='surge_voltage' and isinstance(item.get('value'),str) and
-                 re.search(r'\b(?:rated|surge)\s+voltage\b.*[×x*]',item['value'],re.I))
+        formula=is_surge_voltage_formula(field,item.get('value'))
         if formula:
             item['postprocess_status']='formula_preserved_not_calculated'
             item['postprocess_issue']=str(error)
@@ -694,6 +702,11 @@ def _validate_specification(field, item, part_number, prepared, entries):
             issues.append('esr_measurement_frequency_missing')
         if not item.condition or not re.search(r'[+−–-]?\s*\d+\s*[°º]\s*C\b',item.condition,re.I):
             issues.append('esr_measurement_temperature_missing')
+    if is_surge_voltage_formula(field,item.value):
+        # 공식형 서지전압(예: Rated voltage × 1.15)은 계산하지 않고 원문 공식을 그대로 인정함
+        checks['formula_preserved']=True
+        checks['verification_status']='failed' if issues else 'verified'
+        return checks
     try:
         checks['normalized']=normalize_spec_value(field,item.value,item.unit,item.value_min,item.value_max)
     except ValueError:

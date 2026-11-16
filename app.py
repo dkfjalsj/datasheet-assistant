@@ -37,6 +37,8 @@ SPEC_ORDER = [
 ]
 UNKNOWN_STATUSES = {"not_found", "ambiguous", "unverifiable", "unknown", "not_evaluated"}
 ERROR_STATUSES = {"extraction_error", "error", "failed"}
+# 같은 입력으로 한 번 더 요청하면 해결되는 일시적 응답 형식 오류
+RETRYABLE_ERROR_TYPES = {"structured_response_validation_error", "incomplete_or_blocked_generation"}
 
 
 def init_state() -> None:
@@ -669,6 +671,10 @@ def user_error_message(record: dict[str, Any]) -> str:
         return "현재 AI 요청 한도에 도달했습니다. 나중에 다시 시도해 주세요."
     if record.get("http_status") == 503:
         return "AI 서비스가 일시적으로 응답하지 않습니다. 나중에 다시 시도해 주세요."
+    if record.get("error_type") in RETRYABLE_ERROR_TYPES:
+        return "AI 응답 형식이 올바르지 않아 분석을 완료하지 못했습니다. 다시 시도해 주세요."
+    if record.get("error_type") == "transport_error":
+        return "AI 서비스에 연결하지 못했습니다. 네트워크 상태를 확인한 뒤 다시 시도해 주세요."
     return "분석 오류"
 
 
@@ -717,16 +723,27 @@ def user_persisted_result(document: dict[str, Any], part_number: str) -> dict[st
 
 def user_display_specs(record, document):
     """원본 응답을 보존하고 분석·비교·질문에 같은 규격 사본을 사용함."""
-    from datasheet_analysis import recover_specification_for_display, surge_voltage_unit_is_supported
+    from datasheet_analysis import (PartExtraction, is_surge_voltage_formula, recover_specification_for_display,
+                                    surge_voltage_unit_is_supported, validate_extraction)
 
     specs = as_dict(as_dict(record.get("extraction")).get("specifications"))
     verification = as_dict(record.get("verification"))
+    try:
+        # 저장된 결과도 현재 검증 규칙으로 다시 확인해 이전 판정이 화면에 남지 않게 함
+        parsed = PartExtraction.model_validate(record["extraction"])
+        verification = validate_extraction(parsed, {"request": {"part_number": record.get("part_number") or parsed.part_number},
+                                                    "evidence": []})
+    except Exception:
+        pass
     display = {}
     for name, item in specs.items():
         if as_dict(verification.get(name)).get("verification_status") == "failed":
             display[name] = {"status": "extraction_error"}
         elif name == "operating_temperature" and item.get("status") == "found":
             display[name] = recover_specification_for_display(name, item)
+        elif name == "surge_voltage" and item.get("status") == "found" and is_surge_voltage_formula(name, item.get("value")):
+            # 공식형 서지전압은 정격전압 단위를 따르므로 원문 공식을 그대로 표시함
+            display[name] = item
         elif name == "surge_voltage" and item.get("status") == "found":
             # 저장 결과도 같은 PDF의 가시 텍스트에서 단위를 다시 확인함
             pages = document["page_words"]
@@ -770,6 +787,13 @@ def user_run_analysis(document: dict[str, Any], part_number: str, progress: Any)
             prepared, response_archive_path=USER_EXTRACTION_ARCHIVE,
             request_metadata={"stage": USER_INPUT_VERSION, "source": "user_ui", "retry_attempts": 0},
         )
+        if record.get("error_type") in RETRYABLE_ERROR_TYPES:
+            # 응답 형식 오류는 일시적인 경우가 많아 같은 입력으로 한 번만 다시 요청함
+            progress.write("AI 응답 형식이 올바르지 않아 한 번 더 요청합니다.")
+            record = request_gemini_extraction(
+                prepared, response_archive_path=USER_EXTRACTION_ARCHIVE,
+                request_metadata={"stage": USER_INPUT_VERSION, "source": "user_ui", "retry_attempts": 1},
+            )
     except (OSError, ValueError, RuntimeError):
         return {"state": "error", "specifications": {},
                 "message": "PDF 또는 분석 모델을 처리하지 못했습니다. 파일과 실행 환경을 확인해 주세요."}
