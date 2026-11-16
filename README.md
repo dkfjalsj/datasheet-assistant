@@ -250,6 +250,9 @@ Vishay T55 응답을 PDF 원문과 대조해 화면 표시를 수정했습니다
 | Streamlit Cloud에서 Gemini API 키를 인식하지 못함 | Streamlit secrets → 환경변수 → `.env` 순서로 읽도록 수정 |
 | 분석 · 비교 버튼이 비활성화됨 | 버튼 활성 조건 수정 |
 | 일부 부품(Vishay T55·593D, AVX TAJ·TPS, Panasonic TPB)이 '제조사 확인 필요'로 표시됨 | 부품번호 접두어 판별 규칙 보완 |
+| 'Rated voltage × 1.15'처럼 공식으로 적힌 서지전압 때문에 Panasonic TPC 부품이 '분석 오류'로 표시됨 | 공식형 서지전압을 정상 값으로 판정하고, 저장된 결과도 현재 검증 규칙으로 다시 확인 |
+| ESR 단위 뒤 'max.' 표기를 단위 오류로 판정 | 단위 검사 규칙 수정 |
+| Gemini 응답의 JSON 형식 오류 | 같은 입력으로 1회 재요청하고 안내 문구 표시 |
 
 ---
 
