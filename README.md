@@ -4,7 +4,7 @@
 
 | 항목 | 내용 |
 |---|---|
-| 기간 | 2026.11.06 ~ 2026.11.16 |
+| 기간 | 2026.11.09 ~ 2026.11.16 |
 | 인원 | 개인 프로젝트 |
 | 대상 | 탄탈륨 · 폴리머 탄탈륨 커패시터 데이터시트 (Vishay · KYOCERA AVX · Panasonic) |
 | 기술 | Python · PyMuPDF · Microsoft Table Transformer · Gemini API · Streamlit |
