@@ -1,6 +1,11 @@
 from __future__ import annotations
 
 import json
+import os
+import tempfile
+import time
+from contextlib import contextmanager
+from uuid import uuid4
 import math
 import re
 from pathlib import Path
@@ -631,6 +636,12 @@ def _match_extraction_citations(citations, prepared, entries, issues):
     return quote_entries
 
 
+def same_part_number(left, right):
+    """대소문자와 앞뒤 공백만 무시해 완전한 부품번호를 비교함."""
+    return (isinstance(left,str) and isinstance(right,str) and bool(left.strip())
+            and left.strip().casefold()==right.strip().casefold())
+
+
 def _validate_specification(field, item, part_number, prepared, entries):
     """한 규격의 값·단위·조건·P/N 연결만 검사함.
 
@@ -641,7 +652,7 @@ def _validate_specification(field, item, part_number, prepared, entries):
     checks={'verification_status':'unverifiable','issues':[],'source_text_matched':False,
             'normalized':None}
     issues=checks['issues']
-    if part_number!=request['part_number']:
+    if not same_part_number(part_number,request['part_number']):
         issues.append('output_pn_mismatch')
     if item.status!='found':
         if issues:
@@ -691,7 +702,7 @@ def validate_saved_extraction(raw_text, prepared):
 
     part_number=payload.get('part_number')
     structure['part_number']=part_number
-    structure['part_number_matches']=isinstance(part_number,str) and part_number==expected_pn
+    structure['part_number_matches']=same_part_number(part_number,expected_pn)
     if not isinstance(part_number,str) or not part_number.strip():
         issues.append('missing_or_invalid_part_number')
     elif not structure['part_number_matches']:
@@ -778,13 +789,23 @@ def _gemini_key_matches_confirmation(key):
     return bool(key and confirmed and hmac.compare_digest(hashlib.sha256(key.encode()).hexdigest(),confirmed))
 
 
-def gemini_free_tier_is_confirmed():
-    """명시적으로 확인된 프로젝트 티어와 API 키 존재 여부를 분리해 검사함."""
-    key = read_gemini_api_key()
+def gemini_configuration_issue():
+    """키 누락과 무료 프로젝트 설정 오류를 구분함."""
+    if not read_gemini_api_key():
+        return 'missing_api_key'
     dotenv_tier = dotenv_values(dotenv_path=_GEMINI_DOTENV_PATH, interpolate=False,
                                 encoding='utf-8-sig').get('DATASHEET_GEMINI_PROJECT_TIER', '')
     tier = os.environ.get('DATASHEET_GEMINI_PROJECT_TIER', dotenv_tier)
-    return bool(key and isinstance(tier, str) and tier.strip().casefold() == 'free')
+    if not tier or not tier.strip():
+        return 'free_project_tier_unconfirmed'
+    if tier.strip().casefold() != 'free':
+        return 'project_tier_not_free'
+    return None
+
+
+def gemini_free_tier_is_confirmed():
+    """키와 무료 프로젝트 설정이 모두 확인됐는지 반환함."""
+    return gemini_configuration_issue() is None
 
 
 def build_gemini_execution_identity(prepared):
@@ -796,18 +817,43 @@ def build_gemini_execution_identity(prepared):
     return hashlib.sha256(source.encode('utf-8')).hexdigest()
 
 
+@contextmanager
+def _execution_archive_lock(destination):
+    """프로세스 간 잠금으로 보관 파일 읽기·수정·교체를 보호함."""
+    lock_path = destination.with_suffix(destination.suffix + '.lock')
+    with lock_path.open('a+b') as lock:
+        if os.name == 'nt':
+            import msvcrt
+            deadline = time.monotonic() + 15
+            while True:
+                lock.seek(0)
+                try:
+                    msvcrt.locking(lock.fileno(), msvcrt.LK_NBLCK, 1)
+                    break
+                except OSError:
+                    if time.monotonic() >= deadline:
+                        raise TimeoutError('Gemini 실행 기록 잠금 시간 초과함') from None
+                    time.sleep(.05)
+            try:
+                yield
+            finally:
+                lock.seek(0)
+                msvcrt.locking(lock.fileno(), msvcrt.LK_UNLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
+            try:
+                yield
+            finally:
+                fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
+
+
 def persist_gemini_execution_record(record, archive_path):
-    """응답 원문을 검증 전에 원자적으로 보관하고 동일 실행은 안전하게 병합함."""
+    """동일 실행의 갱신을 병합하고 원본 응답을 원자적으로 보관함."""
     destination = Path(archive_path)
     if destination.suffix.lower() != '.json':
         raise ValueError('Gemini 실행 보관 파일은 JSON이어야 함')
     destination.parent.mkdir(parents=True, exist_ok=True)
-    if destination.exists():
-        envelope = json.loads(destination.read_text(encoding='utf-8'))
-        if not isinstance(envelope,dict) or not isinstance(envelope.get('records'),list):
-            raise ValueError('기존 실행 보관 파일 구조가 올바르지 않음')
-    else:
-        envelope = {'records':[]}
     safe = json.loads(json.dumps(record, ensure_ascii=False, default=str))
     raw = safe.get('raw_response_text')
     if isinstance(raw,str):
@@ -815,18 +861,34 @@ def persist_gemini_execution_record(record, archive_path):
     execution_id = safe.get('execution_id')
     if not execution_id:
         raise ValueError('실행 식별자가 없어 보관할 수 없음')
-    existing = next((index for index,item in enumerate(envelope['records'])
-                     if item.get('execution_id') == execution_id), None)
-    if existing is None:
-        envelope['records'].append(safe)
-    else:
-        old = envelope['records'][existing]
-        if old.get('raw_response_text') and not safe.get('raw_response_text'):
-            safe['raw_response_text'] = old['raw_response_text']
-        envelope['records'][existing] = safe
-    temporary = destination.with_suffix(destination.suffix+'.tmp')
-    temporary.write_text(json.dumps(envelope, ensure_ascii=False, indent=2), encoding='utf-8')
-    temporary.replace(destination)
+    with _execution_archive_lock(destination):
+        envelope = (json.loads(destination.read_text(encoding='utf-8')) if destination.exists()
+                    else {'records': []})
+        if not isinstance(envelope,dict) or not isinstance(envelope.get('records'),list):
+            raise ValueError('기존 실행 보관 파일 구조가 올바르지 않음')
+        records = envelope['records']
+        existing = next((i for i,item in enumerate(records) if item.get('execution_id')==execution_id), None)
+        if existing is None:
+            records.append(safe)
+        else:
+            old = records[existing]
+            if old.get('raw_response_text'):
+                safe['raw_response_text'] = old['raw_response_text']
+            if old.get('execution_status') == 'completed':
+                return execution_id
+            records[existing] = safe
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile('w', dir=destination.parent, prefix=destination.name+'.',
+                                             suffix='.tmp', encoding='utf-8', delete=False) as stream:
+                temporary = Path(stream.name)
+                json.dump(envelope, stream, ensure_ascii=False, indent=2)
+                stream.flush()
+                os.fsync(stream.fileno())
+            temporary.replace(destination)
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
     return execution_id
 
 
@@ -840,7 +902,7 @@ def request_gemini_extraction(prepared, *, stop_after_failure=False, independent
         'total_tokens':None,'response_id':None,'finish_reason':None,'execution_status':'not_run',
         'error_type':None,'error_message':None,'http_status':None,'quota_warning':None,
         'raw_response_text':None,'extraction':None,'verification':None,
-        'execution_id':build_gemini_execution_identity(prepared),
+        'execution_id':uuid4().hex,'request_identity':build_gemini_execution_identity(prepared),
         'requested_at':datetime.now(timezone.utc).isoformat(),
         'request_metadata':request_metadata or {}}
     api_key=read_gemini_api_key()
@@ -907,13 +969,20 @@ def request_gemini_extraction(prepared, *, stop_after_failure=False, independent
             if checked['structure']['status']=='passed':
                 record['execution_status']='completed'
             else:
-                record.update(execution_status='error',error_type='response_structure_error',
+                record.update(execution_status='error',error_type=('output_pn_mismatch'
+                              if 'output_pn_mismatch' in checked['structure']['issues'] else 'response_structure_error'),
                               error_message='전체 응답 구조 또는 P/N 일치 검사 실패함')
         else:
-            parsed=PartExtraction.model_validate_json(raw)
-            record.update(execution_status='completed',extraction=parsed.model_dump(),
-                          verification=validate_extraction(parsed,prepared))
-    except ValidationError:
+            payload=json.loads(raw)
+            returned_pn=payload.get('part_number') if isinstance(payload,dict) else None
+            if isinstance(returned_pn,str) and returned_pn.strip() and not same_part_number(returned_pn,record['part_number']):
+                record.update(execution_status='error',error_type='output_pn_mismatch',
+                              error_message='분석된 부품번호가 요청한 제품과 일치하지 않습니다.')
+            else:
+                parsed=PartExtraction.model_validate(payload)
+                record.update(execution_status='completed',extraction=parsed.model_dump(),
+                              verification=validate_extraction(parsed,prepared))
+    except (ValidationError, json.JSONDecodeError):
         record.update(execution_status='error',error_type='structured_response_validation_error',
                       error_message='Gemini 응답 JSON이 Pydantic 스키마를 통과하지 못함')
     except errors.APIError as error:
@@ -988,7 +1057,7 @@ def request_gemini_korean_qa(part_number, specifications, question, *, response_
         'response_id': None, 'finish_reason': None, 'execution_status': 'not_run',
         'http_status': None, 'error_type': None, 'error_message': None,
         'raw_response_text': None, 'post_processing_status': 'not_run',
-        'execution_id': execution_id, 'requested_at': datetime.now(timezone.utc).isoformat(),
+        'execution_id': uuid4().hex, 'request_identity': execution_id, 'requested_at': datetime.now(timezone.utc).isoformat(),
         'request_metadata': {'source': 'saved_gemini_extraction_only', 'ground_truth_supplied': False,
                              'retry_attempts': 0},
     }
