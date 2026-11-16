@@ -8,7 +8,8 @@
 | 인원 | 개인 프로젝트 |
 | 대상 | 탄탈륨 · 폴리머 탄탈륨 커패시터 데이터시트 (Vishay · KYOCERA AVX · Panasonic) |
 | 기술 | Python · PyMuPDF · Microsoft Table Transformer · Gemini API · Streamlit |
-| 웹앱 | [datasheet-assistant.streamlit.app](https://datasheet-assistant-7itl3bl23tyzaovwzzctp2.streamlit.app/) |
+| 배포 | [Streamlit 웹앱 바로가기](https://datasheet-assistant-7itl3bl23tyzaovwzzctp2.streamlit.app/) |
+| 프로젝트 보고서 | [프로젝트 발표자료 (PDF, 28쪽)](docs/Datasheet-Assistant_발표자료.pdf) |
 
 ---
 
@@ -179,7 +180,7 @@ flowchart LR
 |---|---|
 | 평가 계획 | 10개 부품 · 규격 60건 |
 | Gemini 응답 | 정상 8개 · HTTP 429 1개 · 미호출 1개 |
-| 정상 응답 기준 | **48/48건 일치 (100%)** — 원문에 없는 규격을 '알 수 없음'으로 맞게 표시한 6건 포함 |
+| 정상 응답 기준 | **48/48건 일치 (100%)** — 수치·단위 40건, 서지전압 공식 2건, 정보 부재 상태 6건 |
 | 전체 계획 기준 | 48/60건 (80%) — 응답이 없는 12건은 미평가 |
 
 > 48/48이라는 숫자만으로는 무엇을 확인했는지 알기 어려워, **값 일치 · 정보 부재 · 미평가**를 구분해 기록했습니다. 표본이 작아 일반 성능으로 확대 해석하지 않습니다.
@@ -204,11 +205,9 @@ flowchart LR
 
 ESR 측정 조건(100 kHz, +20 °C)을 함께 표시해, 조건이 같을 때만 직접 비교하도록 했습니다.
 
-**질문 예시**
+**질문 예시 — 부품 대체 가능성**
 
-> Q. 6TPC150M을 8TPC22M으로 바꿔서 써도 돼?
-> A. 정전용량이 150 µF에서 22 µF로 크게 낮아지므로, … 직접 대체할 수 있다고 확정할 수 없습니다.
-
+- 10TPC68M과 6TPC330MA를 비교한 뒤 대체 가능성을 질문하면, 정격전압 하락(10 → 6.3 V)과 정전용량 증가(68 → 330 µF)를 근거로 **조건부로 판단**
 - 확인되지 않은 회로 조건은 '추가 확인 필요'로 답변
 - [Streamlit Community Cloud](https://datasheet-assistant-7itl3bl23tyzaovwzzctp2.streamlit.app/)에 배포해, 업로드부터 AI 분석 완료까지 배포 환경에서 확인
 
@@ -303,3 +302,4 @@ streamlit run app.py
 | `03_ ~ 08_*.ipynb` | 단계별 실험 노트북 |
 | `data/` | 부품 목록, 데이터 분할, 정답 기준표 |
 | `results/`, `outputs/` | 단계별 평가 결과와 그래프 |
+| `docs/` | 프로젝트 발표자료 (PDF) |
