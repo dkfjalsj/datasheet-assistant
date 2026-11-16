@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
+from threading import Lock
 from typing import Any
 
 import fitz  # PyMuPDF
@@ -542,7 +543,7 @@ def user_init_state() -> None:
     for key, value in {
         "user_results": {}, "user_active_analysis": None, "user_comparison": None,
         "user_question_context": [], "user_question_owner": None, "user_chat": [], "user_qa_cache": {},
-        "user_api_busy": False, "user_quota_limited": False, "user_analysis_result": None,
+        "user_request_lock": Lock(), "user_quota_limited": False, "user_analysis_result": None,
     }.items():
         st.session_state.setdefault(key, value)
 
@@ -654,6 +655,8 @@ def user_identity(part_number: str, part: dict[str, Any]) -> tuple[str, str]:
 
 
 def user_error_message(record: dict[str, Any]) -> str:
+    if record.get("error_type") == "request_in_progress":
+        return "다른 AI 요청을 처리하고 있습니다. 완료 후 다시 눌러 주세요."
     if record.get("error_type") == "output_pn_mismatch":
         return "분석된 부품번호가 요청한 제품과 일치하지 않습니다."
     if record.get("error_type") == "missing_api_key":
@@ -754,7 +757,10 @@ def user_run_analysis(document: dict[str, Any], part_number: str, progress: Any)
     from datasheet_analysis import request_gemini_extraction
     if st.session_state.user_quota_limited:
         return {"state": "error", "specifications": {}, "message": user_error_message({"http_status":429})}
-    st.session_state.user_api_busy = True
+    lock = st.session_state.user_request_lock
+    if not lock.acquire(blocking=False):
+        return {"state": "error", "specifications": {},
+                "message": "다른 AI 요청을 처리하고 있습니다. 완료 후 다시 눌러 주세요."}
     try:
         progress.write("데이터시트에서 필요한 표와 설명을 찾고 있습니다.")
         dl_pages = run_dl_analysis(document, user_auto_pages(document, part_number))
@@ -768,7 +774,7 @@ def user_run_analysis(document: dict[str, Any], part_number: str, progress: Any)
         return {"state": "error", "specifications": {},
                 "message": "PDF 또는 분석 모델을 처리하지 못했습니다. 파일과 실행 환경을 확인해 주세요."}
     finally:
-        st.session_state.user_api_busy = False
+        lock.release()
     if record.get("http_status") == 429:
         st.session_state.user_quota_limited = True
     st.session_state.api_history.append({"at": datetime.now().isoformat(), "kind": "extraction",
@@ -856,7 +862,7 @@ def user_analysis_tab() -> None:
         st.caption("새 분석은 무료 Gemini API를 한 번 사용합니다. PDF 업로드만으로는 AI 요청이 실행되지 않습니다.")
     consent = st.checkbox("무료 API 사용 안내를 확인했습니다.", key="user_analysis_consent")
     if st.button("AI 분석하기", type="primary", icon=":material/analytics:", key="user_analysis_run",
-                 disabled=st.session_state.user_api_busy or (not saved and not consent), width="content"):
+                 disabled=not saved and not consent, width="content"):
         with st.status("데이터시트를 분석하고 있습니다.", expanded=True) as progress:
             result = user_run_analysis(document, part_number, progress)
             progress.update(label="분석이 완료되었습니다." if result.get("state") != "error" else "분석을 완료하지 못했습니다.",
@@ -924,7 +930,7 @@ def user_compare_tab() -> None:
     if st.session_state.user_comparison and st.session_state.user_comparison["signature"] != signature:
         st.session_state.user_comparison = None
     if st.button("두 부품 비교하기", type="primary", icon=":material/compare_arrows:", key="user_compare_run",
-                 disabled=not valid or st.session_state.user_api_busy or (needs_api and not consent), width="content"):
+                 disabled=not valid or (needs_api and not consent), width="content"):
         with st.status("두 데이터시트를 분석하고 있습니다.", expanded=True) as progress:
             progress.write("부품 A를 확인하고 있습니다.")
             result_a = user_run_analysis(document_a, part_a, progress)
@@ -1243,7 +1249,7 @@ def user_question_tab() -> None:
     if use_gemini:
         st.caption("질문 버튼을 누르면 현재 분석된 부품 정보만 Gemini에 한 번 전달합니다.")
     if st.button("AI에게 질문하기", type="primary", icon=":material/question_answer:", key="user_question_run",
-                 disabled=not question.strip() or st.session_state.user_api_busy, width="content"):
+                 disabled=not question.strip(), width="content"):
         answer, source = user_local_answer(question.strip(), selected, parts), "데이터시트 분석 결과 기반 답변 · 외부 AI 미호출"
         if use_gemini:
             from datasheet_analysis import request_gemini_korean_qa
@@ -1257,18 +1263,21 @@ def user_question_tab() -> None:
                 answer, source = user_error_message({"http_status":429}), "Gemini 요청을 실행하지 않았습니다"
             else:
                 with st.status("AI가 데이터시트 분석 결과를 바탕으로 답변하고 있습니다.", expanded=False) as progress:
-                    st.session_state.user_api_busy = True
-                    try:
-                        record = request_gemini_korean_qa(
-                            selected_pns[0], as_dict(context[0]["part"].get("specifications")), question.strip(),
-                            response_archive_path=USER_QA_ARCHIVE,
-                            comparison_part_number=comparison["part_number"] if comparison else None,
-                            comparison_specifications=as_dict(comparison["part"].get("specifications")) if comparison else None,
-                        )
-                    except (OSError, ValueError, RuntimeError):
-                        record = {"execution_status":"error","error_type":"qa_execution_error"}
-                    finally:
-                        st.session_state.user_api_busy = False
+                    lock = st.session_state.user_request_lock
+                    if not lock.acquire(blocking=False):
+                        record = {"execution_status": "blocked", "error_type": "request_in_progress"}
+                    else:
+                        try:
+                            record = request_gemini_korean_qa(
+                                selected_pns[0], as_dict(context[0]["part"].get("specifications")), question.strip(),
+                                response_archive_path=USER_QA_ARCHIVE,
+                                comparison_part_number=comparison["part_number"] if comparison else None,
+                                comparison_specifications=as_dict(comparison["part"].get("specifications")) if comparison else None,
+                            )
+                        except (OSError, ValueError, RuntimeError):
+                            record = {"execution_status":"error","error_type":"qa_execution_error"}
+                        finally:
+                            lock.release()
                     if record.get("http_status")==429:
                         st.session_state.user_quota_limited = True
                     st.session_state.api_history.append({"at": datetime.now().isoformat(), "kind": "qa",
