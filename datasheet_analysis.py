@@ -801,10 +801,31 @@ def estimate_extraction_budget(prepared, max_output_tokens=MAX_EXTRACTION_OUTPUT
 _GEMINI_DOTENV_PATH = Path(__file__).resolve().with_name('.env')
 
 
+def _read_gemini_settings():
+    """Streamlit Secrets, 실행 환경, 프로젝트 .env 순으로 설정을 읽음."""
+    from streamlit import secrets
+    from streamlit.errors import StreamlitSecretNotFoundError
+
+    names = ('GEMINI_API_KEY', 'DATASHEET_GEMINI_PROJECT_TIER')
+    settings = {}
+    for name in names:
+        try:
+            value = secrets[name]
+        except (KeyError, FileNotFoundError, StreamlitSecretNotFoundError):
+            value = None
+        value = value.strip() if isinstance(value,str) else ''
+        settings[name] = value or os.environ.get(name,'').strip()
+    if not all(settings.values()):
+        local = dotenv_values(dotenv_path=_GEMINI_DOTENV_PATH, interpolate=False, encoding='utf-8-sig')
+        for name in names:
+            if not settings[name]:
+                settings[name] = (local.get(name) or '').strip()
+    return settings
+
+
 def read_gemini_api_key():
-    """프로젝트 루트 .env에서만 Gemini 키를 읽음."""
-    value = dotenv_values(dotenv_path=_GEMINI_DOTENV_PATH, interpolate=False, encoding='utf-8-sig').get('GEMINI_API_KEY')
-    return value.strip() if isinstance(value,str) else ''
+    """로컬과 배포 환경에서 설정한 Gemini 키를 반환함."""
+    return _read_gemini_settings()['GEMINI_API_KEY']
 
 
 def _gemini_key_matches_confirmation(key):
@@ -815,22 +836,35 @@ def _gemini_key_matches_confirmation(key):
     return bool(key and confirmed and hmac.compare_digest(hashlib.sha256(key.encode()).hexdigest(),confirmed))
 
 
+_GEMINI_CONFIGURATION_MESSAGES = {
+    'missing_api_key': 'Gemini API 키가 설정되지 않음',
+    'free_project_tier_unconfirmed': '무료 프로젝트 설정이 누락됨',
+    'project_tier_not_free': 'Gemini 프로젝트 설정이 무료로 지정되지 않음',
+    'previous_sample_not_validated': '앞 표본의 응답 또는 원문 검사가 통과하지 못함',
+}
+
+
+def _gemini_request_configuration():
+    """한 요청에서 사용하는 키와 설정 오류를 한 번에 읽음."""
+    settings = _read_gemini_settings()
+    key = settings['GEMINI_API_KEY']
+    tier = settings['DATASHEET_GEMINI_PROJECT_TIER']
+    if not key:
+        return key, 'missing_api_key'
+    if not tier:
+        return key, 'free_project_tier_unconfirmed'
+    if tier.casefold() != 'free':
+        return key, 'project_tier_not_free'
+    return key, None
+
+
 def gemini_configuration_issue():
-    """키 누락과 무료 프로젝트 설정 오류를 구분함."""
-    if not read_gemini_api_key():
-        return 'missing_api_key'
-    dotenv_tier = dotenv_values(dotenv_path=_GEMINI_DOTENV_PATH, interpolate=False,
-                                encoding='utf-8-sig').get('DATASHEET_GEMINI_PROJECT_TIER', '')
-    tier = os.environ.get('DATASHEET_GEMINI_PROJECT_TIER', dotenv_tier)
-    if not tier or not tier.strip():
-        return 'free_project_tier_unconfirmed'
-    if tier.strip().casefold() != 'free':
-        return 'project_tier_not_free'
-    return None
+    """설정 오류 코드를 반환함."""
+    return _gemini_request_configuration()[1]
 
 
 def gemini_free_tier_is_confirmed():
-    """키와 무료 프로젝트 설정이 모두 확인됐는지 반환함."""
+    """외부 조회 없이 명시된 무료 프로젝트 설정을 확인함."""
     return gemini_configuration_issue() is None
 
 
@@ -931,7 +965,9 @@ def request_gemini_extraction(prepared, *, stop_after_failure=False, independent
         'execution_id':uuid4().hex,'request_identity':build_gemini_execution_identity(prepared),
         'requested_at':datetime.now(timezone.utc).isoformat(),
         'request_metadata':request_metadata or {}}
-    api_key=read_gemini_api_key()
+    api_key, issue = ('', 'previous_sample_not_validated') if stop_after_failure else _gemini_request_configuration()
+    if issue:
+        record.update(execution_status='blocked', error_type=issue, error_message=_GEMINI_CONFIGURATION_MESSAGES[issue])
     if response_archive_path:
         try:
             persist_gemini_execution_record(record,response_archive_path)
@@ -939,15 +975,7 @@ def request_gemini_extraction(prepared, *, stop_after_failure=False, independent
             record.update(execution_status='blocked',error_type='execution_record_persistence_error',
                           error_message=f'요청 전 실행 기록 저장 실패: {type(error).__name__}')
             return record
-    if stop_after_failure or not api_key or not gemini_free_tier_is_confirmed():
-        record['execution_status']='blocked'
-        record['error_type']=('previous_sample_not_validated' if stop_after_failure else
-                              'missing_api_key' if not api_key else 'free_project_tier_unconfirmed')
-        record['error_message']={
-            'missing_api_key':'프로젝트 .env에 GEMINI_API_KEY가 없음',
-            'free_project_tier_unconfirmed':'현재 키의 프로젝트 무료 티어를 확인하지 못함',
-            'previous_sample_not_validated':'앞 표본의 응답 또는 원문 검사가 통과하지 못함',
-        }[record['error_type']]
+    if issue:
         return record
     from google import genai
     from google.genai import errors, types
@@ -1087,17 +1115,16 @@ def request_gemini_korean_qa(part_number, specifications, question, *, response_
         'request_metadata': {'source': 'saved_gemini_extraction_only', 'ground_truth_supplied': False,
                              'retry_attempts': 0},
     }
-    api_key = read_gemini_api_key()
+    api_key, issue = _gemini_request_configuration()
+    if issue:
+        record.update(execution_status='blocked', error_type=issue, error_message=_GEMINI_CONFIGURATION_MESSAGES[issue])
     try:
         persist_gemini_execution_record(record, response_archive_path)
     except Exception as error:
         record.update(execution_status='blocked', error_type='execution_record_persistence_error',
                       error_message=f'요청 전 실행 기록 저장 실패: {type(error).__name__}')
         return record
-    if not api_key or not gemini_free_tier_is_confirmed():
-        record.update(execution_status='blocked', error_type='missing_api_key' if not api_key else 'free_project_tier_unconfirmed',
-                      error_message='무료 티어 또는 API 키를 확인하지 못해 QA 호출을 차단함')
-        persist_gemini_execution_record(record, response_archive_path)
+    if issue:
         return record
     from google import genai
     from google.genai import errors, types

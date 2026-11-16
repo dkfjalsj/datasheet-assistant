@@ -751,13 +751,9 @@ def user_run_analysis(document: dict[str, Any], part_number: str, progress: Any)
         progress.write("같은 파일의 저장된 분석 결과를 사용합니다.")
         st.session_state.user_results[key] = persisted
         return persisted
-    from datasheet_analysis import gemini_free_tier_is_confirmed, request_gemini_extraction
+    from datasheet_analysis import request_gemini_extraction
     if st.session_state.user_quota_limited:
         return {"state": "error", "specifications": {}, "message": user_error_message({"http_status":429})}
-    if not gemini_free_tier_is_confirmed():
-        from datasheet_analysis import gemini_configuration_issue
-        return {"state": "error", "specifications": {},
-                "message": user_error_message({"error_type":gemini_configuration_issue()})}
     st.session_state.user_api_busy = True
     try:
         progress.write("데이터시트에서 필요한 표와 설명을 찾고 있습니다.")
@@ -1250,18 +1246,15 @@ def user_question_tab() -> None:
                  disabled=not question.strip() or st.session_state.user_api_busy, width="content"):
         answer, source = user_local_answer(question.strip(), selected, parts), "데이터시트 분석 결과 기반 답변 · 외부 AI 미호출"
         if use_gemini:
-            from datasheet_analysis import gemini_free_tier_is_confirmed, request_gemini_korean_qa
+            from datasheet_analysis import request_gemini_korean_qa
             comparison = context[1] if len(context)==2 else None
             payload = {"parts": [(item["pdf_hash"],item["part_number"],item["part"].get("specifications",{}))
                                  for item in context], "question":question.strip()}
             cache_key = hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()
             if cache_key in st.session_state.user_qa_cache:
                 answer, source = st.session_state.user_qa_cache[cache_key], "같은 질문의 저장된 Gemini AI 답변"
-            elif st.session_state.user_quota_limited or not gemini_free_tier_is_confirmed():
-                from datasheet_analysis import gemini_configuration_issue
-                status = ({"http_status":429} if st.session_state.user_quota_limited
-                          else {"error_type":gemini_configuration_issue()})
-                answer, source = user_error_message(status), "Gemini 요청을 실행하지 않았습니다"
+            elif st.session_state.user_quota_limited:
+                answer, source = user_error_message({"http_status":429}), "Gemini 요청을 실행하지 않았습니다"
             else:
                 with st.status("AI가 데이터시트 분석 결과를 바탕으로 답변하고 있습니다.", expanded=False) as progress:
                     st.session_state.user_api_busy = True
